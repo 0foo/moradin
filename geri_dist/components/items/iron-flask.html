@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Iron Flask</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>DMG</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>178</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>legendary</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>This iron bottle has a brass stopper. You can use an action to speak the flask's command word, targeting a creature that you can see within 60 feet of you. If the target is native to a plane of existence other than the one you're on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has advantage on the saving throw. Once trapped, a creature remains in the flask until released. The flask can hold only one creature at a time. A creature trapped in the flask doesn't need to breathe, eat, or drink and doesn't age.</li>
+            <li>You can use an action to remove the flask's stopper and release the creature the flask contains. The creature is friendly to you and your companions for 1 hour and obeys your commands for that duration. If you give no commands or give it a command that is likely to result in its death, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.</li>
+            <li>An {@spell identify} spell reveals that a creature is inside the flask, but the only way to determine the type of creature is to open the flask. A newly discovered bottle might already contain a creature chosen by the DM or determined randomly.</li>
+            <li></li>
+            <ul>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "This iron bottle has a brass stopper. You can use an action to speak the flask\u0027s command word, targeting a creature that you can see within 60 feet of you. If the target is native to a plane of existence other than the one you\u0027re on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has advantage on the saving throw. Once trapped, a creature remains in the flask until released. The flask can hold only one creature at a time. A creature trapped in the flask doesn\u0027t need to breathe, eat, or drink and doesn\u0027t age.",
+  "You can use an action to remove the flask\u0027s stopper and release the creature the flask contains. The creature is friendly to you and your companions for 1 hour and obeys your commands for that duration. If you give no commands or give it a command that is likely to result in its death, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.",
+  "An {@spell identify} spell reveals that a creature is inside the flask, but the only way to determine the type of creature is to open the flask. A newly discovered bottle might already contain a creature chosen by the DM or determined randomly.",
+  {
+    "colLabels": [
+      "{@dice d100}",
+      "Contents"
+    ],
+    "colStyles": [
+      "col-1 text-center",
+      "col-11"
+    ],
+    "rows": [
+      [
+        "01-50",
+        "Empty"
+      ],
+      [
+        "51",
+        "{@creature Arcanaloth}"
+      ],
+      [
+        "52",
+        "{@creature Cambion}"
+      ],
+      [
+        "53-54",
+        "{@creature Dao}"
+      ],
+      [
+        "55-57",
+        "Demon (type 1): {@creature barlgura}, {@creature shadow demon}, or {@creature vrock}"
+      ],
+      [
+        "58-60",
+        "Demon (type 2): {@creature chasme} or {@creature hezrou}"
+      ],
+      [
+        "61-62",
+        "Demon (type 3): {@creature glabrezu} or {@creature yochlol}"
+      ],
+      [
+        "63-64",
+        "Demon (type 4): {@creature nalfeshnee}"
+      ],
+      [
+        "65",
+        "Demon (type 5): {@creature marilith}"
+      ],
+      [
+        "66",
+        "Demon (type 6): {@creature balor} or {@creature goristro}"
+      ],
+      [
+        "67",
+        "{@creature Deva}"
+      ],
+      [
+        "68-69",
+        "Devil (greater): {@creature horned devil}, {@creature erinyes}, {@creature ice devil}, or {@creature pit fiend}"
+      ],
+      [
+        "70-72",
+        "Devil (lesser): {@creature imp}, {@creature spined devil}, {@creature bearded devil}, {@creature barbed devil}, {@creature chain devil}, or {@creature bone devil}"
+      ],
+      [
+        "73-74",
+        "{@creature Djinni}"
+      ],
+      [
+        "75-76",
+        "{@creature Efreeti}"
+      ],
+      [
+        "77-78",
+        "Elemental (any)"
+      ],
+      [
+        "79",
+        "{@creature Githyanki knight}"
+      ],
+      [
+        "80",
+        "{@creature Githzerai zerth}"
+      ],
+      [
+        "81-82",
+        "{@creature Invisible stalker}"
+      ],
+      [
+        "83-84",
+        "{@creature Marid}"
+      ],
+      [
+        "85-86",
+        "{@creature Mezzoloth}"
+      ],
+      [
+        "87-88",
+        "{@creature Night hag}"
+      ],
+      [
+        "89-90",
+        "{@creature Nycaloth}"
+      ],
+      [
+        "91",
+        "{@creature Planetar}"
+      ],
+      [
+        "92-93",
+        "{@creature Salamander}"
+      ],
+      [
+        "94-95",
+        "Slaad (any)"
+      ],
+      [
+        "96",
+        "{@creature Solar}"
+      ],
+      [
+        "97-98",
+        "{@creature succubus||Succubus/Incubus}"
+      ],
+      [
+        "99",
+        "{@creature Ultroloth}"
+      ],
+      [
+        "00",
+        "{@creature Xorn}"
+      ]
+    ],
+    "type": "table"
+  }
+]</pre>
+</body>
+</html>

@@ -1,0 +1,192 @@
+---
+processor: [jinja_file_parser, remove_blank_lines, 5e_tools_item_tag]
+json_path: ../../data/items/items.json
+start_key: item
+filename_key: "{{ name | lower | replace(' ', '-') }}"
+extension: html
+---
+
+
+<!DOCTYPE html>
+<html>
+{% include '/includes/head.html' %}
+<body>
+
+
+
+
+{# PROCESS FOCUS, WHICH FOR SOME REASON HAS EITHER A LIST OR A BOOL #}
+{% if focus is defined %}
+    {% if focus is boolean %}
+        {% set modified_focus = focus %}
+    {% elif focus is iterable %}
+        {% set modified_focus = focus | join(", ") %}
+    {% else %}
+        {% set modified_focus = focus %}
+    {% endif %}
+{% endif %}
+{# END FOCUS PROCESS #}
+
+
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>{{ name }}</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>{{ source }}</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>{{ page }}</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>{{ type }}</td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>{{ rarity }}</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td>{{ weight }}</td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td>{{ weaponCategory }}</td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td>{{ property }}</td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td>{{ range }}</td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td>{{ reload }}</td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td>{{ dmg1 }}</td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td>{{ dmgType }}</td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td>{{ firearm }}</td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td>{{ weapon }}</td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td>{{ ammoType }}</td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td>{{ srd }}</td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td>{{ basicRules }}</td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td>{{ value }}</td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td>{{ ac }}</td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td>{{ strength }}</td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td>{{ stealth }}</td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td>{{ bonusWeapon }}</td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>{{ reqAttune }}</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>{{ wondrous }}</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td>{{ bonusSpellAttack }}</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td>{{ bonusSpellSaveDc }}</td>
+    </tr>
+    {% if focus %}
+    <tr>
+        <td>Focus:</td>
+        <td>{{ modified_focus }}</td>
+    </tr>
+    {% endif %}
+</table>
+
+
+{% if entries %}
+<hr/>
+<ul>
+    {% for entry in entries %}
+        {% if entry is string %}
+            <li>{{ entry }}</li>
+        {% else %}
+            <li>{{ entry.name }}</li>
+            <ul>
+                {% for sub_entry in entry.entries %}
+                    {% if sub_entry is mapping and sub_entry.type == 'list' %}
+                        <ul>
+                            {% for item in sub_entry["items"] %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% elif sub_entry is string %}
+                        <li>{{ sub_entry }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</ul>
+
+
+
+
+{% if entries %}
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>{{ entries | tojson(indent=2) }}</pre>
+{% endif %}
+
+{% if _copy %}
+<hr/>
+Note: this part is still in progres
+<pre>{{ _copy | tojson(indent=2) }}</pre>
+
+{% endif %}
+
+
+
+
+</body>
+</html>

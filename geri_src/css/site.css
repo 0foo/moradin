@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+  display: flex;
+}
+
+section {
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.main-section{
+  border-bottom: solid 1px grey;
+}
+
+#tableOfContents {
+  width: 200px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#content > section{
+  border-bottom: 1px solid grey;
+}
+
+h2 {
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#Class-Screen, #Class-Nav{
+  display:block;
+}
+#Subclass-Screen, #Subclass-Nav{
+  display: none;
+}
+#Race-Screen, #Race-Nav{
+  display: none;
+}
+#Ability-Screen, #Ability-Nav{
+  display: none;
+}
+#Background-Screen, #Background-Nav{
+  display: none;
+}
+#Spell-Nav, #Spell-Screen{
+  display: none;
+}
+#Skill-Screen, #Skill-Nav{
+  display: none;
+}
+#Feat-Screen, #Feat-Nav{
+  display: none;
+}
+#Item-Screen, #Item-Nav{
+  display: none;
+}
+#Reference-Screen, #Reference-Nav{
+  display: none;
+}

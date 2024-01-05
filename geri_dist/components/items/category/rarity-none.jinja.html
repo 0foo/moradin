@@ -1,0 +1,8 @@
+{% for item in data %}
+    {%  if item.rarity == 'none' %}
+        <ul>
+        <li>{{ item.name }}</li>
+        <li>{{ item.rarity }}</li>
+        </ul>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Saint Vitruvio's Phylactery</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>DoDk</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>233</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>rare</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>by a bard, cleric, druid, or paladin</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>You can use an action to cast one of the following spells from the phylactery: {@spell bless}, {@spell death ward}, {@spell greater restoration}, {@spell prayer of healing}, or {@spell revivify}. The spells use your spellcasting ability and spell save DC. Once the phylactery has been used to cast a spell, it can't be used to cast that spell again until the next dawn.</li>
+            <li>Crown Authority</li>
+            <ul>
+                        <li>A character cannot attune to more than one Seal of Drakkenheim. Guardian constructs in Drakkenheim such as {@creature wall gargoyle|DoDk|wall gargoyles} and {@creature tower dragon|DoDk|tower dragons} do not attack you while you are attuned to one of the Seals of Drakkenheim. An individual guardian ignores this effect for 24 hours if you attack it or cast a spell upon it.</li>
+                        <li>As an action, you may present a Seal of Drakkenheim to rebuke the guardians. You make an opposed Charisma ability check against each {@creature wall gargoyle|DoDk} or {@creature tower dragon|DoDk} that can see or hear you within 30 feet of you. If you win the contest, the creature is rebuked for 1 minute or until it takes any damage. A rebuked creature doesn't move, and can't take actions or reactions. A creature who wins the contest is immune to your rebuke for 24 hours.</li>
+            </ul>
+            <li>Relics of Saint Vitruvio</li>
+            <ul>
+                        <li>These holy relics of the Sacred Flame were wielded by Saint Vitruvio and are kept in several religious sites throughout Drakkenheim. The Knights of the Silver Order and the Followers of the Falling Fire now seek these relics. Not only do both factions revere Saint Vitruvio, both wish to use these relics to help advance their goals in Drakkenheim.</li>
+                        <li>A character attuned to three Relics of Saint Vitruvio may cast the {@spell heal} spell three times per day, after which they must finish a long rest before they may do so again. In addition, that character gains the ability to attune to two additional magic items so long as those magic items are both Relics of Saint Vitruvio.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "You can use an action to cast one of the following spells from the phylactery: {@spell bless}, {@spell death ward}, {@spell greater restoration}, {@spell prayer of healing}, or {@spell revivify}. The spells use your spellcasting ability and spell save DC. Once the phylactery has been used to cast a spell, it can\u0027t be used to cast that spell again until the next dawn.",
+  {
+    "entries": [
+      "A character cannot attune to more than one Seal of Drakkenheim. Guardian constructs in Drakkenheim such as {@creature wall gargoyle|DoDk|wall gargoyles} and {@creature tower dragon|DoDk|tower dragons} do not attack you while you are attuned to one of the Seals of Drakkenheim. An individual guardian ignores this effect for 24 hours if you attack it or cast a spell upon it.",
+      "As an action, you may present a Seal of Drakkenheim to rebuke the guardians. You make an opposed Charisma ability check against each {@creature wall gargoyle|DoDk} or {@creature tower dragon|DoDk} that can see or hear you within 30 feet of you. If you win the contest, the creature is rebuked for 1 minute or until it takes any damage. A rebuked creature doesn\u0027t move, and can\u0027t take actions or reactions. A creature who wins the contest is immune to your rebuke for 24 hours."
+    ],
+    "name": "Crown Authority",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "These holy relics of the Sacred Flame were wielded by Saint Vitruvio and are kept in several religious sites throughout Drakkenheim. The Knights of the Silver Order and the Followers of the Falling Fire now seek these relics. Not only do both factions revere Saint Vitruvio, both wish to use these relics to help advance their goals in Drakkenheim.",
+      "A character attuned to three Relics of Saint Vitruvio may cast the {@spell heal} spell three times per day, after which they must finish a long rest before they may do so again. In addition, that character gains the ability to attune to two additional magic items so long as those magic items are both Relics of Saint Vitruvio."
+    ],
+    "name": "Relics of Saint Vitruvio",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

@@ -1,0 +1,77 @@
+---
+processor: [jinja_file_parser, remove_blank_lines, 5e_tools_item_tag]
+json_path: ../../data/classes/all_classes.json
+filename_key: "{{class.0.name | urlencode}}"
+extension: html
+---
+{% set class_info = class.0 %}
+
+
+
+<h1>{{ class_info.name }}</h1>
+
+<hr/>
+
+<div id="class-info-container">
+
+<div class="class-info-box">
+<h4>Starting Info</h4>
+<p><strong>Source:</strong> {{ class_info.source | upper }}, Page: {{ class_info.page }}</p>
+<p><strong>Hit Dice:</strong> {{ class_info.hd.number }}d{{ class_info.hd.faces }}</p>
+<p><strong>Proficiency:</strong> {{ class_info.proficiency | join(", ")}}</p>
+{% if class_info.spellcastingAbility %}
+<p><strong>Spellcasting Ability:</strong> {{ class_info.spellcastingAbility }}</p>
+<p><strong>Caster Progression:</strong> {{ class_info.casterProgression }}</p>
+{% if class_info.preparedSpells %}
+<p><strong>Prepared Spells:</strong> {{ class_info.preparedSpells }}</p>
+{% endif %}
+{% endif %}
+</div>
+
+<div class="class-info-box">
+    <h4>Starting Proficiencies</h4>
+    <p><strong>Armor:</strong> {{ class_info.startingProficiencies.armor|join(", ") }}</p>
+    <p><strong>Weapons:</strong> {{ class_info.startingProficiencies.weapons|join(", ") }}</p>
+    {% if class_info.startingProficiencies.tools %}
+    <p><strong>Tools:</strong> {{ class_info.startingProficiencies.tools| join(", ") }}</p>
+    {% endif %}
+</div>
+
+
+<div class="class-info-box">
+    <h4>Starting Equipment</h4>
+    <ul>
+        {%- for item in class_info.startingEquipment.default -%}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+</div>
+
+
+
+
+<hr/>
+
+{% if class_info.cantripProgression %}
+<div class="class-info-box"></div>
+<h2>Cantrip Progression</h2>
+<ul>
+    <li>{{ class_info.cantripProgression | join(",") }}</li>
+</ul>
+</div>
+{% endif %}
+
+{% if class_info.optionalfeatureProgression %}
+<div class="class-info-box"></div>
+<h2>Optional Feature Progression</h2>
+<ul>
+    {% for feature in class_info.optionalfeatureProgression %}
+    <li>{{ feature.name }}: {{ feature.progression|join(", ") }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}

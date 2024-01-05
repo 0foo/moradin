@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Helm of Perfect Potential</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>BGG</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>112</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>artifact</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>This copper-hued helm contains a shard of the Elemental Chaos embedded in its forehead, surrounded by a motif of a rising sun. Legend says Annam fashioned this helm for his daughter Diancastra to hold the fragment of chaos she used to prove her worth to her father.</li>
+            <li>Random Properties</li>
+            <ul>
+                        <li>The helm has the following random properties, determined by rolling on the appropriate table in the Dungeon Master's Guide:</li>
+                        <ul>
+                                <li>2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties</li>
+                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property</li>
+                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property</li>
+                        </ul>
+            </ul>
+            <li>Master of Guile</li>
+            <ul>
+                        <li>While wearing the helm, you have advantage on Charisma ({@skill Deception}) and Wisdom ({@skill Insight}) checks.</li>
+            </ul>
+            <li>Arrow of Elemental Havoc</li>
+            <ul>
+                        <li>As a bonus action while wearing the helm, you can launch a bolt of searing elemental energy toward a creature you can see within 90 feet of yourself. The target must make a DC 20 Dexterity saving throw. On a failed save, the creature takes {@damage 4d6} acid, cold, fire, lightning, or thunder damage (your choice). On a successful save, the creature takes half as much damage.</li>
+            </ul>
+            <li>Spellcasting</li>
+            <ul>
+                        <li>The helm has 6 charges and regains {@dice 1d6} charges each dawn. As an action while wearing the helm, you can expend 1 or more of its charges to cast one of the following spells (save DC 20): {@spell elemental weapon} (1 charge), {@spell call lightning} (2 charges), {@spell wall of fire} (3 charges), {@spell conjure elemental} (4 charges), {@spell tsunami} (5 charges).</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "This copper-hued helm contains a shard of the Elemental Chaos embedded in its forehead, surrounded by a motif of a rising sun. Legend says Annam fashioned this helm for his daughter Diancastra to hold the fragment of chaos she used to prove her worth to her father.",
+  {
+    "entries": [
+      "The helm has the following random properties, determined by rolling on the appropriate table in the Dungeon Master\u0027s Guide:",
+      {
+        "items": [
+          "2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
+          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property",
+          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property"
+        ],
+        "type": "list"
+      }
+    ],
+    "name": "Random Properties",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "While wearing the helm, you have advantage on Charisma ({@skill Deception}) and Wisdom ({@skill Insight}) checks."
+    ],
+    "name": "Master of Guile",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As a bonus action while wearing the helm, you can launch a bolt of searing elemental energy toward a creature you can see within 90 feet of yourself. The target must make a DC 20 Dexterity saving throw. On a failed save, the creature takes {@damage 4d6} acid, cold, fire, lightning, or thunder damage (your choice). On a successful save, the creature takes half as much damage."
+    ],
+    "name": "Arrow of Elemental Havoc",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "The helm has 6 charges and regains {@dice 1d6} charges each dawn. As an action while wearing the helm, you can expend 1 or more of its charges to cast one of the following spells (save DC 20): {@spell elemental weapon} (1 charge), {@spell call lightning} (2 charges), {@spell wall of fire} (3 charges), {@spell conjure elemental} (4 charges), {@spell tsunami} (5 charges)."
+    ],
+    "name": "Spellcasting",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

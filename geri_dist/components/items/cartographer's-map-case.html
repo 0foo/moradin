@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Cartographer's Map Case</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>AI</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>common</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>Map of Shortcuts</li>
+            <ul>
+                        <li>At rank 3, your map case becomes a common magic item. In addition to storing normal maps, your cartographer's map case can be used to generate a special map identifying a shortcut. You can use your action to make a DC 15 Wisdom ({@skill Perception}) check, with a success revealing a map buried in your cartographer's map case noting a relevant shortcut. Your travel time is reduced by half while you follow that route. If you succeed at the check by 5 or more, the map includes notes on the terrain, granting you advantage on the next ability check you make to travel through the mapped area in the next hour. Once you use this feature, you cannot use it again until you finish a long rest.</li>
+            </ul>
+            <li>Map of the Moment</li>
+            <ul>
+                        <li>Starting at rank 3, you can use an action to make a DC 15 Wisdom ({@skill Perception}) check and search your cartographer's map case to find a map either related to your current mission or inspiring a new one. On a success, you find a map with a prominent landmark. The map has information on the natural terrain within one mile of the landmark. Once you use this feature, you cannot use it again until dawn seven days later.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  {
+    "entries": [
+      "At rank 3, your map case becomes a common magic item. In addition to storing normal maps, your cartographer\u0027s map case can be used to generate a special map identifying a shortcut. You can use your action to make a DC 15 Wisdom ({@skill Perception}) check, with a success revealing a map buried in your cartographer\u0027s map case noting a relevant shortcut. Your travel time is reduced by half while you follow that route. If you succeed at the check by 5 or more, the map includes notes on the terrain, granting you advantage on the next ability check you make to travel through the mapped area in the next hour. Once you use this feature, you cannot use it again until you finish a long rest."
+    ],
+    "name": "Map of Shortcuts",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "Starting at rank 3, you can use an action to make a DC 15 Wisdom ({@skill Perception}) check and search your cartographer\u0027s map case to find a map either related to your current mission or inspiring a new one. On a success, you find a map with a prominent landmark. The map has information on the natural terrain within one mile of the landmark. Once you use this feature, you cannot use it again until dawn seven days later.",
+      {
+        "caption": "Possible Map Mission Landmarks",
+        "colLabels": [
+          "d8",
+          "Landmark"
+        ],
+        "colStyles": [
+          "col-2 text-center",
+          "col-10"
+        ],
+        "rows": [
+          [
+            "1",
+            "The Ancient Sarcophagus of Gerald Smith"
+          ],
+          [
+            "2",
+            "A tree labeled \"This tree\""
+          ],
+          [
+            "3",
+            "\"The Last Resting Place of My Rich Brother that is Also a Bear Cave\""
+          ],
+          [
+            "4",
+            "A range of peaks known as the Slightly Wobbly Spires"
+          ],
+          [
+            "5",
+            "An ever-flowing, nonmagical spigot of pure, clear water in the middle of nowhere"
+          ],
+          [
+            "6",
+            "A cave filled with screaming bioluminescent worms"
+          ],
+          [
+            "7",
+            "The most haunted forest for ten miles in any direction"
+          ],
+          [
+            "8",
+            "A huge pile of rocks with no other rocks within sight"
+          ]
+        ],
+        "type": "table"
+      }
+    ],
+    "name": "Map of the Moment",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Book of Vile Darkness (Variant)</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>KftGV</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>207</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+</ul>
+<hr/>
+Note: this part is still in progres
+<pre>{
+  "_mod": {
+    "entries": {
+      "items": [
+        "The Book of Vile Darkness has the following properties:",
+        {
+          "items": [
+            {
+              "entries": [
+                "While attuned to the book, you can cast {@spell circle of death} (save DC 20) from it as an action. After you cast the spell, roll a {@dice d6}. On a roll of 1-5, you can\u0027t use this property again until the next dawn."
+              ],
+              "name": "Circle of Death",
+              "type": "item"
+            },
+            {
+              "entries": [
+                "While attuned to the book, you can\u0027t be {@condition charmed} or {@condition frightened}."
+              ],
+              "name": "Condition Immunities",
+              "type": "item"
+            },
+            {
+              "entries": [
+                "The book houses an evil spirit that is hostile toward you. When you become attuned to the book, the spirit tries to leave the book and enter your body. If you fail a DC 20 Charisma saving throw, it succeeds, and you become an NPC under the DM\u0027s control until the intruding spirit is banished using magic such as the {@spell dispel evil and good} spell. The banished spirit returns to the book."
+              ],
+              "name": "Evil Presence",
+              "type": "item"
+            }
+          ],
+          "style": "list-hang-notitle",
+          "type": "list"
+        }
+      ],
+      "mode": "replaceArr",
+      "replace": {
+        "index": 7
+      }
+    }
+  },
+  "name": "Book of Vile Darkness",
+  "source": "DMG"
+}</pre>
+</body>
+</html>

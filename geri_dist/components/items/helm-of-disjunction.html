@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Helm of Disjunction</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>HAT-LMI</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>legendary</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>by a sorcerer</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>The wizard Mordenkainen crafted this sleek, golden helmet. If he created other helms of disjunction, they have yet to be found.</li>
+            <li>As an action while wearing this helm, you can use it to emit an antimagic pulse in a 300-foot-radius sphere centered on yourself. The pulse has the following effects:</li>
+            <li>Magic Item Disjunction</li>
+            <ul>
+                        <li>Potions and scrolls in the area are destroyed. All other magic items in the area have their magical properties suppressed for 1 minute. Artifacts are unaffected by this property, as are magic items on your person.</li>
+            </ul>
+            <li>Spell Disjunction</li>
+            <ul>
+                        <li>Any ongoing spell ends if the creature, object, or area affected by it is even partly in the pulse's area.</li>
+            </ul>
+            <li>Wave of Force</li>
+            <ul>
+                        <li>The antimagic pulse is strong enough to knock down creatures close to you. Each creature within 30 feet of you must succeed on a DC 15 Strength saving throw or have the {@condition prone} condition.</li>
+                        <li>Once you use the helm's property, it can't be used again until {@dice 1d4} days have passed.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "The wizard Mordenkainen crafted this sleek, golden helmet. If he created other helms of disjunction, they have yet to be found.",
+  "As an action while wearing this helm, you can use it to emit an antimagic pulse in a 300-foot-radius sphere centered on yourself. The pulse has the following effects:",
+  {
+    "entries": [
+      "Potions and scrolls in the area are destroyed. All other magic items in the area have their magical properties suppressed for 1 minute. Artifacts are unaffected by this property, as are magic items on your person."
+    ],
+    "name": "Magic Item Disjunction",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "Any ongoing spell ends if the creature, object, or area affected by it is even partly in the pulse\u0027s area."
+    ],
+    "name": "Spell Disjunction",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "The antimagic pulse is strong enough to knock down creatures close to you. Each creature within 30 feet of you must succeed on a DC 15 Strength saving throw or have the {@condition prone} condition.",
+      "Once you use the helm\u0027s property, it can\u0027t be used again until {@dice 1d4} days have passed."
+    ],
+    "name": "Wave of Force",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

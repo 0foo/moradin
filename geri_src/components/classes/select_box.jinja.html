@@ -1,0 +1,22 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+json_path: ../../data/classes/all_classes.json
+---
+
+
+
+<label for="classSelect" class="form-control-lg">Choose a class:</label>
+<select id="classSelect" 
+    multiple size="15" 
+    class="form-select form-select-lg mb-3" 
+    aria-label="select class" 
+    hx-get="/components/classes/<classSelect>.html"
+    hx-target="#class-description-container"
+    name="classSelect">
+        {%- for item in data %}     
+            <option value="{{ item.class.0.name }}">{{ item.class.0.name }}</option>
+        {% endfor -%}
+ </select>

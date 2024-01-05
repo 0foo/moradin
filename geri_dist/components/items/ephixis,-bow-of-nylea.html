@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Ephixis, Bow of Nylea</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>MOT</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>R</td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>artifact</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td>simple</td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td>['A', '2H']</td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td>80/320</td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td>1d6</td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td>P</td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td>arrow|phb</td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td>+3</td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>Nylea wields the shortbow Ephixis, the bow whose arrows herald the turning of the seasons. Nylea is quick to let her favored followers borrow her bow, particularly when they intend to use it to perform great deeds, put an end to foul creatures, or cast down the arrogant.</li>
+            <li>Bow of the Wild</li>
+            <ul>
+                        <li>This divine weapon includes a shortbow and a quiver with four arrows, each tied to one of the four seasons. You gain a +3 bonus to attack and damage rolls made with this bow, and you suffer no disadvantage when attacking at the weapon's long range. Additionally, Ephixis scores a critical hit on a {@dice d20} roll of 19 or 20.</li>
+            </ul>
+            <li>Blessing of the Wild</li>
+            <ul>
+                        <li>If you are a worshiper of Nylea, you gain all the following benefits for which you have the required piety:</li>
+                        <ul>
+                                <li>{'type': 'item', 'name': 'Piety 10+', 'entry': 'The bow has 1 randomly determined {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} property.'}</li>
+                                <li>{'type': 'item', 'name': 'Piety 25+', 'entry': 'The bow has 1 randomly determined {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property.'}</li>
+                        </ul>
+                        <li>If you aren't a worshiper of Nylea, the bow has 1 randomly determined {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental} property.</li>
+                        <li>See "Artifacts" in chapter 7 of the Dungeon Master's Guide for details on randomly determined properties.</li>
+            </ul>
+            <li>Arrows of the Seasons</li>
+            <ul>
+                        <li>The four arrows—each associated with a season—that accompany this bow can be fired only from it. Each arrow disappears immediately after it's used, and it reappears in the quiver at the next dusk. The save DC against spells cast with the arrows is 18. Each arrow has a unique property:</li>
+            </ul>
+            <li>Spring</li>
+            <ul>
+                        <li>As an action, you can fire this arrow, targeting a beast or a plant creature you can see within 320 feet of you. On a hit, the arrow deals no damage, and the target gains the benefits of the {@spell awaken} spell for 8 hours.</li>
+            </ul>
+            <li>Summer</li>
+            <ul>
+                        <li>As an action, you can fire this arrow at an unoccupied space on the ground that you can see within 320 feet of you, no attack roll required. A Nyxborn lynx is summoned in that space (use the stat block for a {@creature tiger} with the {@book Nyxborn traits|MOT|6|Nyxborn Creatures} from chapter 6). The lynx understands your verbal commands and obeys them as best it can, and it takes its turns immediately after yours. The emissary remains for 1 hour before fading away.</li>
+            </ul>
+            <li>Autumn</li>
+            <ul>
+                        <li>As an action, you can fire this arrow at a space on the ground that you can see within 320 feet of you, no attack roll required, casting the {@spell wall of thorns} spell there.</li>
+            </ul>
+            <li>Winter</li>
+            <ul>
+                        <li>As an action, you can fire this arrow at a space that you can see within 320 feet of you, no attack roll required, casting the {@spell ice storm} spell there.</li>
+            </ul>
+            <li>Destroying the Bow</li>
+            <ul>
+                        <li>The bow can't be destroyed without first destroying all its arrows. The winter arrow must be fed to a cerberus on the winter solstice. The spring arrow must be planted at the base of a Black Oak of Asphodel on the spring equinox. The summer arrow must be broken by a sea giant on the summer solstice. Then the autumn arrow must be shot into the carcass of a hydra on the autumnal equinox. When all four arrows are destroyed, the bow and quiver dissolve into dust.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "Nylea wields the shortbow Ephixis, the bow whose arrows herald the turning of the seasons. Nylea is quick to let her favored followers borrow her bow, particularly when they intend to use it to perform great deeds, put an end to foul creatures, or cast down the arrogant.",
+  {
+    "entries": [
+      "This divine weapon includes a shortbow and a quiver with four arrows, each tied to one of the four seasons. You gain a +3 bonus to attack and damage rolls made with this bow, and you suffer no disadvantage when attacking at the weapon\u0027s long range. Additionally, Ephixis scores a critical hit on a {@dice d20} roll of 19 or 20."
+    ],
+    "name": "Bow of the Wild",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "If you are a worshiper of Nylea, you gain all the following benefits for which you have the required piety:",
+      {
+        "items": [
+          {
+            "entry": "The bow has 1 randomly determined {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} property.",
+            "name": "Piety 10+",
+            "type": "item"
+          },
+          {
+            "entry": "The bow has 1 randomly determined {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property.",
+            "name": "Piety 25+",
+            "type": "item"
+          }
+        ],
+        "style": "list-hang-notitle",
+        "type": "list"
+      },
+      "If you aren\u0027t a worshiper of Nylea, the bow has 1 randomly determined {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental} property.",
+      "See \"Artifacts\" in chapter 7 of the Dungeon Master\u0027s Guide for details on randomly determined properties."
+    ],
+    "name": "Blessing of the Wild",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "The four arrows\u2014each associated with a season\u2014that accompany this bow can be fired only from it. Each arrow disappears immediately after it\u0027s used, and it reappears in the quiver at the next dusk. The save DC against spells cast with the arrows is 18. Each arrow has a unique property:"
+    ],
+    "name": "Arrows of the Seasons",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As an action, you can fire this arrow, targeting a beast or a plant creature you can see within 320 feet of you. On a hit, the arrow deals no damage, and the target gains the benefits of the {@spell awaken} spell for 8 hours."
+    ],
+    "name": "Spring",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As an action, you can fire this arrow at an unoccupied space on the ground that you can see within 320 feet of you, no attack roll required. A Nyxborn lynx is summoned in that space (use the stat block for a {@creature tiger} with the {@book Nyxborn traits|MOT|6|Nyxborn Creatures} from chapter 6). The lynx understands your verbal commands and obeys them as best it can, and it takes its turns immediately after yours. The emissary remains for 1 hour before fading away."
+    ],
+    "name": "Summer",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As an action, you can fire this arrow at a space on the ground that you can see within 320 feet of you, no attack roll required, casting the {@spell wall of thorns} spell there."
+    ],
+    "name": "Autumn",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As an action, you can fire this arrow at a space that you can see within 320 feet of you, no attack roll required, casting the {@spell ice storm} spell there."
+    ],
+    "name": "Winter",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "The bow can\u0027t be destroyed without first destroying all its arrows. The winter arrow must be fed to a cerberus on the winter solstice. The spring arrow must be planted at the base of a Black Oak of Asphodel on the spring equinox. The summer arrow must be broken by a sea giant on the summer solstice. Then the autumn arrow must be shot into the carcass of a hydra on the autumnal equinox. When all four arrows are destroyed, the bow and quiver dissolve into dust."
+    ],
+    "name": "Destroying the Bow",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

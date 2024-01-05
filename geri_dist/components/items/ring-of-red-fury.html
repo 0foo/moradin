@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Ring of Red Fury</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>CRCotN</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>214</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>RG</td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>very rare</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>This ring has a stripe of ruidium running through it. While wearing the ring, you gain the following benefits:</li>
+            <li></li>
+            <ul>
+            </ul>
+            <li>Ruidium Rage</li>
+            <ul>
+                        <li>As a bonus action, you can use the ring to gain the following benefits, which last for 1 minute or until you are {@condition incapacitated}:</li>
+                        <ul>
+                                <li>You have advantage on Strength checks and Strength saving throws.</li>
+                                <li>When you hit with an attack, you can add your proficiency bonus to the damage roll.</li>
+                                <li>Difficult terrain doesn't cost you extra movement, and you are immune to the {@condition paralyzed} and {@condition restrained} conditions.</li>
+                        </ul>
+                        <li>You can't use this property of the ring again until you finish a long rest.</li>
+            </ul>
+            <li>Ruidium Corruption</li>
+            <ul>
+                        <li>When you use the Ruidium Rage property of the ring, you must make a DC 20 Charisma saving throw. On a failed save, you gain 1 level of {@condition exhaustion}. If you are not already suffering from ruidium corruption, you become corrupted when you fail this save.</li>
+            </ul>
+            <li>If Ruidium Is Destroyed</li>
+            <ul>
+                        <li>If the Apotheon is killed or redeemed, all the ruidium in Exandria is destroyed instantly, and the ring of red fury becomes a <a href="/components/items/ring-of-free-action.html">ring of free action</a>.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "This ring has a stripe of ruidium running through it. While wearing the ring, you gain the following benefits:",
+  {
+    "items": [
+      "You can breathe water.",
+      "You gain a swimming speed equal to your walking speed."
+    ],
+    "type": "list"
+  },
+  {
+    "entries": [
+      "As a bonus action, you can use the ring to gain the following benefits, which last for 1 minute or until you are {@condition incapacitated}:",
+      {
+        "items": [
+          "You have advantage on Strength checks and Strength saving throws.",
+          "When you hit with an attack, you can add your proficiency bonus to the damage roll.",
+          "Difficult terrain doesn\u0027t cost you extra movement, and you are immune to the {@condition paralyzed} and {@condition restrained} conditions."
+        ],
+        "type": "list"
+      },
+      "You can\u0027t use this property of the ring again until you finish a long rest."
+    ],
+    "name": "Ruidium Rage",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "When you use the Ruidium Rage property of the ring, you must make a DC 20 Charisma saving throw. On a failed save, you gain 1 level of {@condition exhaustion}. If you are not already suffering from ruidium corruption, you become corrupted when you fail this save."
+    ],
+    "name": "Ruidium Corruption",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "If the Apotheon is killed or redeemed, all the ruidium in Exandria is destroyed instantly, and the ring of red fury becomes a <a href="/components/items/ring-of-free-action.html">ring of free action</a>."
+    ],
+    "name": "If Ruidium Is Destroyed",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

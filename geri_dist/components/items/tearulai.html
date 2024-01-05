@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Tearulai</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>WDMM</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>70</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>M</td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>very rare</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td>martial</td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td>['V']</td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td>1d8</td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td>S</td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>The longsword, Tearulai, is a sentient, neutral good <a href="/components/items/sword-of-sharpness.html">sword of sharpness</a> with an emerald-colored blade and precious gemstones embedded in its hilt and pommel. The sword's magical properties are suppressed until it is removed from Valdemar's skull.</li>
+            <li>Evil creatures can't attune to Tearulai; any evil creature that tries to do so takes 20 psychic damage. The weapon's emerald blade can't be damaged or dulled, and the sword can't be teleported anywhere without its wielder while the two are attuned to one another.</li>
+            <li>Spells</li>
+            <ul>
+                        <li>The sword has 6 charges and regains {@dice 1d4 + 2} expended charges daily at dawn. A creature attuned to the sword can use an action and expend 1 or more charges to cast one of the following spells from it without material components: {@spell fly} (2 charges), {@spell polymorph} (3 charges), or {@spell transport via plants} (4 charges).</li>
+            </ul>
+            <li>Sentience</li>
+            <ul>
+                        <li>The sword has an Intelligence of 17, a Wisdom of 12, and a Charisma of 20. It has hearing and {@sense truesight} out to a range of 120 feet. It communicates telepathically with its attuned wielder and can speak, read, and understand Common, Draconic, Elvish, and Sylvan. In addition, the sword can ascertain the true value of any gemstone brought within 5 feet of it.</li>
+            </ul>
+            <li>Personality</li>
+            <ul>
+                        <li>Tearulai admires great beauty, music, fine art, and poetry. Vain, the weapon strives to improve its appearance. It craves gemstones and seeks out better ones with which to adorn itself. Most of all, it longs to return to the forests around Myth Drannor, where it was created. If its wielder's goals run counter to its own, Tearulai attempts to take control of its wielder and escape Undermountain, whereupon it can use its {@spell transport via plants} spell to return whence it came.</li>
+            </ul>
+            <li>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</li>
+            <li>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 14 slashing damage. Then roll another {@dice d20}. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the DM. If the creature has no limb to sever, you lop off a portion of its body instead.</li>
+            <li>{@note Note: According to the SRD, it is an extra {@damage 4d6} slashing damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}}.</li>
+            <li>In addition, you can speak the sword's command to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</li>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "The longsword, Tearulai, is a sentient, neutral good <a href="/components/items/sword-of-sharpness.html">sword of sharpness</a> with an emerald-colored blade and precious gemstones embedded in its hilt and pommel. The sword\u0027s magical properties are suppressed until it is removed from Valdemar\u0027s skull.",
+  "Evil creatures can\u0027t attune to Tearulai; any evil creature that tries to do so takes 20 psychic damage. The weapon\u0027s emerald blade can\u0027t be damaged or dulled, and the sword can\u0027t be teleported anywhere without its wielder while the two are attuned to one another.",
+  {
+    "entries": [
+      "The sword has 6 charges and regains {@dice 1d4 + 2} expended charges daily at dawn. A creature attuned to the sword can use an action and expend 1 or more charges to cast one of the following spells from it without material components: {@spell fly} (2 charges), {@spell polymorph} (3 charges), or {@spell transport via plants} (4 charges)."
+    ],
+    "name": "Spells",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "The sword has an Intelligence of 17, a Wisdom of 12, and a Charisma of 20. It has hearing and {@sense truesight} out to a range of 120 feet. It communicates telepathically with its attuned wielder and can speak, read, and understand Common, Draconic, Elvish, and Sylvan. In addition, the sword can ascertain the true value of any gemstone brought within 5 feet of it."
+    ],
+    "name": "Sentience",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "Tearulai admires great beauty, music, fine art, and poetry. Vain, the weapon strives to improve its appearance. It craves gemstones and seeks out better ones with which to adorn itself. Most of all, it longs to return to the forests around Myth Drannor, where it was created. If its wielder\u0027s goals run counter to its own, Tearulai attempts to take control of its wielder and escape Undermountain, whereupon it can use its {@spell transport via plants} spell to return whence it came."
+    ],
+    "name": "Personality",
+    "type": "entries"
+  },
+  "When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.",
+  "When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 14 slashing damage. Then roll another {@dice d20}. If you roll a 20, you lop off one of the target\u0027s limbs, with the effect of such loss determined by the DM. If the creature has no limb to sever, you lop off a portion of its body instead.",
+  "{@note Note: According to the SRD, it is an extra {@damage 4d6} slashing damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}}.",
+  "In addition, you can speak the sword\u0027s command to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light."
+]</pre>
+</body>
+</html>

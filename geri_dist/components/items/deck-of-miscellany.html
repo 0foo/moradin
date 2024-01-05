@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Deck of Miscellany</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>BMT</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>41</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>uncommon</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>This wooden box contains a set of thirty-two parchment cards.</li>
+            <li></li>
+            <ul>
+            </ul>
+            <li>The face of each card bears an illustration of a different item or set of items. As an action, you can draw a card of your choice from the deck and throw it to the ground in an unoccupied space within 5 feet of yourself. When the card hits the ground, the card permanently transforms into the item or set of items depicted on its face. An altered deck of real-world playing cards can simulate the deck, as shown on the Deck of Miscellany table.</li>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "This wooden box contains a set of thirty-two parchment cards.",
+  {
+    "caption": "Deck of Miscellany",
+    "colLabels": [
+      "{@dice 1d32|Card}",
+      "Item"
+    ],
+    "colStyles": [
+      "col-2 text-center",
+      "col-10"
+    ],
+    "rows": [
+      [
+        {
+          "entry": "\u20073 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 1
+          },
+          "type": "cell"
+        },
+        "Wooden <a href="/components/items/abacus.html">abacus</a>"
+      ],
+      [
+        {
+          "entry": "\u20074 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 2
+          },
+          "type": "cell"
+        },
+        "Four <a href="/components/items/perfume-(vial).html">Perfume (vial)</a>"
+      ],
+      [
+        {
+          "entry": "\u20075 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 3
+          },
+          "type": "cell"
+        },
+        "5 days\u0027 worth of <a href="/components/items/rations-(1-day).html">Rations (1 day)</a>"
+      ],
+      [
+        {
+          "entry": "\u20076 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 4
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/iron-pot.html">Iron pot</a>"
+      ],
+      [
+        {
+          "entry": "\u20077 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 5
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/disguise-kit.html">Disguise kit</a>"
+      ],
+      [
+        {
+          "entry": "\u20078 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 6
+          },
+          "type": "cell"
+        },
+        "Window (up to 5 feet wide and 5 feet high), which you can place on a vertical surface up to 5 feet thick and which allows you to look through the surface"
+      ],
+      [
+        {
+          "entry": "\u20079 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 7
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/manacles.html">Manacles</a>"
+      ],
+      [
+        {
+          "entry": "10 {@color \u2666|#ff0000}",
+          "roll": {
+            "exact": 8
+          },
+          "type": "cell"
+        },
+        "Ten <a href="/components/items/parchment-(one-sheet).html">Parchment (one sheet)</a>"
+      ],
+      [
+        {
+          "entry": "\u20073 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 9
+          },
+          "type": "cell"
+        },
+        "Three <a href="/components/items/dagger.html">dagger</a>"
+      ],
+      [
+        {
+          "entry": "\u20074 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 10
+          },
+          "type": "cell"
+        },
+        "Four <a href="/components/items/oil-(flask).html">Oil (flask)</a>"
+      ],
+      [
+        {
+          "entry": "\u20075 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 11
+          },
+          "type": "cell"
+        },
+        "Five silk <a href="/components/items/robes.html">robes</a>"
+      ],
+      [
+        {
+          "entry": "\u20076 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 12
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/forgery-kit.html">Forgery kit</a>"
+      ],
+      [
+        {
+          "entry": "\u20077 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 13
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/quarterstaff.html">Quarterstaff</a>"
+      ],
+      [
+        {
+          "entry": "\u20078 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 14
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/fishing-tackle.html">Fishing tackle</a>"
+      ],
+      [
+        {
+          "entry": "\u20079 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 15
+          },
+          "type": "cell"
+        },
+        "Leather <a href="/components/items/pouch.html">pouch</a> containing 18 gp"
+      ],
+      [
+        {
+          "entry": "10 {@color \u2665|#ff0000}",
+          "roll": {
+            "exact": 16
+          },
+          "type": "cell"
+        },
+        "10 <a href="/components/items/crossbow-bolt.html">crossbow bolt</a>"
+      ],
+      [
+        {
+          "entry": "\u20073 \u2663",
+          "roll": {
+            "exact": 17
+          },
+          "type": "cell"
+        },
+        "Three <a href="/components/items/book.html">book</a>, written in {@language Common}, about random historical events"
+      ],
+      [
+        {
+          "entry": "\u20074 \u2663",
+          "roll": {
+            "exact": 18
+          },
+          "type": "cell"
+        },
+        "Canvas <a href="/components/items/two-person-tent.html">Two-Person Tent</a>"
+      ],
+      [
+        {
+          "entry": "\u20075 \u2663",
+          "roll": {
+            "exact": 19
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/silk-rope-(50-feet).html">Silk Rope (50 feet)</a>"
+      ],
+      [
+        {
+          "entry": "\u20076 \u2663",
+          "roll": {
+            "exact": 20
+          },
+          "type": "cell"
+        },
+        "Two <a href="/components/items/crowbar.html">crowbar</a>"
+      ],
+      [
+        {
+          "entry": "\u20077 \u2663",
+          "roll": {
+            "exact": 21
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/healer\u0027s-kit.html">Healer\u0027s kit</a>"
+      ],
+      [
+        {
+          "entry": "\u20078 \u2663",
+          "roll": {
+            "exact": 22
+          },
+          "type": "cell"
+        },
+        "Eight gems worth 5 gp each"
+      ],
+      [
+        {
+          "entry": "\u20079 \u2663",
+          "roll": {
+            "exact": 23
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/lamp.html">Lamp</a>"
+      ],
+      [
+        {
+          "entry": "10 \u2663",
+          "roll": {
+            "exact": 24
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/chain-(10-feet).html">Chain (10 feet)</a>"
+      ],
+      [
+        {
+          "entry": "\u20073 \u2660",
+          "roll": {
+            "exact": 25
+          },
+          "type": "cell"
+        },
+        "Three <a href="/components/items/spear.html">spear</a>"
+      ],
+      [
+        {
+          "entry": "\u20074 \u2660",
+          "roll": {
+            "exact": 26
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/steel-mirror.html">Steel mirror</a>"
+      ],
+      [
+        {
+          "entry": "\u20075 \u2660",
+          "roll": {
+            "exact": 27
+          },
+          "type": "cell"
+        },
+        "15-foot wooden pole"
+      ],
+      [
+        {
+          "entry": "\u20076 \u2660",
+          "roll": {
+            "exact": 28
+          },
+          "type": "cell"
+        },
+        "Burlap <a href="/components/items/sack.html">sack</a>"
+      ],
+      [
+        {
+          "entry": "\u20077 \u2660",
+          "roll": {
+            "exact": 29
+          },
+          "type": "cell"
+        },
+        "Two sets of <a href="/components/items/fine-clothes.html">fine clothes</a>"
+      ],
+      [
+        {
+          "entry": "\u20078 \u2660",
+          "roll": {
+            "exact": 30
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/shovel.html">Shovel</a>"
+      ],
+      [
+        {
+          "entry": "\u20079 \u2660",
+          "roll": {
+            "exact": 31
+          },
+          "type": "cell"
+        },
+        "<a href="/components/items/light-hammer.html">Light hammer</a>"
+      ],
+      [
+        {
+          "entry": "10 \u2660",
+          "roll": {
+            "exact": 32
+          },
+          "type": "cell"
+        },
+        "Ten <a href="/components/items/arrow.html">arrow</a>"
+      ]
+    ],
+    "type": "table"
+  },
+  "The face of each card bears an illustration of a different item or set of items. As an action, you can draw a card of your choice from the deck and throw it to the ground in an unoccupied space within 5 feet of yourself. When the card hits the ground, the card permanently transforms into the item or set of items depicted on its face. An altered deck of real-world playing cards can simulate the deck, as shown on the Deck of Miscellany table."
+]</pre>
+</body>
+</html>

@@ -1,0 +1,81 @@
+---
+processor: [
+    jinja_parser,
+    remove_blank_lines
+]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include '/includes/head.html' %}
+<body>
+
+  <div id="tableOfContents">
+    <button type="button" class="btn btn-warning">Reset All</button>
+    <hr/>
+    <h2 id="Class-Nav"><a href="#Class-Screen">Class</a></h2>
+    <h2 id="Subclass-Nav"><a href="#Subclass-Screen">Subclass</a></h2>
+    <h2 id="Race-Nav"><a href="#Race-Screen">Race</a></h2>
+    <h2 id="Ability-Nav"><a href="#Ability-Screen">Abilities</a></h2>
+    <h2 id="Background-Nav"><a href="#Background-Screen">Background</a></h2>
+    <h2 id="Skill-Nav"><a href="#Skill-Screen">Skills</a></h2>
+    <h2 id="Feat-Nav"><a href="#Feat-Screen">Feats</a></h2>
+    <h2 id="Item-Nav"><a href="#Item-Screen">Items</a></h2>
+    <h2 id="Spell-Nav"><a href="#Spell-Screen">Spells</a></h2>
+    <h2 id="Reference-Nav"><a href="#Reference-Screen">Reference</a></h2>
+  </div>
+
+  <div id="content">
+    <section id="Class-Screen">
+            {% include './includes/class.html' %}
+    </section>
+
+    <section id="Subclass-Screen">
+          {% include './includes/subclass.html' %}
+    </section>
+
+    <section id="Race-Screen"> 
+        
+    </section>
+
+
+
+    <section id="Ability-Screen">
+      <h2>Abilities</h2>
+      <p>Your content for section 3 goes here.</p>
+    </section>
+
+    <section id="Background-Screen"> 
+        <h2>Background</h2>
+    </section>
+
+    <section id="Skill-Screen">
+        <h2>Feats</h2>
+        <p>Your content for section 4 goes here.</p>
+      </section>
+    
+    <section id="Feat-Screen">
+        <h2>Items</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Item-Screen">
+        <h2>Items</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Spell-Screen">
+        <h2>Spells</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Reference-Screen">
+        <h2>Reference</h2>
+        <p>Reference content.</p>
+    </section>
+
+  </div>
+
+
+</body>
+</html>

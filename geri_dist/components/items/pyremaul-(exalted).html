@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Pyremaul (Exalted)</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>TDCSR</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+</ul>
+<hr/>
+Note: this part is still in progres
+<pre>{
+  "_mod": {
+    "entries": [
+      {
+        "items": {
+          "entries": [
+            {
+              "entries": [
+                "When Pyremaul reaches an exalted state, you gain the following benefits:",
+                {
+                  "items": [
+                    "The weapon\u0027s bonus to attack rolls increases to +3.",
+                    "The extra fire damage dealt by the weapon increases to {@dice 3d6}.",
+                    "When you cast {@spell burning hands} with the weapon, you do so at 3rd level and the save DC increases to 17.",
+                    "When you score a critical hit with this weapon, the {@quickref saving throws|PHB|2|1|saving throw} to avoid being knocked {@condition prone} increases to 17. You also roll an extra {@damage 3d6} fire damage when determining the extra damage for the critical hit.",
+                    "When you kill a creature with an attack using this weapon, you can take {@damage 10d10} fire damage and immolate the creature\u0027s corpse. This damage can\u0027t be reduced in any way, and you die if this damage reduces you to 0 hit points. The immolated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of ash. The creature can be restored to life only by means of a {@spell true resurrection} or a {@spell wish} spell. You can\u0027t use this property of the maul again until 7 days have passed."
+                  ],
+                  "type": "list"
+                }
+              ],
+              "name": "Exalted",
+              "type": "entries"
+            }
+          ]
+        },
+        "mode": "appendArr"
+      }
+    ]
+  },
+  "_preserve": {
+    "fluff": true,
+    "page": true
+  },
+  "name": "Pyremaul (Awakened)",
+  "source": "TDCSR"
+}</pre>
+</body>
+</html>

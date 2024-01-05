@@ -1,0 +1,14 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+pre {
+        max-width: 100%;       /* Limit the width to 100% of the parent container */
+        overflow-x: auto;      /* Enable horizontal scrolling if content overflows */
+        white-space: pre-wrap; /* Wrap text to next line if it's too long */
+        word-wrap: break-word; /* Break words if necessary to prevent overflow */
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <script  type="module" src="/js/util/util.js"></script>
+    <script  type="module" src="/js/util/global.js"></script>
+    <title></title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>Name:</td>
+        <td>Chronolometer</td>
+    </tr>
+    <tr>
+        <td>Source:</td>
+        <td>AI</td>
+    </tr>
+    <tr>
+        <td>Page:</td>
+        <td>220</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rarity:</td>
+        <td>very rare</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon Category:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Property:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Range:</td>
+        <td><class 'range'></td>
+    </tr>
+    <tr>
+        <td>Reload</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg1</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dmg Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Firearm</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Ammo Type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SRD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Basic Rules</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Value
+            (in copper, divide by 100 for gold)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AC</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Stealth</td>
+        <td></td>
+    </tr>    
+    <tr>
+        <td>Bonus Weapon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Requires Attunement:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Wondrous:</td>
+        <td>True</td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Attack:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Bonus Spell Save DC:</td>
+        <td></td>
+    </tr>
+</table>
+<hr/>
+<ul>
+            <li>While attuned to this device, you have a +1 bonus to Intelligence saving throws. The first time you attune to the chronolometer, you choose one language you don't know. You subsequently know that language while attuned to the device.</li>
+            <li>Time Bandit</li>
+            <ul>
+                        <li>At the start of your turn, roll a {@dice d6} (no action required). On a 1–3, you slow down time, gaining an additional action on your turn and doubling your speed until the end of the turn. On a 4–6, you go forward in time to warn yourself of what is to come. The next time you fail a saving throw, attack roll, or ability check, you can reroll the check and take either result. Once you use this feature of the chronolometer, it cannot be used again until the next dawn.</li>
+            </ul>
+            <li>Fate Swap</li>
+            <ul>
+                        <li>As a reaction when a creature you can see within 30 feet of you takes damage, that creature gains an additional action if it is the creature's turn, or can take an action immediately even though it isn't the creature's turn. Once you use this feature of the chronolometer, it cannot be used again until the next dawn.</li>
+            </ul>
+            <li>Part of a Whole</li>
+            <ul>
+                        <li>While this component is not installed in the <a href="/components/items/orrery-of-the-wanderer.html">Orrery of the Wanderer</a>, its magic might function sporadically or with unpredictable side effects, as determined by the DM.</li>
+            </ul>
+</ul>
+<hr/>
+Note: this display part is still in progress, here's the complete data:
+<pre>[
+  "While attuned to this device, you have a +1 bonus to Intelligence saving throws. The first time you attune to the chronolometer, you choose one language you don\u0027t know. You subsequently know that language while attuned to the device.",
+  {
+    "entries": [
+      "At the start of your turn, roll a {@dice d6} (no action required). On a 1\u20133, you slow down time, gaining an additional action on your turn and doubling your speed until the end of the turn. On a 4\u20136, you go forward in time to warn yourself of what is to come. The next time you fail a saving throw, attack roll, or ability check, you can reroll the check and take either result. Once you use this feature of the chronolometer, it cannot be used again until the next dawn."
+    ],
+    "name": "Time Bandit",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "As a reaction when a creature you can see within 30 feet of you takes damage, that creature gains an additional action if it is the creature\u0027s turn, or can take an action immediately even though it isn\u0027t the creature\u0027s turn. Once you use this feature of the chronolometer, it cannot be used again until the next dawn."
+    ],
+    "name": "Fate Swap",
+    "type": "entries"
+  },
+  {
+    "entries": [
+      "While this component is not installed in the <a href="/components/items/orrery-of-the-wanderer.html">Orrery of the Wanderer</a>, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
+    ],
+    "name": "Part of a Whole",
+    "type": "entries"
+  }
+]</pre>
+</body>
+</html>

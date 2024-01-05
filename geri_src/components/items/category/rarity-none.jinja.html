@@ -1,0 +1,14 @@
+---
+processor: [jinja_parser, remove_blank_lines]
+json_path: ../data/items/items.json
+start_key: item
+# Note: this
+---
+{% for item in data %}
+    {%  if item.rarity == 'none' %}
+        <ul>
+        <li>{{ item.name }}</li>
+        <li>{{ item.rarity }}</li>
+        </ul>
+    {% endif %}
+{% endfor %}
