@@ -1,13 +1,28 @@
+# hello world!
 def hello_world(value):
     return "hello world"
 
-def json_list_to_html_list(value):
+# converts a list to a simple html structure, can pass in optional class
+def json_list_to_html_list(value, the_class=None):
     out = []
-    out.append("<ul>")
+    if the_class:
+        out.append(f"<ul class={the_class}>")
+    else:
+        out.append("<ul>")
     for item in value:
         out.append(f"<li>{item}</li>")
     out.append("</ul>")
     return "\n".join(out)
+
+# formats a string as a link to an items
+def format_as_item_href(value):
+    # Lowercase the string and replace spaces with dashes
+    formatted_value = value.lower().replace(" ", "-")
+
+    # Create the HTML a href string
+    href = f'<a href="/components/items/{formatted_value}.html">{value}</a>'
+
+    return href
 
 # note: in the jinja template, each item in the list needs to be inside quotes, or if string only needs quotes as well
 def without_keys(d, keys):
@@ -37,15 +52,7 @@ def top_level_keys(value):
         return list(value.keys())
     return value
 
-def format_as_item_href(value):
-    # Lowercase the string and replace spaces with dashes
-    formatted_value = value.lower().replace(" ", "-")
-
-    # Create the HTML a href string
-    href = f'<a href="/components/items/{formatted_value}.html">{value}</a>'
-
-    return href
-
+# returns a recursive type tree for all of the items in the json structure
 def type_tree(obj):
     if isinstance(obj, dict):
         # Handle dictionaries by replacing each value with its type or a recursive call
