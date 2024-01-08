@@ -2,13 +2,16 @@
 processor: [
     jinja_file_parser, 
     remove_blank_lines, 
-    5e_tools_item_tag
+    5e_tools_tag_replace
 ]
 json_project_path: /data/items/items.json
 start_key: item
 filename_key: "{{ name | lower | replace(' ', '-') }}"
 extension: html
-custom_filter_file: ".geraldine/custom_jinja_filters.py"
+custom_filter_files: 
+- ".geraldine/custom_filters/custom_jinja_filters.py"
+- ".geraldine/custom_filters/items/item_jinja_filters.py"
+add_full_data_variable: true
 ---
 
 <!DOCTYPE html>
@@ -21,9 +24,6 @@ custom_filter_file: ".geraldine/custom_jinja_filters.py"
             <title>{{ name }}</title>
         </head>
     <body>
-        
-
-
         <table>
             <tr>
                 <th>Key</th>
@@ -38,8 +38,5 @@ custom_filter_file: ".geraldine/custom_jinja_filters.py"
                 {% endif %}
             {% endfor %}
         </table>
-
-
-
     </body>
 </html>

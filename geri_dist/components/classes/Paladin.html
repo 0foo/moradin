@@ -31,3 +31,130 @@
     <li>Fighting Style: 2</li>
 </ul>
 </div>
+<hr/>
+<pre>{
+  "casterProgression": "1/2",
+  "hd": {
+    "faces": 10,
+    "number": 1
+  },
+  "multiclassing": {
+    "proficienciesGained": {
+      "armor": [
+        "light",
+        "medium",
+        "<a href="/components/items/shield.html">shield</a>"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ]
+    },
+    "requirements": {
+      "cha": 13,
+      "str": 13
+    }
+  },
+  "name": "Paladin",
+  "optionalfeatureProgression": [
+    {
+      "featureType": [
+        "FS:P"
+      ],
+      "name": "Fighting Style",
+      "progression": {
+        "2": 1
+      }
+    }
+  ],
+  "page": 82,
+  "preparedSpells": "\u003c$level$\u003e / 2 + \u003c$cha_mod$\u003e",
+  "proficiency": [
+    "wis",
+    "cha"
+  ],
+  "source": "PHB",
+  "spellcastingAbility": "cha",
+  "srd": true,
+  "startingEquipment": {
+    "additionalFromBackground": true,
+    "default": [
+      "(a) a <a href="/components/items/category/common-weapons.html">martial weapon</a> and a <a href="/components/items/shield.html">shield</a> or (b) two <a href="/components/items/category/common-weapons.html">martial weapons</a>",
+      "(a) five <a href="/components/items/javelin.html">javelin</a> or (b) any <a href="/components/items/category/common-weapons.html">simple melee weapon</a>",
+      "(a) a <a href="/components/items/priest\u0027s-pack.html">priest\u0027s pack</a> or (b) an <a href="/components/items/explorer\u0027s-pack.html">explorer\u0027s pack</a>",
+      "<a href="/components/items/chain-mail.html">Chain mail</a> and a <a href="/components/items/holy-symbol.html">holy symbol</a>"
+    ],
+    "defaultData": [
+      {
+        "a": [
+          {
+            "equipmentType": "weaponMartial"
+          },
+          "shield|phb"
+        ],
+        "b": [
+          {
+            "equipmentType": "weaponMartial",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "a": [
+          {
+            "item": "javelin|phb",
+            "quantity": 5
+          }
+        ],
+        "b": [
+          {
+            "equipmentType": "weaponSimpleMelee"
+          }
+        ]
+      },
+      {
+        "a": [
+          "priest\u0027s pack|phb"
+        ],
+        "b": [
+          "explorer\u0027s pack|phb"
+        ]
+      },
+      {
+        "_": [
+          "Chain mail|phb",
+          "holy symbol|phb"
+        ]
+      }
+    ],
+    "goldAlternative": "{@dice 5d4 \u00d7 10|5d4 \u00d7 10|Starting Gold}"
+  },
+  "startingProficiencies": {
+    "armor": [
+      "light",
+      "medium",
+      "heavy",
+      "<a href="/components/items/shield.html">shield</a>"
+    ],
+    "skills": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "athletics",
+            "insight",
+            "intimidation",
+            "medicine",
+            "persuasion",
+            "religion"
+          ]
+        }
+      }
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ]
+  },
+  "subclassTitle": "Sacred Oath"
+}</pre>

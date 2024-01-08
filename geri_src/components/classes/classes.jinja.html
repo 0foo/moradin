@@ -7,6 +7,9 @@ processor: [
 json_project_path: /data/classes/all_classes.json
 filename_key: "{{class.0.name | urlencode}}"
 extension: html
+custom_filter_files: 
+- ".geraldine/custom_filters/custom_jinja_filters.py"
+add_full_data_variable: true
 ---
 
 {% set class_info = class.0 %}
@@ -56,8 +59,6 @@ extension: html
 </div>
 
 
-
-
 <hr/>
 
 {% if class_info.cantripProgression %}
@@ -78,4 +79,9 @@ extension: html
     {% endfor %}
 </ul>
 </div>
+{% endif %}
+
+<hr/>
+{% if geraldine_full_data %}
+<pre>{{- geraldine_full_data.class.0 | without_keys(["classFeatures", "classTableGroups", "fluff"]) | tojson(indent=2) -}}</pre>
 {% endif %}

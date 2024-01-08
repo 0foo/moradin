@@ -21,3 +21,102 @@
 </div>
 </div>
 <hr/>
+<hr/>
+<pre>{
+  "hd": {
+    "faces": 12,
+    "number": 1
+  },
+  "multiclassing": {
+    "proficienciesGained": {
+      "armor": [
+        "<a href="/components/items/shield.html">shield</a>"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ]
+    },
+    "requirements": {
+      "str": 13
+    }
+  },
+  "name": "Barbarian",
+  "page": 46,
+  "proficiency": [
+    "str",
+    "con"
+  ],
+  "source": "PHB",
+  "srd": true,
+  "startingEquipment": {
+    "additionalFromBackground": true,
+    "default": [
+      "(a) a <a href="/components/items/greataxe.html">greataxe</a> or (b) any <a href="/components/items/category/common-weapons.html">martial melee weapon</a>",
+      "(a) two <a href="/components/items/handaxe.html">handaxe</a> or (b) any <a href="/components/items/category/common-weapons.html">simple weapon</a>",
+      "An <a href="/components/items/explorer\u0027s-pack.html">explorer\u0027s pack</a>, and four <a href="/components/items/javelin.html">javelin</a>"
+    ],
+    "defaultData": [
+      {
+        "a": [
+          "greataxe|phb"
+        ],
+        "b": [
+          {
+            "equipmentType": "weaponMartialMelee"
+          }
+        ]
+      },
+      {
+        "a": [
+          {
+            "item": "handaxe|phb",
+            "quantity": 2
+          }
+        ],
+        "b": [
+          {
+            "equipmentType": "weaponSimple"
+          }
+        ]
+      },
+      {
+        "_": [
+          "explorer\u0027s pack|phb",
+          {
+            "item": "javelin|phb",
+            "quantity": 4
+          }
+        ]
+      }
+    ],
+    "goldAlternative": "{@dice 2d4 \u00d7 10|2d4 \u00d7 10|Starting Gold}"
+  },
+  "startingProficiencies": {
+    "armor": [
+      "light",
+      "medium",
+      "<a href="/components/items/shield.html">shield</a>"
+    ],
+    "skills": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "animal handling",
+            "athletics",
+            "intimidation",
+            "nature",
+            "perception",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ]
+  },
+  "subclassTitle": "Primal Path"
+}</pre>

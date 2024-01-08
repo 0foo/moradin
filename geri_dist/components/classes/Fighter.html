@@ -28,3 +28,137 @@
     <li>Fighting Style: 1</li>
 </ul>
 </div>
+<hr/>
+<pre>{
+  "basicRules": true,
+  "hd": {
+    "faces": 10,
+    "number": 1
+  },
+  "multiclassing": {
+    "proficienciesGained": {
+      "armor": [
+        "light",
+        "medium",
+        "<a href="/components/items/shield.html">shield</a>"
+      ],
+      "weapons": [
+        "simple",
+        "martial"
+      ]
+    },
+    "requirements": {
+      "or": [
+        {
+          "dex": 13,
+          "str": 13
+        }
+      ]
+    }
+  },
+  "name": "Fighter",
+  "optionalfeatureProgression": [
+    {
+      "featureType": [
+        "FS:F"
+      ],
+      "name": "Fighting Style",
+      "progression": {
+        "1": 1
+      }
+    }
+  ],
+  "page": 70,
+  "proficiency": [
+    "str",
+    "con"
+  ],
+  "source": "PHB",
+  "srd": true,
+  "startingEquipment": {
+    "additionalFromBackground": true,
+    "default": [
+      "(a) <a href="/components/items/chain-mail.html">chain mail</a> or (b) <a href="/components/items/leather-armor.html">leather armor</a>, <a href="/components/items/longbow.html">longbow</a>, and <a href="/components/items/arrows-(20).html">arrows (20)</a>",
+      "(a) a <a href="/components/items/category/common-weapons.html">martial weapon</a> and a <a href="/components/items/shield.html">shield</a> or (b) two <a href="/components/items/category/common-weapons.html">martial weapons</a>",
+      "(a) a <a href="/components/items/light-crossbow.html">light crossbow</a> and <a href="/components/items/crossbow-bolts-(20).html">crossbow bolts (20)</a> or (b) two <a href="/components/items/handaxe.html">handaxe</a>",
+      "(a) a <a href="/components/items/dungeoneer\u0027s-pack.html">dungeoneer\u0027s pack</a> or (b) an <a href="/components/items/explorer\u0027s-pack.html">explorer\u0027s pack</a>"
+    ],
+    "defaultData": [
+      {
+        "a": [
+          "chain mail|phb"
+        ],
+        "b": [
+          "leather armor|phb",
+          "longbow|phb",
+          "arrows (20)|phb"
+        ]
+      },
+      {
+        "a": [
+          {
+            "equipmentType": "weaponMartial"
+          },
+          "shield|phb"
+        ],
+        "b": [
+          {
+            "equipmentType": "weaponMartial",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "a": [
+          "light crossbow|phb",
+          "crossbow bolts (20)|phb"
+        ],
+        "b": [
+          {
+            "item": "handaxe|phb",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "a": [
+          "dungeoneer\u0027s pack|phb"
+        ],
+        "b": [
+          "explorer\u0027s pack|phb"
+        ]
+      }
+    ],
+    "goldAlternative": "{@dice 5d4 \u00d7 10|5d4 \u00d7 10|Starting Gold}"
+  },
+  "startingProficiencies": {
+    "armor": [
+      "light",
+      "medium",
+      "heavy",
+      "<a href="/components/items/shield.html">shield</a>"
+    ],
+    "skills": [
+      {
+        "choose": {
+          "count": 2,
+          "from": [
+            "acrobatics",
+            "animal handling",
+            "athletics",
+            "history",
+            "insight",
+            "intimidation",
+            "perception",
+            "survival"
+          ]
+        }
+      }
+    ],
+    "weapons": [
+      "simple",
+      "martial"
+    ]
+  },
+  "subclassTitle": "Martial Archetype"
+}</pre>

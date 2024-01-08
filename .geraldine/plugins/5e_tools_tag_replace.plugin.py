@@ -1,6 +1,5 @@
 import re
 
-
 def convert_simple_weapon_tags_to_links(text):
     # Define the regex pattern to find and capture the parts of the tags
     # pattern = r'\{@filter ([^|]*)\|[^}]*type=simple weapon[^}]*\}'
@@ -34,8 +33,8 @@ def convert_item_tags_to_links(text):
     
     # Function to process each match
     def replace_with_link(match):
-        # Split the content of the tag on '|'
         parts = match.group(1).split('|')
+        # Split the content of the tag on '|'
         # Extract the first part and replace spaces with dashes, add '.html' at the end
         item_name = parts[0].strip().replace(' ', '-').lower() + '.html'
         # Construct the URL

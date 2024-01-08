@@ -1,64 +1,3 @@
-def hello_world(value):
-    return "hello world"
-
-def json_list_to_html_list(value):
-    out = []
-    out.append("<ul>")
-    for item in value:
-        out.append(f"<li>{item}</li>")
-    out.append("</ul>")
-    return "\n".join(out)
-
-"""
-def entry_processor(value):
-    out = []
-    def open_ul():
-        out.append("<ul>")
-
-    def add_item(item):
-        out.append(f"<li>{item}</li>")
-
-    def add_pre(item):
-        out.append(f"<pre>{item}</pre>")
-
-    def close_ul():
-        out.append("</ul>")
-
-    def type_processor(item):
-        if item["type"] == "entries"
-            add_item(item["name"])
-            process_entry(item["entries"])
-        if item["type"] == "table": # line 4773 
-            item = json.dumps(item)
-            add_pre(item) 
-        if item["type"] == "list:  # line 5017
-            the_list = json_list_to_html_list(item["entries"])
-            out.append(the_list)
-
-
-    def process_entry(entry, indent=0):
-        open_ul()
-        for item in entry:
-            if isinstance(item, str):
-                add_item(item)
-            if isinstance(item, dict):
-    
-        close_ul()
-
-    return "\n".join(out)
-"""
-
-
-
-def format_as_item_href(value):
-    # Lowercase the string and replace spaces with dashes
-    formatted_value = value.lower().replace(" ", "-")
-
-    # Create the HTML a href string
-    href = f'<a href="/components/items/{formatted_value}.html">{value}</a>'
-
-    return href
-
 def process_focus(focus):
     if focus is not None:
         if isinstance(focus, (list, tuple)):
@@ -121,3 +60,42 @@ def entry_to_html(data):
 
     return html_output
 
+
+"""
+def entry_processor(value):
+    out = []
+    def open_ul():
+        out.append("<ul>")
+
+    def add_item(item):
+        out.append(f"<li>{item}</li>")
+
+    def add_pre(item):
+        out.append(f"<pre>{item}</pre>")
+
+    def close_ul():
+        out.append("</ul>")
+
+    def type_processor(item):
+        if item["type"] == "entries"
+            add_item(item["name"])
+            process_entry(item["entries"])
+        if item["type"] == "table": # line 4773 
+            item = json.dumps(item)
+            add_pre(item) 
+        if item["type"] == "list:  # line 5017
+            the_list = json_list_to_html_list(item["entries"])
+            out.append(the_list)
+
+
+    def process_entry(entry, indent=0):
+        open_ul()
+        for item in entry:
+            if isinstance(item, str):
+                add_item(item)
+            if isinstance(item, dict):
+    
+        close_ul()
+
+    return "\n".join(out)
+"""
