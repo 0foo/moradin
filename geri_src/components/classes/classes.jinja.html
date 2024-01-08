@@ -83,5 +83,8 @@ add_full_data_variable: true
 
 <hr/>
 {% if geraldine_full_data %}
+<pre> {{- geraldine_full_data.class.0| without_keys(["classFeatures", "classTableGroups", "fluff"]) | type_tree | tojson(indent=2) -}}</pre>
+
+<hr/>
 <pre>{{- geraldine_full_data.class.0 | without_keys(["classFeatures", "classTableGroups", "fluff"]) | tojson(indent=2) -}}</pre>
 {% endif %}

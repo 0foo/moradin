@@ -30,6 +30,92 @@
 </div>
 <hr/>
 <pre>{
+  "basicRules": "bool",
+  "hd": {
+    "faces": "int",
+    "number": "int"
+  },
+  "multiclassing": {
+    "proficienciesGained": {
+      "armor": [],
+      "weapons": []
+    },
+    "requirements": {
+      "or": [
+        {
+          "dex": "int",
+          "str": "int"
+        }
+      ]
+    }
+  },
+  "name": "str",
+  "optionalfeatureProgression": [
+    {
+      "featureType": [],
+      "name": "str",
+      "progression": {
+        "1": "int"
+      }
+    }
+  ],
+  "page": "int",
+  "proficiency": [],
+  "source": "str",
+  "srd": "bool",
+  "startingEquipment": {
+    "additionalFromBackground": "bool",
+    "default": [],
+    "defaultData": [
+      {
+        "a": [],
+        "b": []
+      },
+      {
+        "a": [
+          {
+            "equipmentType": "str"
+          }
+        ],
+        "b": [
+          {
+            "equipmentType": "str",
+            "quantity": "int"
+          }
+        ]
+      },
+      {
+        "a": [],
+        "b": [
+          {
+            "item": "str",
+            "quantity": "int"
+          }
+        ]
+      },
+      {
+        "a": [],
+        "b": []
+      }
+    ],
+    "goldAlternative": "str"
+  },
+  "startingProficiencies": {
+    "armor": [],
+    "skills": [
+      {
+        "choose": {
+          "count": "int",
+          "from": []
+        }
+      }
+    ],
+    "weapons": []
+  },
+  "subclassTitle": "str"
+}</pre>
+<hr/>
+<pre>{
   "basicRules": true,
   "hd": {
     "faces": 10,
