@@ -1,154 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Infiltrator's Key (Dormant)</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>EGW</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>272</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['Vst']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+1</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.</li>
-            <li>Dormant</li>
-            <ul>
-                        <li>The Infiltrator's Key grants the following benefits in its dormant state:</li>
-                        <ul>
-                                <li>The key can be used as <a href="/components/items/thieves'-tools.html">thieves' tools</a> for the purpose of opening locks. When using the key, you are considered proficient in <a href="/components/items/thieves'-tools.html">thieves' tools</a> and you have advantage on ability checks made to open locks.</li>
-                                <li>While holding the key, your steps are muffled, giving you advantage on Dexterity ({@skill Stealth}) checks made to move silently.</li>
-                        </ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.",
-  {
-    "entries": [
-      "The Infiltrator\u0027s Key grants the following benefits in its dormant state:",
-      {
-        "items": [
-          "The key can be used as <a href="/components/items/thieves\u0027-tools.html">thieves\u0027 tools</a> for the purpose of opening locks. When using the key, you are considered proficient in <a href="/components/items/thieves\u0027-tools.html">thieves\u0027 tools</a> and you have advantage on ability checks made to open locks.",
-          "While holding the key, your steps are muffled, giving you advantage on Dexterity ({@skill Stealth}) checks made to move silently."
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Dormant",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Infiltrator's Key (Dormant)</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Infiltrator's Key (Dormant)</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>EGW</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>272</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['Vst']</td>
+                </tr>
+                <tr>
+                    <td>grantsProficiency</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This mithral skeleton key was forged using the blood of twelve master thieves executed for trying to steal magic items during the Age of Arcanum.', {'type': 'entries', 'name': 'Dormant', 'entries': ["The Infiltrator's Key grants the following benefits in its dormant state:", {'type': 'list', 'items': ["The key can be used as {@item thieves' tools|phb} for the purpose of opening locks. When using the key, you are considered proficient in {@item thieves' tools|PHB} and you have advantage on ability checks made to open locks.", 'While holding the key, your steps are muffled, giving you advantage on Dexterity ({@skill Stealth}) checks made to move silently.']}]}]</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

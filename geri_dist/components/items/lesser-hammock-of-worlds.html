@@ -1,134 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Lesser Hammock of Worlds</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>JttRC</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>214</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>The Hammock of Worlds is a colorful hammock woven with traditional Ataguan designs.</li>
-            <li>You can use an action to unfold and place the lesser version of the Hammock of Worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads or the user can cause it to always reliably connect to the Ghost Orchid Tepui. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once the lesser version of the Hammock of Worlds has opened a portal, it can't do so again for {@dice 1d8} hours.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "The Hammock of Worlds is a colorful hammock woven with traditional Ataguan designs.",
-  "You can use an action to unfold and place the lesser version of the Hammock of Worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads or the user can cause it to always reliably connect to the Ghost Orchid Tepui. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once the lesser version of the Hammock of Worlds has opened a portal, it can\u0027t do so again for {@dice 1d8} hours."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Lesser Hammock of Worlds</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Lesser Hammock of Worlds</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>JttRC</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>214</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['The Hammock of Worlds is a colorful hammock woven with traditional Ataguan designs.', "You can use an action to unfold and place the lesser version of the Hammock of Worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads or the user can cause it to always reliably connect to the Ghost Orchid Tepui. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once the lesser version of the Hammock of Worlds has opened a portal, it can't do so again for {@dice 1d8} hours."]</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

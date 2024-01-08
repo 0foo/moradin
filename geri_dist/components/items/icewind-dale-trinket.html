@@ -1,247 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Icewind Dale Trinket</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>IDRotF</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>263</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>G</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>none</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  {
-    "caption": "Icewind Dale Trinkets",
-    "colLabels": [
-      "d100",
-      "Trinket"
-    ],
-    "colStyles": [
-      "col-2 text-center",
-      "col-10"
-    ],
-    "rows": [
-      [
-        "01\u201304",
-        "A small wooden figurine of a yawning walrus, painted in red and black"
-      ],
-      [
-        "05\u201308",
-        "A pair of scrimshaw cufflinks with an image of a fisherman on a boat engraved on them"
-      ],
-      [
-        "09\u201312",
-        "A small iron key with a frayed blue and gold cord tied to it"
-      ],
-      [
-        "13\u201316",
-        "A small illustrated book of Northlander myths that has pages missing"
-      ],
-      [
-        "17\u201320",
-        "A damaged scrimshaw cameo depicting a merfolk"
-      ],
-      [
-        "21\u201324",
-        "A stone from a burial cairn with a tiny Dwarvish rune carved into it"
-      ],
-      [
-        "25\u201328",
-        "A ripped cloth sail with a symbol you don\u0027t recognize"
-      ],
-      [
-        "29\u201332",
-        "An Ulu knife with a scrimshaw handle"
-      ],
-      [
-        "33\u201336",
-        "A jar containing an unidentifiable, sweet, sticky substance"
-      ],
-      [
-        "37\u201340",
-        "A delicate glass ball painted with snowflakes, capped by a metal loop with a tiny hook attached to it"
-      ],
-      [
-        "41\u201344",
-        "An expedition log with missing pages and a pressed flower used as a bookmark"
-      ],
-      [
-        "45\u201348",
-        "An owl figurine carved from whalebone"
-      ],
-      [
-        "49\u201352",
-        "A sewing box that smells of old wood and has three spools of blue thread inside"
-      ],
-      [
-        "53\u201356",
-        "A scrimshaw-handled ink pen with black runic designs along its length"
-      ],
-      [
-        "57\u201360",
-        "A brooch made from a small insect encased in amber"
-      ],
-      [
-        "61\u201364",
-        "A scrimshaw pepper shaker etched with the letter W"
-      ],
-      [
-        "65\u201368",
-        "An old, wooden-handled ice pick stained with blood that won\u0027t wash off"
-      ],
-      [
-        "69\u201372",
-        "A fabric doll bearing an angry expression"
-      ],
-      [
-        "73\u201376",
-        "A set of wind chimes made from seashells"
-      ],
-      [
-        "77\u201380",
-        "A beautiful silver tin that, when opened, emits the smell of rotting fish"
-      ],
-      [
-        "81\u201384",
-        "A bloodstained dreamcatcher made from fishing line, gold wire, and snowy owlbear feathers"
-      ],
-      [
-        "85\u201388",
-        "A figurine of a polar bear made of ice that never melts"
-      ],
-      [
-        "89\u201392",
-        "A snow globe that doesn\u0027t need to be shaken"
-      ],
-      [
-        "93\u201396",
-        "A piece of sea glass shaped like a unicorn\u0027s horn"
-      ],
-      [
-        "97\u201300",
-        "A dark blue scarf that gets lighter in shade the higher the altitude of the wearer"
-      ]
-    ],
-    "type": "table"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Icewind Dale Trinket</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Icewind Dale Trinket</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>IDRotF</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>263</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>G</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>[{'type': 'table', 'caption': 'Icewind Dale Trinkets', 'colLabels': ['d100', 'Trinket'], 'colStyles': ['col-2 text-center', 'col-10'], 'rows': [['01–04', 'A small wooden figurine of a yawning walrus, painted in red and black'], ['05–08', 'A pair of scrimshaw cufflinks with an image of a fisherman on a boat engraved on them'], ['09–12', 'A small iron key with a frayed blue and gold cord tied to it'], ['13–16', 'A small illustrated book of Northlander myths that has pages missing'], ['17–20', 'A damaged scrimshaw cameo depicting a merfolk'], ['21–24', 'A stone from a burial cairn with a tiny Dwarvish rune carved into it'], ['25–28', "A ripped cloth sail with a symbol you don't recognize"], ['29–32', 'An Ulu knife with a scrimshaw handle'], ['33–36', 'A jar containing an unidentifiable, sweet, sticky substance'], ['37–40', 'A delicate glass ball painted with snowflakes, capped by a metal loop with a tiny hook attached to it'], ['41–44', 'An expedition log with missing pages and a pressed flower used as a bookmark'], ['45–48', 'An owl figurine carved from whalebone'], ['49–52', 'A sewing box that smells of old wood and has three spools of blue thread inside'], ['53–56', 'A scrimshaw-handled ink pen with black runic designs along its length'], ['57–60', 'A brooch made from a small insect encased in amber'], ['61–64', 'A scrimshaw pepper shaker etched with the letter W'], ['65–68', "An old, wooden-handled ice pick stained with blood that won't wash off"], ['69–72', 'A fabric doll bearing an angry expression'], ['73–76', 'A set of wind chimes made from seashells'], ['77–80', 'A beautiful silver tin that, when opened, emits the smell of rotting fish'], ['81–84', 'A bloodstained dreamcatcher made from fishing line, gold wire, and snowy owlbear feathers'], ['85–88', 'A figurine of a polar bear made of ice that never melts'], ['89–92', "A snow globe that doesn't need to be shaken"], ['93–96', "A piece of sea glass shaped like a unicorn's horn"], ['97–00', 'A dark blue scarf that gets lighter in shade the higher the altitude of the wearer']]}]</td>
+                </tr>
+                <tr>
+                    <td>miscTags</td>
+                    <td>['TT']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

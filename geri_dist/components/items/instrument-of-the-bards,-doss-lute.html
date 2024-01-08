@@ -1,140 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Instrument of the Bards, Doss Lute</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>176</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>INS</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>uncommon</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>by a bard</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>An instrument of the bards is an exquisite example of its kind, superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a legendary bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take {@damage 2d4} psychic damage.</li>
-            <li>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.</li>
-            <li>You can play the instrument while casting a spell that causes any of its targets to be {@condition charmed} on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.</li>
-            <li>All instruments of the bards can be used to cast the following spells: {@spell fly}, {@spell invisibility}, {@spell levitate}, and {@spell protection from evil and good}.</li>
-            <li>In addition, the Doss lute can be used to cast {@spell animal friendship}, {@spell protection from energy} (fire only), and {@spell protection from poison}.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "An instrument of the bards is an exquisite example of its kind, superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a legendary bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take {@damage 2d4} psychic damage.",
-  "You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can\u0027t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
-  "You can play the instrument while casting a spell that causes any of its targets to be {@condition charmed} on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.",
-  "All instruments of the bards can be used to cast the following spells: {@spell fly}, {@spell invisibility}, {@spell levitate}, and {@spell protection from evil and good}.",
-  "In addition, the Doss lute can be used to cast {@spell animal friendship}, {@spell protection from energy} (fire only), and {@spell protection from poison}."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Instrument of the Bards, Doss Lute</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Instrument of the Bards, Doss Lute</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>176</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>INS</td>
+                </tr>
+                <tr>
+                    <td>tier</td>
+                    <td>major</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>uncommon</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>by a bard</td>
+                </tr>
+                <tr>
+                    <td>reqAttuneTags</td>
+                    <td>[{'class': 'bard'}]</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['An instrument of the bards is an exquisite example of its kind, superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a legendary bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take {@damage 2d4} psychic damage.', "You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.", 'You can play the instrument while casting a spell that causes any of its targets to be {@condition charmed} on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.', 'All instruments of the bards can be used to cast the following spells: {@spell fly}, {@spell invisibility}, {@spell levitate}, and {@spell protection from evil and good}.', 'In addition, the Doss lute can be used to cast {@spell animal friendship}, {@spell protection from energy} (fire only), and {@spell protection from poison}.']</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['animal friendship', 'fly', 'invisibility', 'levitate', 'protection from evil and good', 'protection from energy', 'protection from poison']</td>
+                </tr>
+                <tr>
+                    <td>lootTables</td>
+                    <td>['Magic Item Table F']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

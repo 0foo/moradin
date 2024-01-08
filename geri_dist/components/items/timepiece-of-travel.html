@@ -1,167 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Timepiece of Travel</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>AI</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>221</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>very rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>While attuned to this device, you have a +1 bonus to Dexterity saving throws and you always know which way is north. Additionally, you can cast the {@spell longstrider} spell on yourself at will.</li>
-            <li>Turn-by-Turn Directions</li>
-            <ul>
-                        <li>You can name any location within 10 miles of your current location that is known to at least one creature also within 10 miles of that location (including you). Once you name the location, a disembodied voice heard only by you provides directions to the location by the safest, most direct route. The voice knows to avoid natural hazards, so that it does not send you through trackless wilderness or into a lake. But it has no knowledge of or ability to help you avoid monsters, enemies, traps, locked doors, and the like.</li>
-                        <li>The timepiece is of no use for reaching locations that are wholly secret or not known to any creatures within range. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn.</li>
-            </ul>
-            <li>Get Away From It All</li>
-            <ul>
-                        <li>As an action, you can cast the {@spell teleport} spell. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn.</li>
-            </ul>
-            <li>Part of a Whole</li>
-            <ul>
-                        <li>While this component is not installed in the <a href="/components/items/orrery-of-the-wanderer.html">Orrery of the Wanderer</a>, its magic might function sporadically or with unpredictable side effects, as determined by the DM.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "While attuned to this device, you have a +1 bonus to Dexterity saving throws and you always know which way is north. Additionally, you can cast the {@spell longstrider} spell on yourself at will.",
-  {
-    "entries": [
-      "You can name any location within 10 miles of your current location that is known to at least one creature also within 10 miles of that location (including you). Once you name the location, a disembodied voice heard only by you provides directions to the location by the safest, most direct route. The voice knows to avoid natural hazards, so that it does not send you through trackless wilderness or into a lake. But it has no knowledge of or ability to help you avoid monsters, enemies, traps, locked doors, and the like.",
-      "The timepiece is of no use for reaching locations that are wholly secret or not known to any creatures within range. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn."
-    ],
-    "name": "Turn-by-Turn Directions",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "As an action, you can cast the {@spell teleport} spell. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn."
-    ],
-    "name": "Get Away From It All",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While this component is not installed in the <a href="/components/items/orrery-of-the-wanderer.html">Orrery of the Wanderer</a>, its magic might function sporadically or with unpredictable side effects, as determined by the DM."
-    ],
-    "name": "Part of a Whole",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Timepiece of Travel</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Timepiece of Travel</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>AI</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>221</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>very rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>bonusSavingThrow</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['While attuned to this device, you have a +1 bonus to Dexterity saving throws and you always know which way is north. Additionally, you can cast the {@spell longstrider} spell on yourself at will.', {'type': 'entries', 'name': 'Turn-by-Turn Directions', 'entries': ['You can name any location within 10 miles of your current location that is known to at least one creature also within 10 miles of that location (including you). Once you name the location, a disembodied voice heard only by you provides directions to the location by the safest, most direct route. The voice knows to avoid natural hazards, so that it does not send you through trackless wilderness or into a lake. But it has no knowledge of or ability to help you avoid monsters, enemies, traps, locked doors, and the like.', 'The timepiece is of no use for reaching locations that are wholly secret or not known to any creatures within range. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn.']}, {'type': 'entries', 'name': 'Get Away From It All', 'entries': ['As an action, you can cast the {@spell teleport} spell. Once you use this feature of the timepiece of travel, it cannot be used again until the next dawn.']}, {'type': 'entries', 'name': 'Part of a Whole', 'entries': ['While this component is not installed in the {@item Orrery of the Wanderer|AI}, its magic might function sporadically or with unpredictable side effects, as determined by the DM.']}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['longstrider', 'teleport']</td>
+                </tr>
+        </table>
+    </body>
 </html>

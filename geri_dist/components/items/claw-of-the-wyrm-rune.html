@@ -1,167 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Claw of the Wyrm Rune</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>SKT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>233</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This dragon's claw has been covered with a coat of molten silver, upon which has been inscribed the wyrm (dragon) rune. The claw has the following properties.</li>
-            <li>Wyrmslayer</li>
-            <ul>
-                        <li>As an action, you can point the claw at a dragon within 30 feet of you. The dragon must then succeed on a DC 15 Constitution saving throw or gain vulnerability to all damage types until the end of your next turn. This property can be used three times. The claw regains all expended uses at the next dawn.</li>
-            </ul>
-            <li>Wyrm Shield</li>
-            <ul>
-                        <li>While the claw is displayed on your person, you have resistance to the damage caused by any dragon's breath weapon.</li>
-            </ul>
-            <li>Wyrm Ward</li>
-            <ul>
-                        <li>You can transfer the claw's magic to a place by tracing the wyrm rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 100-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the claw to be within 5 feet of you. At the end, the claw is destroyed, and the area gains the following property:</li>
-                        <li>While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This dragon\u0027s claw has been covered with a coat of molten silver, upon which has been inscribed the wyrm (dragon) rune. The claw has the following properties.",
-  {
-    "entries": [
-      "As an action, you can point the claw at a dragon within 30 feet of you. The dragon must then succeed on a DC 15 Constitution saving throw or gain vulnerability to all damage types until the end of your next turn. This property can be used three times. The claw regains all expended uses at the next dawn."
-    ],
-    "name": "Wyrmslayer",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While the claw is displayed on your person, you have resistance to the damage caused by any dragon\u0027s breath weapon."
-    ],
-    "name": "Wyrm Shield",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "You can transfer the claw\u0027s magic to a place by tracing the wyrm rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 100-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the claw to be within 5 feet of you. At the end, the claw is destroyed, and the area gains the following property:",
-      "While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet."
-    ],
-    "name": "Wyrm Ward",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Claw of the Wyrm Rune</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Claw of the Wyrm Rune</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>SKT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>233</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["This dragon's claw has been covered with a coat of molten silver, upon which has been inscribed the wyrm (dragon) rune. The claw has the following properties.", {'name': 'Wyrmslayer', 'type': 'entries', 'entries': ['As an action, you can point the claw at a dragon within 30 feet of you. The dragon must then succeed on a DC 15 Constitution saving throw or gain vulnerability to all damage types until the end of your next turn. This property can be used three times. The claw regains all expended uses at the next dawn.']}, {'name': 'Wyrm Shield', 'type': 'entries', 'entries': ["While the claw is displayed on your person, you have resistance to the damage caused by any dragon's breath weapon."]}, {'name': 'Wyrm Ward', 'type': 'entries', 'entries': ["You can transfer the claw's magic to a place by tracing the wyrm rune on the ground with your finger. The point where you trace it becomes the center of a spherical area of magic that has a 100-foot radius and that is fixed to the place. The transfer takes 8 hours of work that requires the claw to be within 5 feet of you. At the end, the claw is destroyed, and the area gains the following property:", 'While in the 100-foot-radius sphere, any dragon has disadvantage on saving throws and can have a flying speed no higher than 10 feet.']}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

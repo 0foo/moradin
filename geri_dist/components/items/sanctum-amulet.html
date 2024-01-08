@@ -1,147 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Sanctum Amulet</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BGG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>116</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>very rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>A black opal pendant hangs at the base of this pearlescent chain. The sacred rune is inscribed on the back of the pendant.</li>
-            <li>While wearing this item, you have resistance to necrotic damage. Additionally, you can cast the {@spell spare the dying} cantrip using either an action or a bonus action.</li>
-            <li>Invoking the Rune</li>
-            <ul>
-                        <li>When a creature you can see within 60 feet of you is reduced to 0 hit points as a result of taking damage, you can use your reaction to invoke the item's rune, causing the pendant to flash with pale light. The creature then instead drops to 1 hit point.</li>
-                        <li>Once the rune has been invoked, it can't be invoked again until the next dawn.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "A black opal pendant hangs at the base of this pearlescent chain. The sacred rune is inscribed on the back of the pendant.",
-  "While wearing this item, you have resistance to necrotic damage. Additionally, you can cast the {@spell spare the dying} cantrip using either an action or a bonus action.",
-  {
-    "entries": [
-      "When a creature you can see within 60 feet of you is reduced to 0 hit points as a result of taking damage, you can use your reaction to invoke the item\u0027s rune, causing the pendant to flash with pale light. The creature then instead drops to 1 hit point.",
-      "Once the rune has been invoked, it can\u0027t be invoked again until the next dawn."
-    ],
-    "name": "Invoking the Rune",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Sanctum Amulet</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Sanctum Amulet</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BGG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>116</td>
+                </tr>
+                <tr>
+                    <td>resist</td>
+                    <td>['necrotic']</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>very rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['A black opal pendant hangs at the base of this pearlescent chain. The sacred rune is inscribed on the back of the pendant.', 'While wearing this item, you have resistance to necrotic damage. Additionally, you can cast the {@spell spare the dying} cantrip using either an action or a bonus action.', {'type': 'entries', 'name': 'Invoking the Rune', 'entries': ["When a creature you can see within 60 feet of you is reduced to 0 hit points as a result of taking damage, you can use your reaction to invoke the item's rune, causing the pendant to flash with pale light. The creature then instead drops to 1 hit point.", "Once the rune has been invoked, it can't be invoked again until the next dawn."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['spare the dying']</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,159 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Breastplate of Balance</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BMT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>34</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>MA</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>20</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td>14</td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This burnished copper breastplate looks as if it were made of interlocking gears. Merchant's scales are emblazoned across the chest.</li>
-            <li>The armor has 4 charges. You can use the charges in the following ways while wearing the armor:</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This burnished copper breastplate looks as if it were made of interlocking gears. Merchant\u0027s scales are emblazoned across the chest.",
-  "The armor has 4 charges. You can use the charges in the following ways while wearing the armor:",
-  {
-    "items": [
-      {
-        "entries": [
-          "When you or a creature you can see within 60 feet of yourself is about to roll a {@dice d20} with advantage or disadvantage, you can expend 1 charge and take a reaction to prevent the roll from being affected by advantage or disadvantage."
-        ],
-        "name": "Equalize",
-        "type": "item"
-      },
-      {
-        "entries": [
-          "As a bonus action, you can expend 2 charges to cast the {@spell Lesser Restoration} spell from the armor.",
-          "The armor regains {@dice 1d4} expended charges daily at dawn.",
-          "This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer\u0027s vital organs while leaving the wearer relatively unencumbered."
-        ],
-        "name": "Expunge Imbalance",
-        "type": "item"
-      }
-    ],
-    "style": "list-hang-notitle",
-    "type": "list"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Breastplate of Balance</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Breastplate of Balance</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BMT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>baseItem</td>
+                    <td>breastplate|PHB</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>MA</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>ac</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d4}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["This burnished copper breastplate looks as if it were made of interlocking gears. Merchant's scales are emblazoned across the chest.", 'The armor has 4 charges. You can use the charges in the following ways while wearing the armor:', {'type': 'list', 'style': 'list-hang-notitle', 'items': [{'type': 'item', 'name': 'Equalize', 'entries': ['When you or a creature you can see within 60 feet of yourself is about to roll a {@dice d20} with advantage or disadvantage, you can expend 1 charge and take a reaction to prevent the roll from being affected by advantage or disadvantage.']}, {'type': 'item', 'name': 'Expunge Imbalance', 'entries': ['As a bonus action, you can expend 2 charges to cast the {@spell Lesser Restoration} spell from the armor.', 'The armor regains {@dice 1d4} expended charges daily at dawn.', "This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered."]}]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['lesser restoration']</td>
+                </tr>
+        </table>
+    </body>
 </html>

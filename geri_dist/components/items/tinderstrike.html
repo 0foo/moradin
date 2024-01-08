@@ -1,178 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Tinderstrike</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>PotA</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>224</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>M</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>simple</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['F', 'L', 'T']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td>20/60</td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d4</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>P</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+2</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>A flint dagger, Tinderstrike is uncommonly sharp, and sparks cascade off its edge whenever it strikes something solid. Its handle is always warm to the touch, and the blade smolders for {@dice 1d4} minutes after it is used to deal damage. It contains a spark of {@creature Imix|PotA}, Prince of Evil Fire.</li>
-            <li>You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the target takes an extra {@damage 2d6} fire damage.</li>
-            <li>Fire Mastery</li>
-            <ul>
-                        <li>You gain the following benefits while you hold Tinderstrike:</li>
-            </ul>
-            <li></li>
-            <ul>
-            </ul>
-            <li>Dance of the All-Consuming Fire</li>
-            <ul>
-                        <li>While inside a fire node, you can perform a ritual called the Dance of the All-Consuming Fire, using Tinderstrike to create a <a href="/components/items/devastation-orb-of-fire.html">devastation orb of fire</a>. Once you perform the ritual, Tinderstrike can't be used to perform the ritual again until the next dawn.</li>
-            </ul>
-            <li>Flaw</li>
-            <ul>
-                        <li>Tinderstrike makes its wielder impatient and rash. While attuned to the weapon, you gain the following flaw: "I act without thinking and take risks without weighing the consequences."</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "A flint dagger, Tinderstrike is uncommonly sharp, and sparks cascade off its edge whenever it strikes something solid. Its handle is always warm to the touch, and the blade smolders for {@dice 1d4} minutes after it is used to deal damage. It contains a spark of {@creature Imix|PotA}, Prince of Evil Fire.",
-  "You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the target takes an extra {@damage 2d6} fire damage.",
-  {
-    "entries": [
-      "You gain the following benefits while you hold Tinderstrike:"
-    ],
-    "name": "Fire Mastery",
-    "type": "entries"
-  },
-  {
-    "items": [
-      "You can speak Ignan fluently.",
-      "You have resistance to fire damage.",
-      "You can cast {@spell dominate monster} (save DC 17) on a {@creature fire elemental}. Once you have done so, Tinderstrike can\u0027t be used this way again until the next dawn."
-    ],
-    "type": "list"
-  },
-  {
-    "entries": [
-      "While inside a fire node, you can perform a ritual called the Dance of the All-Consuming Fire, using Tinderstrike to create a <a href="/components/items/devastation-orb-of-fire.html">devastation orb of fire</a>. Once you perform the ritual, Tinderstrike can\u0027t be used to perform the ritual again until the next dawn."
-    ],
-    "name": "Dance of the All-Consuming Fire",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "Tinderstrike makes its wielder impatient and rash. While attuned to the weapon, you gain the following flaw: \"I act without thinking and take risks without weighing the consequences.\""
-    ],
-    "name": "Flaw",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Tinderstrike</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Tinderstrike</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>PotA</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>224</td>
+                </tr>
+                <tr>
+                    <td>baseItem</td>
+                    <td>dagger|phb</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>resist</td>
+                    <td>['fire']</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>simple</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['F', 'L', 'T']</td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td>20/60</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d4</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td>grantsLanguage</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['A flint dagger, Tinderstrike is uncommonly sharp, and sparks cascade off its edge whenever it strikes something solid. Its handle is always warm to the touch, and the blade smolders for {@dice 1d4} minutes after it is used to deal damage. It contains a spark of {@creature Imix|PotA}, Prince of Evil Fire.', 'You gain a +2 bonus to attack and damage rolls made with this magic weapon. When you hit with it, the target takes an extra {@damage 2d6} fire damage.', {'name': 'Fire Mastery', 'type': 'entries', 'entries': ['You gain the following benefits while you hold Tinderstrike:']}, {'type': 'list', 'items': ['You can speak Ignan fluently.', 'You have resistance to fire damage.', "You can cast {@spell dominate monster} (save DC 17) on a {@creature fire elemental}. Once you have done so, Tinderstrike can't be used this way again until the next dawn."]}, {'type': 'entries', 'name': 'Dance of the All-Consuming Fire', 'entries': ["While inside a fire node, you can perform a ritual called the Dance of the All-Consuming Fire, using Tinderstrike to create a {@item devastation orb of fire|PotA}. Once you perform the ritual, Tinderstrike can't be used to perform the ritual again until the next dawn."]}, {'name': 'Flaw', 'type': 'entries', 'entries': ['Tinderstrike makes its wielder impatient and rash. While attuned to the weapon, you gain the following flaw: "I act without thinking and take risks without weighing the consequences."']}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['dominate monster']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,138 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Suude (Blue)</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>TDCSR</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>85</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>IDG</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>unknown (magic)</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Exandria's most infamous drug, <a href="/components/items/suude.html">suude</a> is a glittering powder made from {@book residuum|TDCSR|3|An Enchanting Export}. It was first developed by power-hungry archmages in the {@book Age of Arcanum|TDCSR|1|Age of Arcanum} as an incense burned to enhance focus during ritual spellcasting. The secret to its refinement has been lost and rediscovered a variety of times since the {@book Calamity|TDCSR|1|The Calamity}, and many different types of <a href="/components/items/suude.html">suude</a> have been developed by arcanists in search of ever-greater power. It has terrible addictive and mentally degenerative properties, even when used sparingly.</li>
-            <li>After burning <a href="/components/items/suude.html">suude</a> within a vessel and inhaling its fumes as an action, you take 22 ({@damage 4d10}) psychic damage and must make a {@dc 10} Constitution {@quickref saving throws|PHB|2|1|saving throw}. On a failure, you become {@condition poisoned} for 1 hour and fall {@condition unconscious} for 1 minute, or until you are shaken awake as an action. During this time, the world seems to move in slow motion, and your vision is twisted in kaleidoscopic colors—yet your focus is never distorted. If one dose of <a href="/components/items/suude.html">suude</a>, or more, is used within 1 hour of another, the DC of the Constitution {@quickref saving throws|PHB|2|1|saving throw} is increased by 5 per additional dose. If you fail this save by 10 or more, you instantly drop to 0 hit points.</li>
-            <li>On a success, you gain the ability to use one of the following Metamagic options as a sorcerer for the next minute, requiring no sorcery points. The type of Metamagic you gain access to depends on the type of <a href="/components/items/suude.html">suude</a>, and once you use it, you can't use it again until you inhale <a href="/components/items/suude.html">suude</a> again.</li>
-            <li>Blue suude allows you to use the {@optfeature Twinned Spell|PHB} Metamagic option.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Exandria\u0027s most infamous drug, <a href="/components/items/suude.html">suude</a> is a glittering powder made from {@book residuum|TDCSR|3|An Enchanting Export}. It was first developed by power-hungry archmages in the {@book Age of Arcanum|TDCSR|1|Age of Arcanum} as an incense burned to enhance focus during ritual spellcasting. The secret to its refinement has been lost and rediscovered a variety of times since the {@book Calamity|TDCSR|1|The Calamity}, and many different types of <a href="/components/items/suude.html">suude</a> have been developed by arcanists in search of ever-greater power. It has terrible addictive and mentally degenerative properties, even when used sparingly.",
-  "After burning <a href="/components/items/suude.html">suude</a> within a vessel and inhaling its fumes as an action, you take 22 ({@damage 4d10}) psychic damage and must make a {@dc 10} Constitution {@quickref saving throws|PHB|2|1|saving throw}. On a failure, you become {@condition poisoned} for 1 hour and fall {@condition unconscious} for 1 minute, or until you are shaken awake as an action. During this time, the world seems to move in slow motion, and your vision is twisted in kaleidoscopic colors\u2014yet your focus is never distorted. If one dose of <a href="/components/items/suude.html">suude</a>, or more, is used within 1 hour of another, the DC of the Constitution {@quickref saving throws|PHB|2|1|saving throw} is increased by 5 per additional dose. If you fail this save by 10 or more, you instantly drop to 0 hit points.",
-  "On a success, you gain the ability to use one of the following Metamagic options as a sorcerer for the next minute, requiring no sorcery points. The type of Metamagic you gain access to depends on the type of <a href="/components/items/suude.html">suude</a>, and once you use it, you can\u0027t use it again until you inhale <a href="/components/items/suude.html">suude</a> again.",
-  "Blue suude allows you to use the {@optfeature Twinned Spell|PHB} Metamagic option."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Suude (Blue)</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Suude (Blue)</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>TDCSR</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>IDG</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>unknown (magic)</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["Exandria's most infamous drug, {@item suude|TDCSR} is a glittering powder made from {@book residuum|TDCSR|3|An Enchanting Export}. It was first developed by power-hungry archmages in the {@book Age of Arcanum|TDCSR|1|Age of Arcanum} as an incense burned to enhance focus during ritual spellcasting. The secret to its refinement has been lost and rediscovered a variety of times since the {@book Calamity|TDCSR|1|The Calamity}, and many different types of {@item suude|TDCSR} have been developed by arcanists in search of ever-greater power. It has terrible addictive and mentally degenerative properties, even when used sparingly.", 'After burning {@item suude|TDCSR} within a vessel and inhaling its fumes as an action, you take 22 ({@damage 4d10}) psychic damage and must make a {@dc 10} Constitution {@quickref saving throws|PHB|2|1|saving throw}. On a failure, you become {@condition poisoned} for 1 hour and fall {@condition unconscious} for 1 minute, or until you are shaken awake as an action. During this time, the world seems to move in slow motion, and your vision is twisted in kaleidoscopic colors—yet your focus is never distorted. If one dose of {@item suude|TDCSR}, or more, is used within 1 hour of another, the DC of the Constitution {@quickref saving throws|PHB|2|1|saving throw} is increased by 5 per additional dose. If you fail this save by 10 or more, you instantly drop to 0 hit points.', "On a success, you gain the ability to use one of the following Metamagic options as a sorcerer for the next minute, requiring no sorcery points. The type of Metamagic you gain access to depends on the type of {@item suude|TDCSR}, and once you use it, you can't use it again until you inhale {@item suude|TDCSR} again.", 'Blue suude allows you to use the {@optfeature Twinned Spell|PHB} Metamagic option.']</td>
+                </tr>
+        </table>
+    </body>
 </html>

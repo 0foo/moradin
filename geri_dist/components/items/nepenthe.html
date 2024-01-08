@@ -1,156 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Nepenthe</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>VRGR</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>86</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>M</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>martial</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['V']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d8</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>S</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+3</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>by a paladin</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.</li>
-            <li>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.</li>
-            <li>Sentience</li>
-            <ul>
-                        <li>Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically.</li>
-            </ul>
-            <li>Personality</li>
-            <ul>
-                        <li>In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.",
-  "While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
-  {
-    "entries": [
-      "Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically."
-    ],
-    "name": "Sentience",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable."
-    ],
-    "name": "Personality",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Nepenthe</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Nepenthe</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>VRGR</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>86</td>
+                </tr>
+                <tr>
+                    <td>baseItem</td>
+                    <td>longsword|PHB</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>by a paladin</td>
+                </tr>
+                <tr>
+                    <td>reqAttuneTags</td>
+                    <td>[{'class': 'paladin'}]</td>
+                </tr>
+                <tr>
+                    <td>sentient</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>martial</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['V']</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d8</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>dmg2</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.', 'While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.', {'type': 'entries', 'name': 'Sentience', 'entries': ['Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically.']}, {'type': 'entries', 'name': 'Personality', 'entries': ['In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable.']}]</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

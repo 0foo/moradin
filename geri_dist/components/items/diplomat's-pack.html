@@ -1,151 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Diplomat's Pack</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>PHB</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>151</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>G</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>none</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>36</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td>3900</td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Includes:</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Includes:",
-  {
-    "items": [
-      "a <a href="/components/items/chest.html">chest</a>",
-      "2 <a href="/components/items/map-or-scroll-case.html">Map or Scroll Case</a>",
-      "a set of <a href="/components/items/fine-clothes.html">fine clothes</a>",
-      "a <a href="/components/items/ink-(1-ounce-bottle).html">Ink (1-ounce bottle)</a>",
-      "an <a href="/components/items/ink-pen.html">ink pen</a>",
-      "a <a href="/components/items/lamp.html">lamp</a>",
-      "2 <a href="/components/items/oil-(flask).html">Oil (flask)</a>",
-      "5 <a href="/components/items/paper-(one-sheet).html">Paper (one sheet)</a>",
-      "a <a href="/components/items/perfume-(vial).html">Perfume (vial)</a>",
-      "<a href="/components/items/sealing-wax.html">sealing wax</a>",
-      "<a href="/components/items/soap.html">soap</a>"
-    ],
-    "type": "list"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Diplomat's Pack</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Diplomat's Pack</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>PHB</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>151</td>
+                </tr>
+                <tr>
+                    <td>srd</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>basicRules</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>G</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>3900</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Includes:', {'type': 'list', 'items': ['a {@item chest|phb}', '2 {@item Map or Scroll Case|phb|cases for maps and scrolls}', 'a set of {@item fine clothes|phb}', 'a {@item Ink (1-ounce bottle)|phb|bottle of ink}', 'an {@item ink pen|phb}', 'a {@item lamp|phb}', '2 {@item Oil (flask)|phb|flasks of oil}', '5 {@item Paper (one sheet)|phb|sheets of paper}', 'a {@item Perfume (vial)|phb|vial of perfume}', '{@item sealing wax|phb}', '{@item soap|phb}']}]</td>
+                </tr>
+                <tr>
+                    <td>packContents</td>
+                    <td>['chest|phb', {'item': 'map or scroll case|phb', 'quantity': 2}, 'fine clothes|phb', 'ink (1-ounce bottle)|phb', 'ink pen|phb', 'lamp|phb', {'item': 'oil (flask)|phb', 'quantity': 2}, {'item': 'paper (one sheet)|phb', 'quantity': 5}, 'perfume (vial)|phb', 'sealing wax|phb', 'soap|phb']</td>
+                </tr>
+        </table>
+    </body>
 </html>

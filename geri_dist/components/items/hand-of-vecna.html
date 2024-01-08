@@ -1,229 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Hand of Vecna</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>224</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Seldom is the name of Vecna spoken except in a hushed voice. Vecna was, in his time, one of the mightiest of all wizards. Through dark magic and conquest, he forged a terrible empire. For all his power, Vecna couldn't escape his own mortality. He began to fear death and take steps to prevent his end from ever coming about.</li>
-            <li>{@creature Orcus|MTF}, the demon prince of undeath, taught Vecna a ritual that would allow him to live on as a {@creature lich}. Beyond death, he became the greatest of all liches. Even though his body gradually withered and decayed, Vecna continued to expand his evil dominion. So formidable and hideous was his temper that his subjects feared to speak his name. He was the Whispered One, the Master of the Spider Throne, the Undying King, and the Lord of the Rotted Tower.</li>
-            <li>Some say that Vecna's lieutenant Kas coveted the Spider Throne for himself, or that the sword his lord made for him seduced him into rebellion. Whatever the reason, Kas brought the Undying King's rule to an end in a terrible battle that left Vecna's tower a heap of ash. Of Vecna, all that remained were one hand and one eye, grisly artifacts that still seek to work the Whispered One's will in the world.</li>
-            <li>The <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna might be found together or separately. The eye looks like a bloodshot organ torn free from the socket. The hand is a mummified and shriveled left extremity.</li>
-            <li>To attune to the eye, you must gouge out your own eye and press the artifact into the empty socket. The eye grafts itself to your head and remains there until you die. Once in place, the eye transforms into a golden eye with a slit for a pupil, much like that of a cat. If the eye is ever removed, you die.</li>
-            <li>To attune to the hand, you must lop off your left hand at the wrist and the press the artifact against the stump. The hand grafts itself to your arm and becomes a functioning appendage. If the hand is ever removed, you die.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna each have the following random properties:</li>
-                        <ul>
-                                <li>1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}</li>
-                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}</li>
-                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}</li>
-                        </ul>
-            </ul>
-            <li>Properties of the Hand</li>
-            <ul>
-                        <li>Your alignment changes to neutral evil, and you gain the following benefits:</li>
-            </ul>
-            <li></li>
-            <ul>
-            </ul>
-            <li>Properties of the Eye and Hand</li>
-            <ul>
-                        <li>If you are attuned to both the hand and eye, you gain the following additional benefits:</li>
-                        <ul>
-                                <li>You are immune to disease and poison.</li>
-                                <li>Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.</li>
-                                <li>You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be {@quickref Surprise|PHB|3|0|surprised}.</li>
-                                <li>If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.</li>
-                                <li>If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the Hand of Vecna. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.</li>
-                                <li>You can use an action to cast {@spell wish}. This property can't be used again until 30 days have passed.</li>
-                        </ul>
-            </ul>
-            <li>Destroying the Eye and Hand</li>
-            <ul>
-                        <li>If the <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna are both attached to the same creature, and that creature is slain by the <a href="/components/items/sword-of-kas.html">Sword of Kas</a>, both the eye and the hand burst into flame, turn to ash, and are destroyed forever. Any other attempt to destroy the eye or hand seems to work, but the artifact reappears in one of Vecna's many hidden vaults, where it waits to be rediscovered.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Seldom is the name of Vecna spoken except in a hushed voice. Vecna was, in his time, one of the mightiest of all wizards. Through dark magic and conquest, he forged a terrible empire. For all his power, Vecna couldn\u0027t escape his own mortality. He began to fear death and take steps to prevent his end from ever coming about.",
-  "{@creature Orcus|MTF}, the demon prince of undeath, taught Vecna a ritual that would allow him to live on as a {@creature lich}. Beyond death, he became the greatest of all liches. Even though his body gradually withered and decayed, Vecna continued to expand his evil dominion. So formidable and hideous was his temper that his subjects feared to speak his name. He was the Whispered One, the Master of the Spider Throne, the Undying King, and the Lord of the Rotted Tower.",
-  "Some say that Vecna\u0027s lieutenant Kas coveted the Spider Throne for himself, or that the sword his lord made for him seduced him into rebellion. Whatever the reason, Kas brought the Undying King\u0027s rule to an end in a terrible battle that left Vecna\u0027s tower a heap of ash. Of Vecna, all that remained were one hand and one eye, grisly artifacts that still seek to work the Whispered One\u0027s will in the world.",
-  "The <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna might be found together or separately. The eye looks like a bloodshot organ torn free from the socket. The hand is a mummified and shriveled left extremity.",
-  "To attune to the eye, you must gouge out your own eye and press the artifact into the empty socket. The eye grafts itself to your head and remains there until you die. Once in place, the eye transforms into a golden eye with a slit for a pupil, much like that of a cat. If the eye is ever removed, you die.",
-  "To attune to the hand, you must lop off your left hand at the wrist and the press the artifact against the stump. The hand grafts itself to your arm and becomes a functioning appendage. If the hand is ever removed, you die.",
-  {
-    "entries": [
-      "The <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna each have the following random properties:",
-      {
-        "items": [
-          "1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}",
-          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}",
-          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "Your alignment changes to neutral evil, and you gain the following benefits:"
-    ],
-    "name": "Properties of the Hand",
-    "type": "entries"
-  },
-  {
-    "items": [
-      "Your Strength score becomes 20, unless it is already 20 or higher.",
-      "Any melee spell attack you make with the hand, and any melee weapon attack made with a weapon held by it, deals an extra {@damage 2d8} cold damage on a hit.",
-      "The hand has 8 charges. You can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell finger of death} (5 charges), {@spell sleep} (1 charge), {@spell slow} (2 charges), or {@spell teleport} (3 charges). The hand regains {@dice 1d4 + 4} expended charges daily at dawn. Each time you cast a spell from the hand, it casts the {@spell suggestion} spell on you (save DC 18), demanding that you commit an evil act. The hand might have a specific act in mind or leave it up to you."
-    ],
-    "type": "list"
-  },
-  {
-    "entries": [
-      "If you are attuned to both the hand and eye, you gain the following additional benefits:",
-      {
-        "items": [
-          "You are immune to disease and poison.",
-          "Using the eye\u0027s X-ray vision never causes you to suffer {@condition exhaustion}.",
-          "You experience premonitions of danger and, unless you are {@condition incapacitated}, can\u0027t be {@quickref Surprise|PHB|3|0|surprised}.",
-          "If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.",
-          "If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the Hand of Vecna. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.",
-          "You can use an action to cast {@spell wish}. This property can\u0027t be used again until 30 days have passed."
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Properties of the Eye and Hand",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "If the <a href="/components/items/eye-of-vecna.html">Eye of Vecna</a> and the Hand of Vecna are both attached to the same creature, and that creature is slain by the <a href="/components/items/sword-of-kas.html">Sword of Kas</a>, both the eye and the hand burst into flame, turn to ash, and are destroyed forever. Any other attempt to destroy the eye or hand seems to work, but the artifact reappears in one of Vecna\u0027s many hidden vaults, where it waits to be rediscovered."
-    ],
-    "name": "Destroying the Eye and Hand",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Hand of Vecna</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Hand of Vecna</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>224</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>ability</td>
+                    <td>{'static': {'str': 20}}</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d4 + 4}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["Seldom is the name of Vecna spoken except in a hushed voice. Vecna was, in his time, one of the mightiest of all wizards. Through dark magic and conquest, he forged a terrible empire. For all his power, Vecna couldn't escape his own mortality. He began to fear death and take steps to prevent his end from ever coming about.", '{@creature Orcus|MTF}, the demon prince of undeath, taught Vecna a ritual that would allow him to live on as a {@creature lich}. Beyond death, he became the greatest of all liches. Even though his body gradually withered and decayed, Vecna continued to expand his evil dominion. So formidable and hideous was his temper that his subjects feared to speak his name. He was the Whispered One, the Master of the Spider Throne, the Undying King, and the Lord of the Rotted Tower.', "Some say that Vecna's lieutenant Kas coveted the Spider Throne for himself, or that the sword his lord made for him seduced him into rebellion. Whatever the reason, Kas brought the Undying King's rule to an end in a terrible battle that left Vecna's tower a heap of ash. Of Vecna, all that remained were one hand and one eye, grisly artifacts that still seek to work the Whispered One's will in the world.", 'The {@item Eye of Vecna} and the Hand of Vecna might be found together or separately. The eye looks like a bloodshot organ torn free from the socket. The hand is a mummified and shriveled left extremity.', 'To attune to the eye, you must gouge out your own eye and press the artifact into the empty socket. The eye grafts itself to your head and remains there until you die. Once in place, the eye transforms into a golden eye with a slit for a pupil, much like that of a cat. If the eye is ever removed, you die.', 'To attune to the hand, you must lop off your left hand at the wrist and the press the artifact against the stump. The hand grafts itself to your arm and becomes a functioning appendage. If the hand is ever removed, you die.', {'name': 'Random Properties', 'type': 'entries', 'entries': ['The {@item Eye of Vecna} and the Hand of Vecna each have the following random properties:', {'type': 'list', 'items': ['1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}', '1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}', '1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}']}]}, {'name': 'Properties of the Hand', 'type': 'entries', 'entries': ['Your alignment changes to neutral evil, and you gain the following benefits:']}, {'type': 'list', 'items': ['Your Strength score becomes 20, unless it is already 20 or higher.', 'Any melee spell attack you make with the hand, and any melee weapon attack made with a weapon held by it, deals an extra {@damage 2d8} cold damage on a hit.', 'The hand has 8 charges. You can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell finger of death} (5 charges), {@spell sleep} (1 charge), {@spell slow} (2 charges), or {@spell teleport} (3 charges). The hand regains {@dice 1d4 + 4} expended charges daily at dawn. Each time you cast a spell from the hand, it casts the {@spell suggestion} spell on you (save DC 18), demanding that you commit an evil act. The hand might have a specific act in mind or leave it up to you.']}, {'name': 'Properties of the Eye and Hand', 'type': 'entries', 'entries': ['If you are attuned to both the hand and eye, you gain the following additional benefits:', {'type': 'list', 'items': ['You are immune to disease and poison.', "Using the eye's X-ray vision never causes you to suffer {@condition exhaustion}.", "You experience premonitions of danger and, unless you are {@condition incapacitated}, can't be {@quickref Surprise|PHB|3|0|surprised}.", 'If you start your turn with at least 1 hit point, you regain {@dice 1d10} hit points.', 'If a creature has a skeleton, you can attempt to turn its bones to jelly with a touch of the Hand of Vecna. You can do so by using an action to make a melee attack against a creature you can reach, using your choice of your melee attack bonus for weapons or spells. On a hit, the target must succeed on a DC 18 Constitution saving throw or drop to 0 hit points.', "You can use an action to cast {@spell wish}. This property can't be used again until 30 days have passed."]}]}, {'name': 'Destroying the Eye and Hand', 'type': 'entries', 'entries': ["If the {@item Eye of Vecna} and the Hand of Vecna are both attached to the same creature, and that creature is slain by the {@item Sword of Kas}, both the eye and the hand burst into flame, turn to ash, and are destroyed forever. Any other attempt to destroy the eye or hand seems to work, but the artifact reappears in one of Vecna's many hidden vaults, where it waits to be rediscovered."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['wish', 'finger of death', 'sleep', 'slow', 'teleport']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

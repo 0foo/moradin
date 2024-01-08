@@ -1,154 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Bracers of Asmodeus</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>CoA</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>267</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>You have a +2 bonus to AC while wearing these bracers, if you do not wear armor or use a shield at the same time.</li>
-            <li>Curse</li>
-            <ul>
-                        <li>While attuned to the bracers, you become obsessed with plotting, scheming, and manipulation. You always barter for better deals, often using secrets or leveraging other offers in the process. If you ever decline an opportunity to better yourself financially at another's expense, you immediately take {@damage 3d10} necrotic damage. Only the {@spell Remove Curse} spell allows you to end attunement to this item.</li>
-            </ul>
-            <li>Corrupting</li>
-            <ul>
-                        <li>This item corrupts. See the "{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}" section.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "You have a +2 bonus to AC while wearing these bracers, if you do not wear armor or use a shield at the same time.",
-  {
-    "entries": [
-      "While attuned to the bracers, you become obsessed with plotting, scheming, and manipulation. You always barter for better deals, often using secrets or leveraging other offers in the process. If you ever decline an opportunity to better yourself financially at another\u0027s expense, you immediately take {@damage 3d10} necrotic damage. Only the {@spell Remove Curse} spell allows you to end attunement to this item."
-    ],
-    "name": "Curse",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "This item corrupts. See the \"{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}\" section."
-    ],
-    "name": "Corrupting",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Bracers of Asmodeus</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Bracers of Asmodeus</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>CoA</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>267</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>curse</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>bonusAc</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['You have a +2 bonus to AC while wearing these bracers, if you do not wear armor or use a shield at the same time.', {'type': 'entries', 'name': 'Curse', 'entries': ["While attuned to the bracers, you become obsessed with plotting, scheming, and manipulation. You always barter for better deals, often using secrets or leveraging other offers in the process. If you ever decline an opportunity to better yourself financially at another's expense, you immediately take {@damage 3d10} necrotic damage. Only the {@spell Remove Curse} spell allows you to end attunement to this item."]}, {'type': 'entries', 'name': 'Corrupting', 'entries': ['This item corrupts. See the "{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}" section.']}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

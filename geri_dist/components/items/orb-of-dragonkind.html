@@ -1,199 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Orb of Dragonkind</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>225</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Ages past, on the world of Krynn, elves and humans waged a terrible war against evil dragons. When the world seemed doomed, the wizards of the Towers of High Sorcery came together and worked their greatest magic, forging five Orbs of Dragonkind (or Dragon Orbs) to help them defeat the dragons. One orb was taken to each of the five towers, and there they were used to speed the war toward a victorious end. The wizards used the orbs to lure dragons to them, then destroyed the dragons with powerful magic.</li>
-            <li>As the Towers of High Sorcery fell in later ages, the orbs were destroyed or faded into legend, and only three are thought to survive. Their magic has been warped and twisted over the centuries, so although their primary purpose of calling dragons still functions, they also allow some measure of control over dragons.</li>
-            <li>Each orb contains the essence of an evil dragon, a presence that resents any attempt to coax magic from it. Those lacking in force of personality might find themselves enslaved to an orb.</li>
-            <li>An orb is an etched crystal globe about 10 inches in diameter. When used, it grows to about 20 inches in diameter, and mist swirls inside it.</li>
-            <li>While attuned to an orb, you can use an action to peer into the orb's depths and speak its command word. You must then make a DC 15 Charisma check. On a successful check, you control the orb for as long as you remain attuned to it. On a failed check, you become {@condition charmed} by the orb for as long as you remain attuned to it.</li>
-            <li>While you are {@condition charmed} by the orb, you can't voluntarily end your attunement to it, and the orb casts {@spell suggestion} on you at will (save DC 18), urging you to work toward the evil ends it desires. The dragon essence within the orb might want many things: the annihilation of a particular people, freedom from the orb, to spread suffering in the world, to advance the worship of Takhisis ({@creature Tiamat|RoT|Tiamat's} name on Krynn), or something else the DM decides.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>An Orb of Dragonkind has the following random properties:</li>
-                        <ul>
-                                <li>2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}</li>
-                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}</li>
-                                <li>1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}</li>
-                        </ul>
-            </ul>
-            <li>Spells</li>
-            <ul>
-                        <li>The orb has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell cure wounds} (5th-level version, 3 charges), {@spell daylight} (1 charge), {@spell death ward} (2 charges), or {@spell scrying} (3 charges). You can also use an action to cast the {@spell detect magic} spell from the orb without using any charges.</li>
-            </ul>
-            <li>Call Dragons</li>
-            <ul>
-                        <li>While you control the orb, you can use an action to cause the artifact to issue a telepathic call that extends in all directions for 40 miles. Evil dragons in range feel compelled to come to the orb as soon as possible by the most direct route. Dragon deities such as {@creature Tiamat|RoT} are unaffected by this call. Dragons drawn to the orb might be hostile toward you for compelling them against their will. Once you have used this property, it can't be used again for 1 hour.</li>
-            </ul>
-            <li>Destroying an Orb</li>
-            <ul>
-                        <li>An Orb of Dragonkind appears fragile but is impervious to most damage, including the attacks and breath weapons of dragons. A {@spell disintegrate} spell or one good hit from a +3 magic weapon is sufficient to destroy an orb, however.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Ages past, on the world of Krynn, elves and humans waged a terrible war against evil dragons. When the world seemed doomed, the wizards of the Towers of High Sorcery came together and worked their greatest magic, forging five Orbs of Dragonkind (or Dragon Orbs) to help them defeat the dragons. One orb was taken to each of the five towers, and there they were used to speed the war toward a victorious end. The wizards used the orbs to lure dragons to them, then destroyed the dragons with powerful magic.",
-  "As the Towers of High Sorcery fell in later ages, the orbs were destroyed or faded into legend, and only three are thought to survive. Their magic has been warped and twisted over the centuries, so although their primary purpose of calling dragons still functions, they also allow some measure of control over dragons.",
-  "Each orb contains the essence of an evil dragon, a presence that resents any attempt to coax magic from it. Those lacking in force of personality might find themselves enslaved to an orb.",
-  "An orb is an etched crystal globe about 10 inches in diameter. When used, it grows to about 20 inches in diameter, and mist swirls inside it.",
-  "While attuned to an orb, you can use an action to peer into the orb\u0027s depths and speak its command word. You must then make a DC 15 Charisma check. On a successful check, you control the orb for as long as you remain attuned to it. On a failed check, you become {@condition charmed} by the orb for as long as you remain attuned to it.",
-  "While you are {@condition charmed} by the orb, you can\u0027t voluntarily end your attunement to it, and the orb casts {@spell suggestion} on you at will (save DC 18), urging you to work toward the evil ends it desires. The dragon essence within the orb might want many things: the annihilation of a particular people, freedom from the orb, to spread suffering in the world, to advance the worship of Takhisis ({@creature Tiamat|RoT|Tiamat\u0027s} name on Krynn), or something else the DM decides.",
-  {
-    "entries": [
-      "An Orb of Dragonkind has the following random properties:",
-      {
-        "items": [
-          "2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}",
-          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}",
-          "1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The orb has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell cure wounds} (5th-level version, 3 charges), {@spell daylight} (1 charge), {@spell death ward} (2 charges), or {@spell scrying} (3 charges). You can also use an action to cast the {@spell detect magic} spell from the orb without using any charges."
-    ],
-    "name": "Spells",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While you control the orb, you can use an action to cause the artifact to issue a telepathic call that extends in all directions for 40 miles. Evil dragons in range feel compelled to come to the orb as soon as possible by the most direct route. Dragon deities such as {@creature Tiamat|RoT} are unaffected by this call. Dragons drawn to the orb might be hostile toward you for compelling them against their will. Once you have used this property, it can\u0027t be used again for 1 hour."
-    ],
-    "name": "Call Dragons",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "An Orb of Dragonkind appears fragile but is impervious to most damage, including the attacks and breath weapons of dragons. A {@spell disintegrate} spell or one good hit from a +3 magic weapon is sufficient to destroy an orb, however."
-    ],
-    "name": "Destroying an Orb",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Orb of Dragonkind</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Orb of Dragonkind</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>225</td>
+                </tr>
+                <tr>
+                    <td>srd</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d4 + 3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Ages past, on the world of Krynn, elves and humans waged a terrible war against evil dragons. When the world seemed doomed, the wizards of the Towers of High Sorcery came together and worked their greatest magic, forging five Orbs of Dragonkind (or Dragon Orbs) to help them defeat the dragons. One orb was taken to each of the five towers, and there they were used to speed the war toward a victorious end. The wizards used the orbs to lure dragons to them, then destroyed the dragons with powerful magic.', 'As the Towers of High Sorcery fell in later ages, the orbs were destroyed or faded into legend, and only three are thought to survive. Their magic has been warped and twisted over the centuries, so although their primary purpose of calling dragons still functions, they also allow some measure of control over dragons.', 'Each orb contains the essence of an evil dragon, a presence that resents any attempt to coax magic from it. Those lacking in force of personality might find themselves enslaved to an orb.', 'An orb is an etched crystal globe about 10 inches in diameter. When used, it grows to about 20 inches in diameter, and mist swirls inside it.', "While attuned to an orb, you can use an action to peer into the orb's depths and speak its command word. You must then make a DC 15 Charisma check. On a successful check, you control the orb for as long as you remain attuned to it. On a failed check, you become {@condition charmed} by the orb for as long as you remain attuned to it.", "While you are {@condition charmed} by the orb, you can't voluntarily end your attunement to it, and the orb casts {@spell suggestion} on you at will (save DC 18), urging you to work toward the evil ends it desires. The dragon essence within the orb might want many things: the annihilation of a particular people, freedom from the orb, to spread suffering in the world, to advance the worship of Takhisis ({@creature Tiamat|RoT|Tiamat's} name on Krynn), or something else the DM decides.", {'type': 'entries', 'name': 'Random Properties', 'entries': ['An Orb of Dragonkind has the following random properties:', {'type': 'list', 'items': ['2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}', '1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}', '1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}']}]}, {'type': 'entries', 'name': 'Spells', 'entries': ['The orb has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. If you control the orb, you can use an action and expend 1 or more charges to cast one of the following spells (save DC 18) from it: {@spell cure wounds} (5th-level version, 3 charges), {@spell daylight} (1 charge), {@spell death ward} (2 charges), or {@spell scrying} (3 charges). You can also use an action to cast the {@spell detect magic} spell from the orb without using any charges.']}, {'type': 'entries', 'name': 'Call Dragons', 'entries': ["While you control the orb, you can use an action to cause the artifact to issue a telepathic call that extends in all directions for 40 miles. Evil dragons in range feel compelled to come to the orb as soon as possible by the most direct route. Dragon deities such as {@creature Tiamat|RoT} are unaffected by this call. Dragons drawn to the orb might be hostile toward you for compelling them against their will. Once you have used this property, it can't be used again for 1 hour."]}, {'type': 'entries', 'name': 'Destroying an Orb', 'entries': ['An Orb of Dragonkind appears fragile but is impervious to most damage, including the attacks and breath weapons of dragons. A {@spell disintegrate} spell or one good hit from a +3 magic weapon is sufficient to destroy an orb, however.']}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['detect magic', 'cure wounds', 'daylight', 'death ward', 'scrying']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

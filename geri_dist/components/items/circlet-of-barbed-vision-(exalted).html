@@ -1,160 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Circlet of Barbed Vision (Exalted)</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>TDCSR</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-</ul>
-<hr/>
-Note: this part is still in progres
-<pre>{
-  "_mod": {
-    "entries": [
-      {
-        "items": {
-          "entries": [
-            {
-              "entries": [
-                "When the Circlet of Barbed Vision reaches an exalted state, you gain the following benefits:",
-                {
-                  "items": [
-                    "You are immune to poison damage.",
-                    "You have {@sense truesight} out to a range of 60 feet.",
-                    "Your ability to gain a bonus to an attack roll can be used three times between rests."
-                  ],
-                  "type": "list"
-                }
-              ],
-              "name": "Exalted",
-              "type": "entries"
-            }
-          ]
-        },
-        "mode": "appendArr"
-      }
-    ]
-  },
-  "_preserve": {
-    "fluff": true,
-    "page": true
-  },
-  "name": "Circlet of Barbed Vision (Awakened)",
-  "source": "TDCSR"
-}</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Circlet of Barbed Vision (Exalted)</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Circlet of Barbed Vision (Exalted)</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>TDCSR</td>
+                </tr>
+                <tr>
+                    <td>_copy</td>
+                    <td>{'name': 'Circlet of Barbed Vision (Awakened)', 'source': 'TDCSR', '_mod': {'entries': [{'mode': 'appendArr', 'items': {'entries': [{'type': 'entries', 'name': 'Exalted', 'entries': ['When the Circlet of Barbed Vision reaches an exalted state, you gain the following benefits:', {'type': 'list', 'items': ['You are immune to poison damage.', 'You have {@sense truesight} out to a range of 60 feet.', 'Your ability to gain a bonus to an attack roll can be used three times between rests.']}]}]}}]}, '_preserve': {'page': True, 'fluff': True}}</td>
+                </tr>
+                <tr>
+                    <td>immune</td>
+                    <td>['poison']</td>
+                </tr>
+                <tr>
+                    <td>resist</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

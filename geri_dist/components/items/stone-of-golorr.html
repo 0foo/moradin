@@ -1,215 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Stone of Golorr</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>WDH</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>192</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>The Stone of Golorr is a glossy, greenish-gray stone that fits in the palm of your hand. The stone is actually an {@creature aboleth} named Golorr, transformed by magic into an object.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The Stone of Golorr has the following properties, determined by rolling on the tables in the "Artifacts" section in chapter 7 of the Dungeon Master's Guide:</li>
-                        <ul>
-                                <li>1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}</li>
-                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}</li>
-                        </ul>
-            </ul>
-            <li>Legend Lore</li>
-            <ul>
-                        <li>The Stone of Golorr has 3 charges and regains {@dice 1d3} expended charges daily at dawn. While holding the stone, you can expend 1 of its charges to cast the {@spell legend lore} spell.</li>
-                        <li>By using the stone to cast {@spell legend lore}, you communicate directly with the {@creature aboleth}, and it shares its knowledge with you. The aboleth can't lie to you, but the information it provides is often cryptic or vague.</li>
-                        <li>The aboleth knows where Lord Neverember's secret vault is located. It also knows that three keys are needed to open the vault and that a gold dragon named Aurinax inhabits the vault and guards its treasures.</li>
-            </ul>
-            <li>Failed Memory</li>
-            <ul>
-                        <li>When your attunement to the Stone of Golorr ends, you must make a DC 16 Wisdom saving throw. On a failed save, you lose all memory of the stone being in your possession and all knowledge imparted by it. A {@spell remove curse} spell cast on you has a {@chance 20} chance of restoring the lost knowledge and memories, and a {@spell greater restoration} spell does so automatically.</li>
-            </ul>
-            <li>Sentience</li>
-            <ul>
-                        <li>The Stone of Golorr is a sentient lawful evil magic item with an Intelligence of 18, a Wisdom of 15, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 120 feet. It can communicate telepathically with the creature that is attuned to it, as long as that creature understands at least one language. In addition, the {@creature aboleth} learns the greatest desires of any creature that communicates telepathically with the stone.</li>
-                        <li>The Stone of Golorr hungers for information and prefers not to remain in the clutches of any creature for too long. Whenever the stone desires a new owner, it demands to be given to another intelligent creature as quickly as possible. If its demands are ignored, it tries to take control of its owner (see "Sentient Magic Items" in chapter 7 of the Dungeon Master's Guide).</li>
-            </ul>
-            <li>Personality</li>
-            <ul>
-                        <li>The Stone of Golorr has an alien intellect that is both domineering and hungry for knowledge. It thinks of itself as an ageless and immortal god.</li>
-            </ul>
-            <li>Destroying the Stone</li>
-            <ul>
-                        <li>While in stone form, the {@creature aboleth} isn't a creature and isn't subject to effects that target creatures. The Stone of Golorr is immune to all damage. Casting an {@spell antipathy/sympathy} spell on the stone destroys it if the antipathy effect is selected and the spell is directed to repel aberrations. When the spell is cast in this way, the stone transforms into mucus and is destroyed, and Golorr the aboleth appears in an unoccupied space within 30 feet of the stone's remains. The aboleth is incensed by the stone's destruction, and it attacks all other creatures it can see.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "The Stone of Golorr is a glossy, greenish-gray stone that fits in the palm of your hand. The stone is actually an {@creature aboleth} named Golorr, transformed by magic into an object.",
-  {
-    "entries": [
-      "The Stone of Golorr has the following properties, determined by rolling on the tables in the \"Artifacts\" section in chapter 7 of the Dungeon Master\u0027s Guide:",
-      {
-        "items": [
-          "1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}",
-          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Stone of Golorr has 3 charges and regains {@dice 1d3} expended charges daily at dawn. While holding the stone, you can expend 1 of its charges to cast the {@spell legend lore} spell.",
-      "By using the stone to cast {@spell legend lore}, you communicate directly with the {@creature aboleth}, and it shares its knowledge with you. The aboleth can\u0027t lie to you, but the information it provides is often cryptic or vague.",
-      "The aboleth knows where Lord Neverember\u0027s secret vault is located. It also knows that three keys are needed to open the vault and that a gold dragon named Aurinax inhabits the vault and guards its treasures."
-    ],
-    "name": "Legend Lore",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "When your attunement to the Stone of Golorr ends, you must make a DC 16 Wisdom saving throw. On a failed save, you lose all memory of the stone being in your possession and all knowledge imparted by it. A {@spell remove curse} spell cast on you has a {@chance 20} chance of restoring the lost knowledge and memories, and a {@spell greater restoration} spell does so automatically."
-    ],
-    "name": "Failed Memory",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Stone of Golorr is a sentient lawful evil magic item with an Intelligence of 18, a Wisdom of 15, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 120 feet. It can communicate telepathically with the creature that is attuned to it, as long as that creature understands at least one language. In addition, the {@creature aboleth} learns the greatest desires of any creature that communicates telepathically with the stone.",
-      "The Stone of Golorr hungers for information and prefers not to remain in the clutches of any creature for too long. Whenever the stone desires a new owner, it demands to be given to another intelligent creature as quickly as possible. If its demands are ignored, it tries to take control of its owner (see \"Sentient Magic Items\" in chapter 7 of the Dungeon Master\u0027s Guide)."
-    ],
-    "name": "Sentience",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Stone of Golorr has an alien intellect that is both domineering and hungry for knowledge. It thinks of itself as an ageless and immortal god."
-    ],
-    "name": "Personality",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While in stone form, the {@creature aboleth} isn\u0027t a creature and isn\u0027t subject to effects that target creatures. The Stone of Golorr is immune to all damage. Casting an {@spell antipathy/sympathy} spell on the stone destroys it if the antipathy effect is selected and the spell is directed to repel aberrations. When the spell is cast in this way, the stone transforms into mucus and is destroyed, and Golorr the aboleth appears in an unoccupied space within 30 feet of the stone\u0027s remains. The aboleth is incensed by the stone\u0027s destruction, and it attacks all other creatures it can see."
-    ],
-    "name": "Destroying the Stone",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Stone of Golorr</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Stone of Golorr</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>WDH</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>192</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>sentient</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['The Stone of Golorr is a glossy, greenish-gray stone that fits in the palm of your hand. The stone is actually an {@creature aboleth} named Golorr, transformed by magic into an object.', {'type': 'entries', 'name': 'Random Properties', 'entries': ['The Stone of Golorr has the following properties, determined by rolling on the tables in the "Artifacts" section in chapter 7 of the Dungeon Master\'s Guide:', {'type': 'list', 'items': ['1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial property}', '1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental property}']}]}, {'type': 'entries', 'name': 'Legend Lore', 'entries': ['The Stone of Golorr has 3 charges and regains {@dice 1d3} expended charges daily at dawn. While holding the stone, you can expend 1 of its charges to cast the {@spell legend lore} spell.', "By using the stone to cast {@spell legend lore}, you communicate directly with the {@creature aboleth}, and it shares its knowledge with you. The aboleth can't lie to you, but the information it provides is often cryptic or vague.", "The aboleth knows where Lord Neverember's secret vault is located. It also knows that three keys are needed to open the vault and that a gold dragon named Aurinax inhabits the vault and guards its treasures."]}, {'type': 'entries', 'name': 'Failed Memory', 'entries': ['When your attunement to the Stone of Golorr ends, you must make a DC 16 Wisdom saving throw. On a failed save, you lose all memory of the stone being in your possession and all knowledge imparted by it. A {@spell remove curse} spell cast on you has a {@chance 20} chance of restoring the lost knowledge and memories, and a {@spell greater restoration} spell does so automatically.']}, {'type': 'entries', 'name': 'Sentience', 'entries': ['The Stone of Golorr is a sentient lawful evil magic item with an Intelligence of 18, a Wisdom of 15, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 120 feet. It can communicate telepathically with the creature that is attuned to it, as long as that creature understands at least one language. In addition, the {@creature aboleth} learns the greatest desires of any creature that communicates telepathically with the stone.', 'The Stone of Golorr hungers for information and prefers not to remain in the clutches of any creature for too long. Whenever the stone desires a new owner, it demands to be given to another intelligent creature as quickly as possible. If its demands are ignored, it tries to take control of its owner (see "Sentient Magic Items" in chapter 7 of the Dungeon Master\'s Guide).']}, {'type': 'entries', 'name': 'Personality', 'entries': ['The Stone of Golorr has an alien intellect that is both domineering and hungry for knowledge. It thinks of itself as an ageless and immortal god.']}, {'type': 'entries', 'name': 'Destroying the Stone', 'entries': ["While in stone form, the {@creature aboleth} isn't a creature and isn't subject to effects that target creatures. The Stone of Golorr is immune to all damage. Casting an {@spell antipathy/sympathy} spell on the stone destroys it if the antipathy effect is selected and the spell is directed to repel aberrations. When the spell is cast in this way, the stone transforms into mucus and is destroyed, and Golorr the aboleth appears in an unoccupied space within 30 feet of the stone's remains. The aboleth is incensed by the stone's destruction, and it attacks all other creatures it can see."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['legend lore']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

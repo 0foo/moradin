@@ -1,149 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Wyrmreaver Gauntlets</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BGG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>117</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>very rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Originally crafted for ground-bound giant brawlers to fight against dragons and other enormous predators of the sky, these studded gauntlets are engraved with the dragon rune.</li>
-            <li>While you are wearing these gauntlets, your unarmed strike deals an additional {@damage 1d6} force damage on a hit. Additionally, whenever you finish a long rest, choose one of the following damage types: acid, cold, fire, lightning, or poison. You have resistance to the chosen damage type until you finish another long rest.</li>
-            <li>Invoking the Runes</li>
-            <ul>
-                        <li>As a bonus action, you can invoke the gauntlets' runes and summon two enormous spectral fists that envelop the gauntlets and mimic your hand motions. The fists can also launch themselves to strike distant opponents, returning immediately to your space after they hit or miss.</li>
-                        <li>The fists last for 1 minute or until you are incapacitated. While the spectral fists are active, unarmed strikes you make on your turn have a reach of 30 feet, and when you hit a creature with an opportunity attack made with your unarmed strike, the creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) or have the prone condition.</li>
-                        <li>Once the runes have been invoked, they can't be invoked again until the next dawn.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Originally crafted for ground-bound giant brawlers to fight against dragons and other enormous predators of the sky, these studded gauntlets are engraved with the dragon rune.",
-  "While you are wearing these gauntlets, your unarmed strike deals an additional {@damage 1d6} force damage on a hit. Additionally, whenever you finish a long rest, choose one of the following damage types: acid, cold, fire, lightning, or poison. You have resistance to the chosen damage type until you finish another long rest.",
-  {
-    "entries": [
-      "As a bonus action, you can invoke the gauntlets\u0027 runes and summon two enormous spectral fists that envelop the gauntlets and mimic your hand motions. The fists can also launch themselves to strike distant opponents, returning immediately to your space after they hit or miss.",
-      "The fists last for 1 minute or until you are incapacitated. While the spectral fists are active, unarmed strikes you make on your turn have a reach of 30 feet, and when you hit a creature with an opportunity attack made with your unarmed strike, the creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) or have the prone condition.",
-      "Once the runes have been invoked, they can\u0027t be invoked again until the next dawn."
-    ],
-    "name": "Invoking the Runes",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Wyrmreaver Gauntlets</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Wyrmreaver Gauntlets</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BGG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>117</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>very rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Originally crafted for ground-bound giant brawlers to fight against dragons and other enormous predators of the sky, these studded gauntlets are engraved with the dragon rune.', 'While you are wearing these gauntlets, your unarmed strike deals an additional {@damage 1d6} force damage on a hit. Additionally, whenever you finish a long rest, choose one of the following damage types: acid, cold, fire, lightning, or poison. You have resistance to the chosen damage type until you finish another long rest.', {'type': 'entries', 'name': 'Invoking the Runes', 'entries': ["As a bonus action, you can invoke the gauntlets' runes and summon two enormous spectral fists that envelop the gauntlets and mimic your hand motions. The fists can also launch themselves to strike distant opponents, returning immediately to your space after they hit or miss.", 'The fists last for 1 minute or until you are incapacitated. While the spectral fists are active, unarmed strikes you make on your turn have a reach of 30 feet, and when you hit a creature with an opportunity attack made with your unarmed strike, the creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) or have the prone condition.', "Once the runes have been invoked, they can't be invoked again until the next dawn."]}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

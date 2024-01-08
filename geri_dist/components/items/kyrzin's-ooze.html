@@ -1,178 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Kyrzin's Ooze</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>ERLW</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>278</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>very rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This opalescent, symbiotic goo comes sealed in a jar and slowly shifts and moves, as if endlessly exploring the jar's interior. To attune to this item, you must first drink the contents of the jar, unlocking the following properties.</li>
-            <li>Resistant</li>
-            <ul>
-                        <li>While attuned to Kyrzin's ooze, you have resistance to poison and acid damage, and you're immune to the {@condition poisoned} condition.</li>
-            </ul>
-            <li>Amorphous</li>
-            <ul>
-                        <li>As an action, you can speak a command word and cause your body to assume the amorphous qualities of an ooze. For the next minute, you (along with any equipment you're wearing or carrying) can move through a space as narrow as 1 inch wide without squeezing. Once you use this property, it can't be used again until the next dawn.</li>
-            </ul>
-            <li>Acid Breath</li>
-            <ul>
-                        <li>As an action, you can exhale acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 36 ({@damage 8d8}) acid damage on a failed save, or half as much damage on a successful one. Once you use this property, it can't be used again until the next dawn.</li>
-            </ul>
-            <li>Symbiotic Nature</li>
-            <ul>
-                        <li>The ooze can't be removed from you while you're attuned to it, and you can't voluntarily end your attunement to it. If you're targeted by a spell that ends a curse, your attunement to the ooze ends, as it seeps out of you.</li>
-                        <li>If you die while the ooze is inside you, it bursts out and engulfs you, turning your corpse into a {@creature black pudding} allied with the daelkyr.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This opalescent, symbiotic goo comes sealed in a jar and slowly shifts and moves, as if endlessly exploring the jar\u0027s interior. To attune to this item, you must first drink the contents of the jar, unlocking the following properties.",
-  {
-    "entries": [
-      "While attuned to Kyrzin\u0027s ooze, you have resistance to poison and acid damage, and you\u0027re immune to the {@condition poisoned} condition."
-    ],
-    "name": "Resistant",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "As an action, you can speak a command word and cause your body to assume the amorphous qualities of an ooze. For the next minute, you (along with any equipment you\u0027re wearing or carrying) can move through a space as narrow as 1 inch wide without squeezing. Once you use this property, it can\u0027t be used again until the next dawn."
-    ],
-    "name": "Amorphous",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "As an action, you can exhale acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 36 ({@damage 8d8}) acid damage on a failed save, or half as much damage on a successful one. Once you use this property, it can\u0027t be used again until the next dawn."
-    ],
-    "name": "Acid Breath",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The ooze can\u0027t be removed from you while you\u0027re attuned to it, and you can\u0027t voluntarily end your attunement to it. If you\u0027re targeted by a spell that ends a curse, your attunement to the ooze ends, as it seeps out of you.",
-      "If you die while the ooze is inside you, it bursts out and engulfs you, turning your corpse into a {@creature black pudding} allied with the daelkyr."
-    ],
-    "name": "Symbiotic Nature",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Kyrzin's Ooze</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Kyrzin's Ooze</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>ERLW</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>278</td>
+                </tr>
+                <tr>
+                    <td>resist</td>
+                    <td>['acid', 'poison']</td>
+                </tr>
+                <tr>
+                    <td>conditionImmune</td>
+                    <td>['poisoned']</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>very rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["This opalescent, symbiotic goo comes sealed in a jar and slowly shifts and moves, as if endlessly exploring the jar's interior. To attune to this item, you must first drink the contents of the jar, unlocking the following properties.", {'type': 'entries', 'name': 'Resistant', 'entries': ["While attuned to Kyrzin's ooze, you have resistance to poison and acid damage, and you're immune to the {@condition poisoned} condition."]}, {'type': 'entries', 'name': 'Amorphous', 'entries': ["As an action, you can speak a command word and cause your body to assume the amorphous qualities of an ooze. For the next minute, you (along with any equipment you're wearing or carrying) can move through a space as narrow as 1 inch wide without squeezing. Once you use this property, it can't be used again until the next dawn."]}, {'type': 'entries', 'name': 'Acid Breath', 'entries': ["As an action, you can exhale acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 36 ({@damage 8d8}) acid damage on a failed save, or half as much damage on a successful one. Once you use this property, it can't be used again until the next dawn."]}, {'type': 'entries', 'name': 'Symbiotic Nature', 'entries': ["The ooze can't be removed from you while you're attuned to it, and you can't voluntarily end your attunement to it. If you're targeted by a spell that ends a curse, your attunement to the ooze ends, as it seeps out of you.", 'If you die while the ooze is inside you, it bursts out and engulfs you, turning your corpse into a {@creature black pudding} allied with the daelkyr.']}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

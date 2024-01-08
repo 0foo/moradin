@@ -1,257 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Crook of Rao</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>TCE</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>123</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Ages ago, the serene god Rao created a tool to shield his fledgling faithful against the evils of the Lower Planes. Yet, as eons passed, mortals developed their own methods of dealing with existential threats, and the crook was largely forgotten. In recent ages, though, the Crook of Rao was rediscovered and leveraged against the rising power of the Witch Queen Iggwilv (one of the names of the wizard Tasha). Although she was defeated, Iggwilv managed to damage the crook during the battle, infecting it with an insidious curse-and the potential for future victory. In the aftermath, the crook was again lost. Occasionally it reappears, but the famed artifact is not what it was. Whether or not the artifact's bearers realize its full threat, few risk using the Crook of Rao -potentially for the final time.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The artifact has the following random properties, which you can determine by rolling on the tables in the "Artifacts" section of the {@book Dungeon Master's Guide|DMG}:</li>
-                        <ul>
-                                <li>2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties</li>
-                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property</li>
-                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property</li>
-                        </ul>
-            </ul>
-            <li>Spells</li>
-            <ul>
-                        <li>The crook has 6 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell aura of life} (2 charges), {@spell aura of purity} (2 charges), {@spell banishment} (1 charge), {@spell beacon of hope} (1 charge), {@spell mass cure wounds} (3 charges). The crook regains {@dice 1d6} expended charges daily at dawn.</li>
-            </ul>
-            <li>Absolute Banishment</li>
-            <ul>
-                        <li>While you are attuned to the crook and holding it, you can spend 10 minutes to banish all but the mightiest fiends within 1 mile of you. Any fiend with a challenge rating of 19 or higher is unaffected. Each banished fiend is sent back to its home plane and can't return to the plane the Crook of Rao banished it from for 100 years.</li>
-            </ul>
-            <li>Failing Matrix</li>
-            <ul>
-                        <li>Whenever the Crook of Rao's Absolute Banishment property is used, or when its last charge is expended, roll on the Extraplanar Reversal table. Any creatures conjured as a result of this effect appear in random unoccupied spaces within 60 feet of you and are not under your control.</li>
-            </ul>
-            <li>Iggwilv's Curse</li>
-            <ul>
-                        <li>When the Crook was last used against Iggwilv, the Witch Queen lashed out at the artifact, infecting its magical matrix. Over the years, this curse has spread within the crook, threatening to violently pervert its ancient magic. If this occurs, the Crook of Rao, as it is currently known, is destroyed, its magical matrix inverting and exploding into a 50-foot-diameter portal. This portal functions as a permanent {@spell gate} spell cast by Iggwilv. The gate then, once per round on initiative count 20, audibly speaks a fiend's name in Iggwilv's voice, doing so until the gate calls on every fiend ever banished by the Crook of Rao. If the fiend still exists, it is drawn through the gate. This process takes eighteen years to complete, at the end of which the gate becomes a permanent portal to Pazunia, the first layer of the Abyss.</li>
-            </ul>
-            <li>Destroying or Repairing the Crook</li>
-            <ul>
-                        <li>The Crook of Rao can either be destroyed or repaired by journeying to Mount Celestia and obtaining a tear from the eternally serene god Rao. One way to make the emotionless god cry would be to reunite Rao with the spirit of his first worshiper who sought revelations beyond the multiverse long ago. The Crook dissolves if immersed in the god's tear for a year and a day. If washed in the tear daily for 30 days, the Crook loses its Failing Matrix property.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Ages ago, the serene god Rao created a tool to shield his fledgling faithful against the evils of the Lower Planes. Yet, as eons passed, mortals developed their own methods of dealing with existential threats, and the crook was largely forgotten. In recent ages, though, the Crook of Rao was rediscovered and leveraged against the rising power of the Witch Queen Iggwilv (one of the names of the wizard Tasha). Although she was defeated, Iggwilv managed to damage the crook during the battle, infecting it with an insidious curse-and the potential for future victory. In the aftermath, the crook was again lost. Occasionally it reappears, but the famed artifact is not what it was. Whether or not the artifact\u0027s bearers realize its full threat, few risk using the Crook of Rao -potentially for the final time.",
-  {
-    "entries": [
-      "The artifact has the following random properties, which you can determine by rolling on the tables in the \"Artifacts\" section of the {@book Dungeon Master\u0027s Guide|DMG}:",
-      {
-        "items": [
-          "2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
-          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property",
-          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The crook has 6 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell aura of life} (2 charges), {@spell aura of purity} (2 charges), {@spell banishment} (1 charge), {@spell beacon of hope} (1 charge), {@spell mass cure wounds} (3 charges). The crook regains {@dice 1d6} expended charges daily at dawn."
-    ],
-    "name": "Spells",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While you are attuned to the crook and holding it, you can spend 10 minutes to banish all but the mightiest fiends within 1 mile of you. Any fiend with a challenge rating of 19 or higher is unaffected. Each banished fiend is sent back to its home plane and can\u0027t return to the plane the Crook of Rao banished it from for 100 years."
-    ],
-    "name": "Absolute Banishment",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "Whenever the Crook of Rao\u0027s Absolute Banishment property is used, or when its last charge is expended, roll on the Extraplanar Reversal table. Any creatures conjured as a result of this effect appear in random unoccupied spaces within 60 feet of you and are not under your control."
-    ],
-    "name": "Failing Matrix",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "When the Crook was last used against Iggwilv, the Witch Queen lashed out at the artifact, infecting its magical matrix. Over the years, this curse has spread within the crook, threatening to violently pervert its ancient magic. If this occurs, the Crook of Rao, as it is currently known, is destroyed, its magical matrix inverting and exploding into a 50-foot-diameter portal. This portal functions as a permanent {@spell gate} spell cast by Iggwilv. The gate then, once per round on initiative count 20, audibly speaks a fiend\u0027s name in Iggwilv\u0027s voice, doing so until the gate calls on every fiend ever banished by the Crook of Rao. If the fiend still exists, it is drawn through the gate. This process takes eighteen years to complete, at the end of which the gate becomes a permanent portal to Pazunia, the first layer of the Abyss.",
-      {
-        "caption": "Extraplanar Reversal",
-        "colLabels": [
-          "d100",
-          "Effect"
-        ],
-        "colStyles": [
-          "col-2 text-center",
-          "col-10"
-        ],
-        "rows": [
-          [
-            "1-25",
-            "A portal to a random plane opens. The portal closes after 5 minutes."
-          ],
-          [
-            "26-45",
-            "{@dice 2d4} {@creature imp||imps} and {@dice 2d4} {@creature quasit||quasits} appear."
-          ],
-          [
-            "46-60",
-            "{@dice 1d8} {@creature succubus||succubi}/{@creature incubus||incubi} appear."
-          ],
-          [
-            "61-70",
-            "{@dice 1d10} {@creature barbed devil||barbed devils} and {@dice 1d10} {@creature vrock||vrocks} appear."
-          ],
-          [
-            "71-80",
-            "1 {@creature arcanaloth}, 1 {@creature night hag}, and 1 {@creature rakshasa} appear."
-          ],
-          [
-            "81-85",
-            "1 {@creature ice devil} and 1 {@creature marilith} appear."
-          ],
-          [
-            "86-90",
-            "1 {@creature balor} and 1 {@creature pit fiend} appear. At the DM\u0027s discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
-          ],
-          [
-            "91-00",
-            "Iggwilv\u0027s Curse (see the Iggwilv\u0027s Curse property)."
-          ]
-        ],
-        "type": "table"
-      }
-    ],
-    "name": "Iggwilv\u0027s Curse",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Crook of Rao can either be destroyed or repaired by journeying to Mount Celestia and obtaining a tear from the eternally serene god Rao. One way to make the emotionless god cry would be to reunite Rao with the spirit of his first worshiper who sought revelations beyond the multiverse long ago. The Crook dissolves if immersed in the god\u0027s tear for a year and a day. If washed in the tear daily for 30 days, the Crook loses its Failing Matrix property."
-    ],
-    "name": "Destroying or Repairing the Crook",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Crook of Rao</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Crook of Rao</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>TCE</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d6}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["Ages ago, the serene god Rao created a tool to shield his fledgling faithful against the evils of the Lower Planes. Yet, as eons passed, mortals developed their own methods of dealing with existential threats, and the crook was largely forgotten. In recent ages, though, the Crook of Rao was rediscovered and leveraged against the rising power of the Witch Queen Iggwilv (one of the names of the wizard Tasha). Although she was defeated, Iggwilv managed to damage the crook during the battle, infecting it with an insidious curse-and the potential for future victory. In the aftermath, the crook was again lost. Occasionally it reappears, but the famed artifact is not what it was. Whether or not the artifact's bearers realize its full threat, few risk using the Crook of Rao -potentially for the final time.", {'type': 'entries', 'name': 'Random Properties', 'entries': ['The artifact has the following random properties, which you can determine by rolling on the tables in the "Artifacts" section of the {@book Dungeon Master\'s Guide|DMG}:', {'type': 'list', 'items': ['2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties', '1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property', '1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property']}]}, {'type': 'entries', 'name': 'Spells', 'entries': ['The crook has 6 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell aura of life} (2 charges), {@spell aura of purity} (2 charges), {@spell banishment} (1 charge), {@spell beacon of hope} (1 charge), {@spell mass cure wounds} (3 charges). The crook regains {@dice 1d6} expended charges daily at dawn.']}, {'type': 'entries', 'name': 'Absolute Banishment', 'entries': ["While you are attuned to the crook and holding it, you can spend 10 minutes to banish all but the mightiest fiends within 1 mile of you. Any fiend with a challenge rating of 19 or higher is unaffected. Each banished fiend is sent back to its home plane and can't return to the plane the Crook of Rao banished it from for 100 years."]}, {'type': 'entries', 'name': 'Failing Matrix', 'entries': ["Whenever the Crook of Rao's Absolute Banishment property is used, or when its last charge is expended, roll on the Extraplanar Reversal table. Any creatures conjured as a result of this effect appear in random unoccupied spaces within 60 feet of you and are not under your control."]}, {'type': 'entries', 'name': "Iggwilv's Curse", 'entries': ["When the Crook was last used against Iggwilv, the Witch Queen lashed out at the artifact, infecting its magical matrix. Over the years, this curse has spread within the crook, threatening to violently pervert its ancient magic. If this occurs, the Crook of Rao, as it is currently known, is destroyed, its magical matrix inverting and exploding into a 50-foot-diameter portal. This portal functions as a permanent {@spell gate} spell cast by Iggwilv. The gate then, once per round on initiative count 20, audibly speaks a fiend's name in Iggwilv's voice, doing so until the gate calls on every fiend ever banished by the Crook of Rao. If the fiend still exists, it is drawn through the gate. This process takes eighteen years to complete, at the end of which the gate becomes a permanent portal to Pazunia, the first layer of the Abyss.", {'type': 'table', 'caption': 'Extraplanar Reversal', 'colLabels': ['d100', 'Effect'], 'colStyles': ['col-2 text-center', 'col-10'], 'rows': [['1-25', 'A portal to a random plane opens. The portal closes after 5 minutes.'], ['26-45', '{@dice 2d4} {@creature imp||imps} and {@dice 2d4} {@creature quasit||quasits} appear.'], ['46-60', '{@dice 1d8} {@creature succubus||succubi}/{@creature incubus||incubi} appear.'], ['61-70', '{@dice 1d10} {@creature barbed devil||barbed devils} and {@dice 1d10} {@creature vrock||vrocks} appear.'], ['71-80', '1 {@creature arcanaloth}, 1 {@creature night hag}, and 1 {@creature rakshasa} appear.'], ['81-85', '1 {@creature ice devil} and 1 {@creature marilith} appear.'], ['86-90', "1 {@creature balor} and 1 {@creature pit fiend} appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."], ['91-00', "Iggwilv's Curse (see the Iggwilv's Curse property)."]]}]}, {'type': 'entries', 'name': 'Destroying or Repairing the Crook', 'entries': ["The Crook of Rao can either be destroyed or repaired by journeying to Mount Celestia and obtaining a tear from the eternally serene god Rao. One way to make the emotionless god cry would be to reunite Rao with the spirit of his first worshiper who sought revelations beyond the multiverse long ago. The Crook dissolves if immersed in the god's tear for a year and a day. If washed in the tear daily for 30 days, the Crook loses its Failing Matrix property."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['aura of life', 'aura of purity', 'banishment', 'beacon of hope', 'gate', 'mass cure wounds']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,162 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Rogue's Mantle</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BMT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>37</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This dark, hooded mantle of thick cloth is infused with secretive and deceptive magic. While wearing it, you gain the following benefits:</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This dark, hooded mantle of thick cloth is infused with secretive and deceptive magic. While wearing it, you gain the following benefits:",
-  {
-    "items": [
-      {
-        "entries": [
-          "You gain {@sense darkvision} within a range of 60 feet. If you already have {@sense darkvision}, the mantle increases your {@sense darkvision}\u0027s range by 60 feet instead."
-        ],
-        "name": "Darkvision",
-        "type": "item"
-      },
-      {
-        "entries": [
-          "While you are in {@quickref Vision and Light||2||dim light} or darkness, you can use a bonus action to teleport, along with anything you are wearing or carrying, up to 30 feet to an unoccupied space you can see that is also in {@quickref Vision and Light||2||dim light} or darkness. You then have advantage on the first melee attack you make before the end of the turn."
-        ],
-        "name": "Move in Shadows",
-        "type": "item"
-      },
-      {
-        "entries": [
-          "You can cast the {@spell Antagonize|BMT} spell (save DC 15) from the mantle. Once the mantle has cast the spell, it can\u0027t cast the spell again until the next dawn."
-        ],
-        "name": "Willful Enmity",
-        "type": "item"
-      }
-    ],
-    "style": "list-hang-notitle",
-    "type": "list"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Rogue's Mantle</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Rogue's Mantle</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BMT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This dark, hooded mantle of thick cloth is infused with secretive and deceptive magic. While wearing it, you gain the following benefits:', {'type': 'list', 'style': 'list-hang-notitle', 'items': [{'type': 'item', 'name': 'Darkvision', 'entries': ["You gain {@sense darkvision} within a range of 60 feet. If you already have {@sense darkvision}, the mantle increases your {@sense darkvision}'s range by 60 feet instead."]}, {'type': 'item', 'name': 'Move in Shadows', 'entries': ['While you are in {@quickref Vision and Light||2||dim light} or darkness, you can use a bonus action to teleport, along with anything you are wearing or carrying, up to 30 feet to an unoccupied space you can see that is also in {@quickref Vision and Light||2||dim light} or darkness. You then have advantage on the first melee attack you make before the end of the turn.']}, {'type': 'item', 'name': 'Willful Enmity', 'entries': ["You can cast the {@spell Antagonize|BMT} spell (save DC 15) from the mantle. Once the mantle has cast the spell, it can't cast the spell again until the next dawn."]}]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['antagonize|bmt']</td>
+                </tr>
+        </table>
+    </body>
 </html>

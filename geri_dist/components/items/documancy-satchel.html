@@ -1,156 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Documancy Satchel</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>AI</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>24</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>varies</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>At rank 2, your documancy satchel becomes a common magic item, allowing you to magically send and receive documents to and from Head Office through a special pouch. Your documancy satchel magically produces prewritten and signature-ready contracts at your request, covering most common contractual needs. It also occasionally produces sticky notes printed with useful information and inspirational quotes from Head Office.</li>
-            <li>Satchel of Holding</li>
-            <ul>
-                        <li>At rank 3, your documancy satchel gains additional features and becomes an uncommon magic item. One of the satchel's pouches now functions as a <a href="/components/items/bag-of-holding.html">bag of holding</a>.</li>
-                        <li>Additionally, you can use an action to draw forth from the documancy satchel a <a href="/components/items/spell-scroll.html">spell scroll</a> of {@spell comprehend languages}. The scroll vanishes when used, or ten minutes after it appears. This property of the bag can't be used again until the next dawn.</li>
-            </ul>
-            <li>Scroll Humidor</li>
-            <ul>
-                        <li>At rank 4, your documancy satchel gains additional power and becomes a rare magic item. Within the satchel, a dedicated extradimensional space can hold up to thirty documents or <a href="/components/items/spell-scroll.html">spell scroll</a>. Placing a single document into the scroll humidor is an action. Drawing forth a desired scroll is a bonus action.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "At rank 2, your documancy satchel becomes a common magic item, allowing you to magically send and receive documents to and from Head Office through a special pouch. Your documancy satchel magically produces prewritten and signature-ready contracts at your request, covering most common contractual needs. It also occasionally produces sticky notes printed with useful information and inspirational quotes from Head Office.",
-  {
-    "entries": [
-      "At rank 3, your documancy satchel gains additional features and becomes an uncommon magic item. One of the satchel\u0027s pouches now functions as a <a href="/components/items/bag-of-holding.html">bag of holding</a>.",
-      "Additionally, you can use an action to draw forth from the documancy satchel a <a href="/components/items/spell-scroll.html">spell scroll</a> of {@spell comprehend languages}. The scroll vanishes when used, or ten minutes after it appears. This property of the bag can\u0027t be used again until the next dawn."
-    ],
-    "name": "Satchel of Holding",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "At rank 4, your documancy satchel gains additional power and becomes a rare magic item. Within the satchel, a dedicated extradimensional space can hold up to thirty documents or <a href="/components/items/spell-scroll.html">spell scroll</a>. Placing a single document into the scroll humidor is an action. Drawing forth a desired scroll is a bonus action."
-    ],
-    "name": "Scroll Humidor",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Documancy Satchel</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Documancy Satchel</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>AI</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>varies</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['At rank 2, your documancy satchel becomes a common magic item, allowing you to magically send and receive documents to and from Head Office through a special pouch. Your documancy satchel magically produces prewritten and signature-ready contracts at your request, covering most common contractual needs. It also occasionally produces sticky notes printed with useful information and inspirational quotes from Head Office.', {'type': 'entries', 'name': 'Satchel of Holding', 'entries': ["At rank 3, your documancy satchel gains additional features and becomes an uncommon magic item. One of the satchel's pouches now functions as a {@item bag of holding}.", "Additionally, you can use an action to draw forth from the documancy satchel a {@item spell scroll} of {@spell comprehend languages}. The scroll vanishes when used, or ten minutes after it appears. This property of the bag can't be used again until the next dawn."]}, {'type': 'entries', 'name': 'Scroll Humidor', 'entries': ['At rank 4, your documancy satchel gains additional power and becomes a rare magic item. Within the satchel, a dedicated extradimensional space can hold up to thirty documents or {@item spell scroll||spell scrolls}. Placing a single document into the scroll humidor is an action. Drawing forth a desired scroll is a bonus action.']}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['comprehend languages']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

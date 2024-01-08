@@ -1,138 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Stonespeaker Crystal</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>OotA</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>223</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Created by the stone giant librarians of Gravenhollow, this nineteen-inch-long shard of quartz grants you advantage on Intelligence ({@skill Investigation}) checks while it is on your person.</li>
-            <li>The crystal has 10 charges. While holding it, you can use an action to expend some of its charges to cast one of the following spells from it: {@spell speak with animals} (2 charges), {@spell speak with dead} (4 charges), or {@spell speak with plants} (3 charges).</li>
-            <li>When you cast a {@filter divination|spells|school=D} spell, you can use the crystal in place of one material component that would normally be consumed by the spell, at a cost of 1 charge per level of the spell. The crystal is not consumed when used in this way.</li>
-            <li>The crystal regains {@dice 1d6 + 4} expended charges daily at dawn. If you expend the crystal's last charge, roll a {@dice d20}. On a 1, the crystal vanishes, lost forever.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Created by the stone giant librarians of Gravenhollow, this nineteen-inch-long shard of quartz grants you advantage on Intelligence ({@skill Investigation}) checks while it is on your person.",
-  "The crystal has 10 charges. While holding it, you can use an action to expend some of its charges to cast one of the following spells from it: {@spell speak with animals} (2 charges), {@spell speak with dead} (4 charges), or {@spell speak with plants} (3 charges).",
-  "When you cast a {@filter divination|spells|school=D} spell, you can use the crystal in place of one material component that would normally be consumed by the spell, at a cost of 1 charge per level of the spell. The crystal is not consumed when used in this way.",
-  "The crystal regains {@dice 1d6 + 4} expended charges daily at dawn. If you expend the crystal\u0027s last charge, roll a {@dice d20}. On a 1, the crystal vanishes, lost forever."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Stonespeaker Crystal</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Stonespeaker Crystal</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>OotA</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>223</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d6 + 4}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Created by the stone giant librarians of Gravenhollow, this nineteen-inch-long shard of quartz grants you advantage on Intelligence ({@skill Investigation}) checks while it is on your person.', 'The crystal has 10 charges. While holding it, you can use an action to expend some of its charges to cast one of the following spells from it: {@spell speak with animals} (2 charges), {@spell speak with dead} (4 charges), or {@spell speak with plants} (3 charges).', 'When you cast a {@filter divination|spells|school=D} spell, you can use the crystal in place of one material component that would normally be consumed by the spell, at a cost of 1 charge per level of the spell. The crystal is not consumed when used in this way.', "The crystal regains {@dice 1d6 + 4} expended charges daily at dawn. If you expend the crystal's last charge, roll a {@dice d20}. On a 1, the crystal vanishes, lost forever."]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['speak with animals', 'speak with dead', 'speak with plants']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

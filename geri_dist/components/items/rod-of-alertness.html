@@ -1,167 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Rod of Alertness</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>196</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>RD</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>very rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This rod has a flanged head and the following properties.</li>
-            <li>Alertness</li>
-            <ul>
-                        <li>While holding the rod, you have advantage on Wisdom ({@skill Perception}) checks and on rolls for initiative.</li>
-            </ul>
-            <li>Spells</li>
-            <ul>
-                        <li>While holding the rod, you can use an action to cast one of the following spells from it: {@spell detect evil and good}, {@spell detect magic}, {@spell detect poison and disease}, or {@spell see invisibility}.</li>
-            </ul>
-            <li>Protective Aura</li>
-            <ul>
-                        <li>As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition invisible} hostile creature that is also in the bright light.</li>
-                        <li>The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This rod has a flanged head and the following properties.",
-  {
-    "entries": [
-      "While holding the rod, you have advantage on Wisdom ({@skill Perception}) checks and on rolls for initiative."
-    ],
-    "name": "Alertness",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While holding the rod, you can use an action to cast one of the following spells from it: {@spell detect evil and good}, {@spell detect magic}, {@spell detect poison and disease}, or {@spell see invisibility}."
-    ],
-    "name": "Spells",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "As an action, you can plant the haft end of the rod in the ground, whereupon the rod\u0027s head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition invisible} hostile creature that is also in the bright light.",
-      "The rod\u0027s head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can\u0027t be used again until the next dawn."
-    ],
-    "name": "Protective Aura",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Rod of Alertness</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Rod of Alertness</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>196</td>
+                </tr>
+                <tr>
+                    <td>srd</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>RD</td>
+                </tr>
+                <tr>
+                    <td>tier</td>
+                    <td>major</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>very rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>bonusAc</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td>bonusSavingThrow</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This rod has a flanged head and the following properties.', {'name': 'Alertness', 'type': 'entries', 'entries': ['While holding the rod, you have advantage on Wisdom ({@skill Perception}) checks and on rolls for initiative.']}, {'name': 'Spells', 'type': 'entries', 'entries': ['While holding the rod, you can use an action to cast one of the following spells from it: {@spell detect evil and good}, {@spell detect magic}, {@spell detect poison and disease}, or {@spell see invisibility}.']}, {'name': 'Protective Aura', 'type': 'entries', 'entries': ["As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any {@condition invisible} hostile creature that is also in the bright light.", "The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['detect evil and good', 'detect magic', 'detect poison and disease', 'see invisibility']</td>
+                </tr>
+                <tr>
+                    <td>lootTables</td>
+                    <td>['Magic Item Table H']</td>
+                </tr>
+        </table>
+    </body>
 </html>

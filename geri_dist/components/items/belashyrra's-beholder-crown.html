@@ -1,160 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Belashyrra's Beholder Crown</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>ERLW</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>276</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This symbiotic crown is carved from dark purple and mauve stone, with ten points like stalks set with gemstones resembling the eyestalks of a {@creature beholder}. To attune to this item, you must wear it on your head for the entire attunement period, during which the crown's hidden tendrils burrow into your scalp to bond with your skull.</li>
-            <li>While wearing the crown, you can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.</li>
-            <li>Spells</li>
-            <ul>
-                        <li>The crown has 10 charges. While wearing it, you can use an action to expend some of its charges to cast one of the following spells from it (spell save DC 16): {@spell charm person} (1 charge), {@spell disintegrate} (6 charges), {@spell fear} (3 charges), {@spell finger of death} (7 charges), {@spell flesh to stone} (6 charges), {@spell hold person} (2 charges), {@spell ray of enfeeblement} (2 charges), {@spell sleep} (1 charge), {@spell slow} (3 charges), {@spell telekinesis} (5 charges).</li>
-                        <li>The crown regains {@dice 1d6 + 3} expended charges daily at dawn.</li>
-            </ul>
-            <li>Symbiotic Nature</li>
-            <ul>
-                        <li>The crown can't be removed from you while you're attuned to it, and you can't voluntarily end your attunement to it. If you're targeted by a spell that ends a curse, your attunement to the crown ends, and it detaches from you.</li>
-                        <li>The daelkyr {@creature Belashyrra|ERLW} made these crowns. While on the same plane of existence as the crown, Belashyrra can see through its eyestalks.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This symbiotic crown is carved from dark purple and mauve stone, with ten points like stalks set with gemstones resembling the eyestalks of a {@creature beholder}. To attune to this item, you must wear it on your head for the entire attunement period, during which the crown\u0027s hidden tendrils burrow into your scalp to bond with your skull.",
-  "While wearing the crown, you can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.",
-  {
-    "entries": [
-      "The crown has 10 charges. While wearing it, you can use an action to expend some of its charges to cast one of the following spells from it (spell save DC 16): {@spell charm person} (1 charge), {@spell disintegrate} (6 charges), {@spell fear} (3 charges), {@spell finger of death} (7 charges), {@spell flesh to stone} (6 charges), {@spell hold person} (2 charges), {@spell ray of enfeeblement} (2 charges), {@spell sleep} (1 charge), {@spell slow} (3 charges), {@spell telekinesis} (5 charges).",
-      "The crown regains {@dice 1d6 + 3} expended charges daily at dawn."
-    ],
-    "name": "Spells",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The crown can\u0027t be removed from you while you\u0027re attuned to it, and you can\u0027t voluntarily end your attunement to it. If you\u0027re targeted by a spell that ends a curse, your attunement to the crown ends, and it detaches from you.",
-      "The daelkyr {@creature Belashyrra|ERLW} made these crowns. While on the same plane of existence as the crown, Belashyrra can see through its eyestalks."
-    ],
-    "name": "Symbiotic Nature",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Belashyrra's Beholder Crown</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Belashyrra's Beholder Crown</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>ERLW</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>276</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d6 + 3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["This symbiotic crown is carved from dark purple and mauve stone, with ten points like stalks set with gemstones resembling the eyestalks of a {@creature beholder}. To attune to this item, you must wear it on your head for the entire attunement period, during which the crown's hidden tendrils burrow into your scalp to bond with your skull.", 'While wearing the crown, you can see normally in darkness, both magical and nonmagical, to a distance of 120 feet.', {'type': 'entries', 'name': 'Spells', 'entries': ['The crown has 10 charges. While wearing it, you can use an action to expend some of its charges to cast one of the following spells from it (spell save DC 16): {@spell charm person} (1 charge), {@spell disintegrate} (6 charges), {@spell fear} (3 charges), {@spell finger of death} (7 charges), {@spell flesh to stone} (6 charges), {@spell hold person} (2 charges), {@spell ray of enfeeblement} (2 charges), {@spell sleep} (1 charge), {@spell slow} (3 charges), {@spell telekinesis} (5 charges).', 'The crown regains {@dice 1d6 + 3} expended charges daily at dawn.']}, {'type': 'entries', 'name': 'Symbiotic Nature', 'entries': ["The crown can't be removed from you while you're attuned to it, and you can't voluntarily end your attunement to it. If you're targeted by a spell that ends a curse, your attunement to the crown ends, and it detaches from you.", 'The daelkyr {@creature Belashyrra|ERLW} made these crowns. While on the same plane of existence as the crown, Belashyrra can see through its eyestalks.']}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['charm person', 'disintegrate', 'fear', 'finger of death', 'flesh to stone', 'hold person', 'ray of enfeeblement', 'sleep', 'slow', 'telekinesis']</td>
+                </tr>
+        </table>
+    </body>
 </html>

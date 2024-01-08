@@ -1,151 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Inscrutable Staff</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DoDk</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>233</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>M</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>simple</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['V']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>B</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+2</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>by a sorcerer, warlock, or wizard</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td>+2</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to spell attack rolls and your spell save DC.</li>
-            <li>The staff has 20 charges, and regains {@dice 2d10} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff triggers a random arcane anomaly (see Dungeons of Drakkenheim). On a 20, the staff regains {@dice 1d10} charges.</li>
-            <li>While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: {@spell haste} (3 charges), {@spell slow} (3 charges), {@spell arcane eye} (4 charges), {@spell dimension door} (4 charges), {@spell Bigby's hand} (5 charges), {@spell wall of force} (5 charges), {@spell disintegrate} (6 charges), {@spell reverse gravity} (7 charges), or {@spell maze} (8 charges).</li>
-            <li>You can also use an action to cast one of the following spells from the staff without using any charges: {@spell detect magic}, {@spell Tenser's Floating Disk}, {@spell mage armor}, {@spell mending}, {@spell message}, or {@spell misty step}.</li>
-            <li>Crown Authority</li>
-            <ul>
-                        <li>A character cannot attune to more than one Seal of Drakkenheim. Guardian constructs in Drakkenheim such as {@creature wall gargoyle|DoDk|wall gargoyles} and {@creature tower dragon|DoDk|tower dragons} do not attack you while you are attuned to one of the Seals of Drakkenheim. An individual guardian ignores this effect for 24 hours if you attack it or cast a spell upon it.</li>
-                        <li>As an action, you may present a Seal of Drakkenheim to rebuke the guardians. You make an opposed Charisma ability check against each {@creature wall gargoyle|DoDk} or {@creature tower dragon|DoDk} that can see or hear you within 30 feet of you. If you win the contest, the creature is rebuked for 1 minute or until it takes any damage. A rebuked creature doesn't move, and can't take actions or reactions. A creature who wins the contest is immune to your rebuke for 24 hours.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to spell attack rolls and your spell save DC.",
-  "The staff has 20 charges, and regains {@dice 2d10} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff triggers a random arcane anomaly (see Dungeons of Drakkenheim). On a 20, the staff regains {@dice 1d10} charges.",
-  "While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: {@spell haste} (3 charges), {@spell slow} (3 charges), {@spell arcane eye} (4 charges), {@spell dimension door} (4 charges), {@spell Bigby\u0027s hand} (5 charges), {@spell wall of force} (5 charges), {@spell disintegrate} (6 charges), {@spell reverse gravity} (7 charges), or {@spell maze} (8 charges).",
-  "You can also use an action to cast one of the following spells from the staff without using any charges: {@spell detect magic}, {@spell Tenser\u0027s Floating Disk}, {@spell mage armor}, {@spell mending}, {@spell message}, or {@spell misty step}.",
-  {
-    "entries": [
-      "A character cannot attune to more than one Seal of Drakkenheim. Guardian constructs in Drakkenheim such as {@creature wall gargoyle|DoDk|wall gargoyles} and {@creature tower dragon|DoDk|tower dragons} do not attack you while you are attuned to one of the Seals of Drakkenheim. An individual guardian ignores this effect for 24 hours if you attack it or cast a spell upon it.",
-      "As an action, you may present a Seal of Drakkenheim to rebuke the guardians. You make an opposed Charisma ability check against each {@creature wall gargoyle|DoDk} or {@creature tower dragon|DoDk} that can see or hear you within 30 feet of you. If you win the contest, the creature is rebuked for 1 minute or until it takes any damage. A rebuked creature doesn\u0027t move, and can\u0027t take actions or reactions. A creature who wins the contest is immune to your rebuke for 24 hours."
-    ],
-    "name": "Crown Authority",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Inscrutable Staff</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Inscrutable Staff</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DoDk</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>233</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>by a sorcerer, warlock, or wizard</td>
+                </tr>
+                <tr>
+                    <td>reqAttuneTags</td>
+                    <td>[{'class': 'sorcerer'}, {'class': 'warlock'}, {'class': 'wizard'}]</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>simple</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['V']</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>dmg2</td>
+                    <td>1d8</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td>bonusSpellAttack</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 2d10}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>staff</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to spell attack rolls and your spell save DC.', 'The staff has 20 charges, and regains {@dice 2d10} expended charges daily at dawn. If you expend the last charge, roll a {@dice d20}. On a 1, the staff triggers a random arcane anomaly (see Dungeons of Drakkenheim). On a 20, the staff regains {@dice 1d10} charges.', "While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: {@spell haste} (3 charges), {@spell slow} (3 charges), {@spell arcane eye} (4 charges), {@spell dimension door} (4 charges), {@spell Bigby's hand} (5 charges), {@spell wall of force} (5 charges), {@spell disintegrate} (6 charges), {@spell reverse gravity} (7 charges), or {@spell maze} (8 charges).", "You can also use an action to cast one of the following spells from the staff without using any charges: {@spell detect magic}, {@spell Tenser's Floating Disk}, {@spell mage armor}, {@spell mending}, {@spell message}, or {@spell misty step}.", {'type': 'entries', 'name': 'Crown Authority', 'entries': ['A character cannot attune to more than one Seal of Drakkenheim. Guardian constructs in Drakkenheim such as {@creature wall gargoyle|DoDk|wall gargoyles} and {@creature tower dragon|DoDk|tower dragons} do not attack you while you are attuned to one of the Seals of Drakkenheim. An individual guardian ignores this effect for 24 hours if you attack it or cast a spell upon it.', "As an action, you may present a Seal of Drakkenheim to rebuke the guardians. You make an opposed Charisma ability check against each {@creature wall gargoyle|DoDk} or {@creature tower dragon|DoDk} that can see or hear you within 30 feet of you. If you win the contest, the creature is rebuked for 1 minute or until it takes any damage. A rebuked creature doesn't move, and can't take actions or reactions. A creature who wins the contest is immune to your rebuke for 24 hours."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['haste', 'slow', 'arcane eye', 'dimension door', "bigby's hand", 'wall of force', 'disintegrate', 'reverse gravity', 'maze', 'detect magic', "tenser's floating disk", 'mage armor', 'mending', 'message', 'misty step']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,191 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Staff of the Forgotten One</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>ToA</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>208</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>simple</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['V']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>B</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+3</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>by a sorcerer, warlock, or wizard</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This crooked staff is carved from bone and topped with the skull of a forgotten {@creature archmage} whom {@creature Acererak|ToA} destroyed long ago. Etched into the skull's forehead is {@creature acererak|ToA|Acererak's} rune, which is known on many worlds as a sign of death.</li>
-            <li>Beneficial Properties</li>
-            <ul>
-                        <li>While the staff is on your person, you gain the following benefits:</li>
-                        <ul>
-                                <li>Your proficiency bonus to Intelligence ({@skill Arcana}) and Intelligence ({@skill History}) checks is doubled.</li>
-                                <li>You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition petrified}, or {@condition stunned}.</li>
-                                <li>Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.</li>
-                                <li>You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@damage 3d6}) necrotic damage on a hit.</li>
-                        </ul>
-            </ul>
-            <li>Invoke Curse</li>
-            <ul>
-                        <li>The Staff of the Forgotten One has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. While holding the staff, you can use an action to expend 1 charge and target one creature you can see within 60 feet of you. The target must succeed on a Constitution saving throw (using your spell save DC) or be cursed. While cursed in this way, the target can't regain hit points and has vulnerability to necrotic damage. A {@spell greater restoration}, {@spell remove curse}, or similar spell ends the curse on the target.</li>
-            </ul>
-            <li>The Forgotten One</li>
-            <ul>
-                        <li>The bodiless life force of a dead {@creature archmage} empowers the staff and is imprisoned within it. The rune carved into the staff's skull protects {@creature Acererak|ToA} from this spirit's vengeance. Each time a creature other than {@creature Acererak|ToA} expends any of the staff's charges, there is a {@chance 50} chance that the life force tries to possess the staff wielder. The wielder must succeed on a DC 20 Charisma saving throw or be possessed, becoming an NPC under the DM's control. If the intruding life force is targeted by magic such as a {@spell dispel evil and good} spell, it becomes trapped in the staff once more. Once it takes control of another creature, the insane spirit of the dead {@creature archmage} attempts to destroy the staff.</li>
-            </ul>
-            <li>Destroying the Staff</li>
-            <ul>
-                        <li>A creature in possession of the staff can use an action to break it over one knee or a solid surface. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it. Each creature in the area must make a DC 18 Dexterity saving throw, taking 132 ({@damage 24d10}) force damage on a failed save, or half as much damage on a successful one. When the staff is destroyed, the life force of the Forgotten One is released to the afterlife. Where it goes is anyone's guess.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This crooked staff is carved from bone and topped with the skull of a forgotten {@creature archmage} whom {@creature Acererak|ToA} destroyed long ago. Etched into the skull\u0027s forehead is {@creature acererak|ToA|Acererak\u0027s} rune, which is known on many worlds as a sign of death.",
-  {
-    "entries": [
-      "While the staff is on your person, you gain the following benefits:",
-      {
-        "items": [
-          "Your proficiency bonus to Intelligence ({@skill Arcana}) and Intelligence ({@skill History}) checks is doubled.",
-          "You can\u0027t be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition petrified}, or {@condition stunned}.",
-          "Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.",
-          "You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@damage 3d6}) necrotic damage on a hit."
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Beneficial Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Staff of the Forgotten One has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. While holding the staff, you can use an action to expend 1 charge and target one creature you can see within 60 feet of you. The target must succeed on a Constitution saving throw (using your spell save DC) or be cursed. While cursed in this way, the target can\u0027t regain hit points and has vulnerability to necrotic damage. A {@spell greater restoration}, {@spell remove curse}, or similar spell ends the curse on the target."
-    ],
-    "name": "Invoke Curse",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The bodiless life force of a dead {@creature archmage} empowers the staff and is imprisoned within it. The rune carved into the staff\u0027s skull protects {@creature Acererak|ToA} from this spirit\u0027s vengeance. Each time a creature other than {@creature Acererak|ToA} expends any of the staff\u0027s charges, there is a {@chance 50} chance that the life force tries to possess the staff wielder. The wielder must succeed on a DC 20 Charisma saving throw or be possessed, becoming an NPC under the DM\u0027s control. If the intruding life force is targeted by magic such as a {@spell dispel evil and good} spell, it becomes trapped in the staff once more. Once it takes control of another creature, the insane spirit of the dead {@creature archmage} attempts to destroy the staff."
-    ],
-    "name": "The Forgotten One",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "A creature in possession of the staff can use an action to break it over one knee or a solid surface. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it. Each creature in the area must make a DC 18 Dexterity saving throw, taking 132 ({@damage 24d10}) force damage on a failed save, or half as much damage on a successful one. When the staff is destroyed, the life force of the Forgotten One is released to the afterlife. Where it goes is anyone\u0027s guess."
-    ],
-    "name": "Destroying the Staff",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Staff of the Forgotten One</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Staff of the Forgotten One</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>ToA</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>208</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>by a sorcerer, warlock, or wizard</td>
+                </tr>
+                <tr>
+                    <td>reqAttuneTags</td>
+                    <td>[{'class': 'sorcerer'}, {'class': 'warlock'}, {'class': 'wizard'}]</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>simple</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['V']</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>dmg2</td>
+                    <td>1d8</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d4 + 3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>staff</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["This crooked staff is carved from bone and topped with the skull of a forgotten {@creature archmage} whom {@creature Acererak|ToA} destroyed long ago. Etched into the skull's forehead is {@creature acererak|ToA|Acererak's} rune, which is known on many worlds as a sign of death.", {'type': 'entries', 'name': 'Beneficial Properties', 'entries': ['While the staff is on your person, you gain the following benefits:', {'type': 'list', 'items': ['Your proficiency bonus to Intelligence ({@skill Arcana}) and Intelligence ({@skill History}) checks is doubled.', "You can't be {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition petrified}, or {@condition stunned}.", 'Undead with a challenge rating of 2 or lower will neither threaten nor attack you unless you harm them.', 'You can wield the staff as a +3 quarterstaff that deals an extra 10 ({@damage 3d6}) necrotic damage on a hit.']}]}, {'type': 'entries', 'name': 'Invoke Curse', 'entries': ["The Staff of the Forgotten One has 7 charges and regains {@dice 1d4 + 3} expended charges daily at dawn. While holding the staff, you can use an action to expend 1 charge and target one creature you can see within 60 feet of you. The target must succeed on a Constitution saving throw (using your spell save DC) or be cursed. While cursed in this way, the target can't regain hit points and has vulnerability to necrotic damage. A {@spell greater restoration}, {@spell remove curse}, or similar spell ends the curse on the target."]}, {'type': 'entries', 'name': 'The Forgotten One', 'entries': ["The bodiless life force of a dead {@creature archmage} empowers the staff and is imprisoned within it. The rune carved into the staff's skull protects {@creature Acererak|ToA} from this spirit's vengeance. Each time a creature other than {@creature Acererak|ToA} expends any of the staff's charges, there is a {@chance 50} chance that the life force tries to possess the staff wielder. The wielder must succeed on a DC 20 Charisma saving throw or be possessed, becoming an NPC under the DM's control. If the intruding life force is targeted by magic such as a {@spell dispel evil and good} spell, it becomes trapped in the staff once more. Once it takes control of another creature, the insane spirit of the dead {@creature archmage} attempts to destroy the staff."]}, {'type': 'entries', 'name': 'Destroying the Staff', 'entries': ["A creature in possession of the staff can use an action to break it over one knee or a solid surface. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it. Each creature in the area must make a DC 18 Dexterity saving throw, taking 132 ({@damage 24d10}) force damage on a failed save, or half as much damage on a successful one. When the staff is destroyed, the life force of the Forgotten One is released to the afterlife. Where it goes is anyone's guess."]}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

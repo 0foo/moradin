@@ -3,9 +3,9 @@ processor: [
     jinja_parser, 
     remove_blank_lines
 ]
-json_path: ../../data/classes/all_classes.json
+custom_filter_file: ".geraldine/custom_jinja_filters.py"
+json_project_path: /data/classes/all_classes.json
 ---
-
 
 
 <label for="classSelect" class="form-control-lg">Choose a class:</label>
@@ -20,3 +20,4 @@ json_path: ../../data/classes/all_classes.json
             <option value="{{ item.class.0.name }}">{{ item.class.0.name }}</option>
         {% endfor -%}
  </select>
+

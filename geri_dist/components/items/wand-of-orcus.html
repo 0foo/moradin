@@ -1,240 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Wand of Orcus</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>227</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>WD</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>simple</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>B</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+3</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>The ghastly Wand of Orcus rarely leaves {@creature Orcus|MTF|Orcus's} side. The device, as evil as its creator, shares the demon lord's aims to snuff out the lives of all living things and bind the Material Plane in the stasis of undeath. {@creature Orcus|MTF} allows the wand to slip from his grasp from time to time. When it does, it magically appears wherever its master senses an opportunity to achieve some fell goal.</li>
-            <li>Made from bones as hard as iron, the wand is topped with a magically enlarged skull that once belonged to a human hero slain by {@creature Orcus|MTF}. The wand can magically change in size to better conform to the grip of its user. Plants wither, drinks spoil, flesh rots, and vermin thrive in the wand's presence.</li>
-            <li>Any creature besides {@creature Orcus|MTF} that tries to attune to the wand must make a DC 17 Constitution saving throw. On a successful save, the creature takes {@damage 10d6} necrotic damage. On a failed save, the creature dies and rises as a {@creature zombie}.</li>
-            <li>In the hands of one who is attuned to it, the wand can be wielded as a magic <a href="/components/items/mace.html">mace</a> that grants a +3 bonus to attack and damage rolls made with it. The wand deals an extra {@damage 2d12} necrotic damage on a hit.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The Wand of Orcus has the following random properties:</li>
-                        <ul>
-                                <li>2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}</li>
-                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}</li>
-                                <li>2 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental properties}</li>
-                                <li>1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}</li>
-                        </ul>
-                        <li>The detrimental properties of the Wand of Orcus are suppressed while the wand is attuned to {@creature Orcus|MTF} himself.</li>
-            </ul>
-            <li>Protection</li>
-            <ul>
-                        <li>You gain a +3 bonus to Armor Class while holding the wand.</li>
-            </ul>
-            <li>Spells</li>
-            <ul>
-                        <li>The wand has 7 charges. While holding it, you can use an action and expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell animate dead} (1 charge), {@spell blight} (2 charges), {@spell circle of death} (3 charges), {@spell finger of death} (3 charges), {@spell power word kill} (4 charges), or {@spell speak with dead} (1 charge). The wand regains {@dice 1d4 + 3} expended charges daily at dawn.</li>
-                        <li>While attuned to the wand, {@creature Orcus|MTF} or a follower blessed by him can cast each of the wand's spells using 2 fewer charges (minimum of 0).</li>
-            </ul>
-            <li>Call Undead</li>
-            <ul>
-                        <li>While you are holding the wand, you can use an action to conjure {@creature skeleton||skeletons} and {@creature zombie||zombies}, calling forth as many of them as you can divide 500 hit points among, each undead having average hit points. The undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of you and obey your commands until they are destroyed or until dawn of the next day, when they collapse into inanimate piles of bones and rotting corpses. Once you use this property of the wand, you can't use it again until the next dawn.</li>
-                        <li>While attuned to the wand, {@creature Orcus|MTF} can summon any kind of undead, not just skeletons and zombies. The undead don't perish or disappear at dawn the following day, remaining until {@creature Orcus|MTF} dismisses them.</li>
-            </ul>
-            <li>Sentience</li>
-            <ul>
-                        <li>The Wand of Orcus is a sentient, chaotic evil item with an Intelligence of 16, a Wisdom of 12, and a Charisma of 16. It has hearing and {@sense darkvision} out to a range of 120 feet.</li>
-                        <li>The wand communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common.</li>
-            </ul>
-            <li>Personality</li>
-            <ul>
-                        <li>The wand's purpose is to help satisfy {@creature Orcus|MTF|Orcus's} desire to slay everything in the multiverse. The wand is cold, cruel, nihilistic, and bereft of humor. In order to further its master's goals, the wand feigns devotion to its current user and makes grandiose promises that it has no intention of fulfilling, such as vowing to help its user overthrow {@creature Orcus|MTF}.</li>
-            </ul>
-            <li>Destroying the Wand</li>
-            <ul>
-                        <li>Destroying the Wand of Orcus requires that it be taken to the Positive Energy Plane by the ancient hero whose skull surmounts it. For this to happen, the long-lost hero must first be restored to life—no easy task, given the fact that {@creature Orcus|MTF} has imprisoned the hero's soul and keeps it hidden and well guarded.</li>
-                        <li>Bathing the wand in positive energy causes it to crack and explode, but unless the above conditions are met, the wand instantly reforms on {@creature Orcus|MTF|Orcus's} layer of the Abyss.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "The ghastly Wand of Orcus rarely leaves {@creature Orcus|MTF|Orcus\u0027s} side. The device, as evil as its creator, shares the demon lord\u0027s aims to snuff out the lives of all living things and bind the Material Plane in the stasis of undeath. {@creature Orcus|MTF} allows the wand to slip from his grasp from time to time. When it does, it magically appears wherever its master senses an opportunity to achieve some fell goal.",
-  "Made from bones as hard as iron, the wand is topped with a magically enlarged skull that once belonged to a human hero slain by {@creature Orcus|MTF}. The wand can magically change in size to better conform to the grip of its user. Plants wither, drinks spoil, flesh rots, and vermin thrive in the wand\u0027s presence.",
-  "Any creature besides {@creature Orcus|MTF} that tries to attune to the wand must make a DC 17 Constitution saving throw. On a successful save, the creature takes {@damage 10d6} necrotic damage. On a failed save, the creature dies and rises as a {@creature zombie}.",
-  "In the hands of one who is attuned to it, the wand can be wielded as a magic <a href="/components/items/mace.html">mace</a> that grants a +3 bonus to attack and damage rolls made with it. The wand deals an extra {@damage 2d12} necrotic damage on a hit.",
-  {
-    "entries": [
-      "The Wand of Orcus has the following random properties:",
-      {
-        "items": [
-          "2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}",
-          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}",
-          "2 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental properties}",
-          "1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}"
-        ],
-        "type": "list"
-      },
-      "The detrimental properties of the Wand of Orcus are suppressed while the wand is attuned to {@creature Orcus|MTF} himself."
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "You gain a +3 bonus to Armor Class while holding the wand."
-    ],
-    "name": "Protection",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The wand has 7 charges. While holding it, you can use an action and expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell animate dead} (1 charge), {@spell blight} (2 charges), {@spell circle of death} (3 charges), {@spell finger of death} (3 charges), {@spell power word kill} (4 charges), or {@spell speak with dead} (1 charge). The wand regains {@dice 1d4 + 3} expended charges daily at dawn.",
-      "While attuned to the wand, {@creature Orcus|MTF} or a follower blessed by him can cast each of the wand\u0027s spells using 2 fewer charges (minimum of 0)."
-    ],
-    "name": "Spells",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While you are holding the wand, you can use an action to conjure {@creature skeleton||skeletons} and {@creature zombie||zombies}, calling forth as many of them as you can divide 500 hit points among, each undead having average hit points. The undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of you and obey your commands until they are destroyed or until dawn of the next day, when they collapse into inanimate piles of bones and rotting corpses. Once you use this property of the wand, you can\u0027t use it again until the next dawn.",
-      "While attuned to the wand, {@creature Orcus|MTF} can summon any kind of undead, not just skeletons and zombies. The undead don\u0027t perish or disappear at dawn the following day, remaining until {@creature Orcus|MTF} dismisses them."
-    ],
-    "name": "Call Undead",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Wand of Orcus is a sentient, chaotic evil item with an Intelligence of 16, a Wisdom of 12, and a Charisma of 16. It has hearing and {@sense darkvision} out to a range of 120 feet.",
-      "The wand communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common."
-    ],
-    "name": "Sentience",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The wand\u0027s purpose is to help satisfy {@creature Orcus|MTF|Orcus\u0027s} desire to slay everything in the multiverse. The wand is cold, cruel, nihilistic, and bereft of humor. In order to further its master\u0027s goals, the wand feigns devotion to its current user and makes grandiose promises that it has no intention of fulfilling, such as vowing to help its user overthrow {@creature Orcus|MTF}."
-    ],
-    "name": "Personality",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "Destroying the Wand of Orcus requires that it be taken to the Positive Energy Plane by the ancient hero whose skull surmounts it. For this to happen, the long-lost hero must first be restored to life\u2014no easy task, given the fact that {@creature Orcus|MTF} has imprisoned the hero\u0027s soul and keeps it hidden and well guarded.",
-      "Bathing the wand in positive energy causes it to crack and explode, but unless the above conditions are met, the wand instantly reforms on {@creature Orcus|MTF|Orcus\u0027s} layer of the Abyss."
-    ],
-    "name": "Destroying the Wand",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Wand of Orcus</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Wand of Orcus</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>227</td>
+                </tr>
+                <tr>
+                    <td>baseItem</td>
+                    <td>mace|phb</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>WD</td>
+                </tr>
+                <tr>
+                    <td>typeAlt</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>sentient</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>simple</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <td>bonusAc</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d4 + 3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["The ghastly Wand of Orcus rarely leaves {@creature Orcus|MTF|Orcus's} side. The device, as evil as its creator, shares the demon lord's aims to snuff out the lives of all living things and bind the Material Plane in the stasis of undeath. {@creature Orcus|MTF} allows the wand to slip from his grasp from time to time. When it does, it magically appears wherever its master senses an opportunity to achieve some fell goal.", "Made from bones as hard as iron, the wand is topped with a magically enlarged skull that once belonged to a human hero slain by {@creature Orcus|MTF}. The wand can magically change in size to better conform to the grip of its user. Plants wither, drinks spoil, flesh rots, and vermin thrive in the wand's presence.", 'Any creature besides {@creature Orcus|MTF} that tries to attune to the wand must make a DC 17 Constitution saving throw. On a successful save, the creature takes {@damage 10d6} necrotic damage. On a failed save, the creature dies and rises as a {@creature zombie}.', 'In the hands of one who is attuned to it, the wand can be wielded as a magic {@item mace|phb} that grants a +3 bonus to attack and damage rolls made with it. The wand deals an extra {@damage 2d12} necrotic damage on a hit.', {'name': 'Random Properties', 'type': 'entries', 'entries': ['The Wand of Orcus has the following random properties:', {'type': 'list', 'items': ['2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial properties}', '1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial property}', '2 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental properties}', '1 {@table Artifact Properties; Major Detrimental Properties|dmg|major detrimental property}']}, 'The detrimental properties of the Wand of Orcus are suppressed while the wand is attuned to {@creature Orcus|MTF} himself.']}, {'name': 'Protection', 'type': 'entries', 'entries': ['You gain a +3 bonus to Armor Class while holding the wand.']}, {'name': 'Spells', 'type': 'entries', 'entries': ['The wand has 7 charges. While holding it, you can use an action and expend 1 or more of its charges to cast one of the following spells (save DC 18) from it: {@spell animate dead} (1 charge), {@spell blight} (2 charges), {@spell circle of death} (3 charges), {@spell finger of death} (3 charges), {@spell power word kill} (4 charges), or {@spell speak with dead} (1 charge). The wand regains {@dice 1d4 + 3} expended charges daily at dawn.', "While attuned to the wand, {@creature Orcus|MTF} or a follower blessed by him can cast each of the wand's spells using 2 fewer charges (minimum of 0)."]}, {'name': 'Call Undead', 'type': 'entries', 'entries': ["While you are holding the wand, you can use an action to conjure {@creature skeleton||skeletons} and {@creature zombie||zombies}, calling forth as many of them as you can divide 500 hit points among, each undead having average hit points. The undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of you and obey your commands until they are destroyed or until dawn of the next day, when they collapse into inanimate piles of bones and rotting corpses. Once you use this property of the wand, you can't use it again until the next dawn.", "While attuned to the wand, {@creature Orcus|MTF} can summon any kind of undead, not just skeletons and zombies. The undead don't perish or disappear at dawn the following day, remaining until {@creature Orcus|MTF} dismisses them."]}, {'name': 'Sentience', 'type': 'entries', 'entries': ['The Wand of Orcus is a sentient, chaotic evil item with an Intelligence of 16, a Wisdom of 12, and a Charisma of 16. It has hearing and {@sense darkvision} out to a range of 120 feet.', 'The wand communicates telepathically with its wielder and can speak, read, and understand Abyssal and Common.']}, {'name': 'Personality', 'type': 'entries', 'entries': ["The wand's purpose is to help satisfy {@creature Orcus|MTF|Orcus's} desire to slay everything in the multiverse. The wand is cold, cruel, nihilistic, and bereft of humor. In order to further its master's goals, the wand feigns devotion to its current user and makes grandiose promises that it has no intention of fulfilling, such as vowing to help its user overthrow {@creature Orcus|MTF}."]}, {'name': 'Destroying the Wand', 'type': 'entries', 'entries': ["Destroying the Wand of Orcus requires that it be taken to the Positive Energy Plane by the ancient hero whose skull surmounts it. For this to happen, the long-lost hero must first be restored to life—no easy task, given the fact that {@creature Orcus|MTF} has imprisoned the hero's soul and keeps it hidden and well guarded.", "Bathing the wand in positive energy causes it to crack and explode, but unless the above conditions are met, the wand instantly reforms on {@creature Orcus|MTF|Orcus's} layer of the Abyss."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['animate dead', 'blight', 'circle of death', 'finger of death', 'power word kill', 'speak with dead']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

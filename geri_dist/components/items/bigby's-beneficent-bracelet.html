@@ -1,193 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Bigby's Beneficent Bracelet</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BGG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>111</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This gorgeous jewelry piece, crafted by the wizard Bigby himself, consists of four gold rings attached via delicate chains to a wrist cuff studded with sapphires and diamonds.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The bracelet has the following random properties, determined by rolling on the appropriate table in the Dungeon Master's Guide:</li>
-                        <ul>
-                                <li>1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} property</li>
-                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property</li>
-                                <li>1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property</li>
-                        </ul>
-            </ul>
-            <li>Dexterous Fingers</li>
-            <ul>
-                        <li>While wearing the bracelet, you can cast {@spell mage hand}.</li>
-            </ul>
-            <li>Force Sculpture</li>
-            <ul>
-                        <li>By focusing and channeling the bracelet's magic for 1 minute, you can create a spectral copy of a Large or smaller nonmagical object. The copy appears in an unoccupied space within 10 feet of you, and it is made of tangible but translucent force that mimics the size, weight, and other properties of the object it's copying. The copy must appear on a surface or liquid that can support it. Creatures can touch and interact with the copy as if it were a nonmagical object.</li>
-                        <li>The copy is immune to all damage and can't be dispelled, but a {@spell disintegrate} spell destroys it immediately. Otherwise, the copy disappears after 8 hours or when you dismiss it as an action.</li>
-                        <li>The bracelet can create up to three copies and regains all expended uses at dawn.</li>
-            </ul>
-            <li>Helpful Hand</li>
-            <ul>
-                        <li>As an action, you can use the bracelet to cast {@spell Bigby's hand} as a 9th-level spell (spell attack bonus +13). When you cast the spell this way, the spell doesn't require {@status concentration}. Once this property is used, it can't be used again until the next dawn.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This gorgeous jewelry piece, crafted by the wizard Bigby himself, consists of four gold rings attached via delicate chains to a wrist cuff studded with sapphires and diamonds.",
-  {
-    "entries": [
-      "The bracelet has the following random properties, determined by rolling on the appropriate table in the Dungeon Master\u0027s Guide:",
-      {
-        "items": [
-          "1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} property",
-          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property",
-          "1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While wearing the bracelet, you can cast {@spell mage hand}."
-    ],
-    "name": "Dexterous Fingers",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "By focusing and channeling the bracelet\u0027s magic for 1 minute, you can create a spectral copy of a Large or smaller nonmagical object. The copy appears in an unoccupied space within 10 feet of you, and it is made of tangible but translucent force that mimics the size, weight, and other properties of the object it\u0027s copying. The copy must appear on a surface or liquid that can support it. Creatures can touch and interact with the copy as if it were a nonmagical object.",
-      "The copy is immune to all damage and can\u0027t be dispelled, but a {@spell disintegrate} spell destroys it immediately. Otherwise, the copy disappears after 8 hours or when you dismiss it as an action.",
-      "The bracelet can create up to three copies and regains all expended uses at dawn."
-    ],
-    "name": "Force Sculpture",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "As an action, you can use the bracelet to cast {@spell Bigby\u0027s hand} as a 9th-level spell (spell attack bonus +13). When you cast the spell this way, the spell doesn\u0027t require {@status concentration}. Once this property is used, it can\u0027t be used again until the next dawn."
-    ],
-    "name": "Helpful Hand",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Bigby's Beneficent Bracelet</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Bigby's Beneficent Bracelet</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BGG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>111</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This gorgeous jewelry piece, crafted by the wizard Bigby himself, consists of four gold rings attached via delicate chains to a wrist cuff studded with sapphires and diamonds.', {'type': 'entries', 'name': 'Random Properties', 'entries': ["The bracelet has the following random properties, determined by rolling on the appropriate table in the Dungeon Master's Guide:", {'type': 'list', 'items': ['1 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} property', '1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property', '1 {@table Artifact Properties; Minor Detrimental Properties|dmg|minor detrimental} property']}]}, {'type': 'entries', 'name': 'Dexterous Fingers', 'entries': ['While wearing the bracelet, you can cast {@spell mage hand}.']}, {'type': 'entries', 'name': 'Force Sculpture', 'entries': ["By focusing and channeling the bracelet's magic for 1 minute, you can create a spectral copy of a Large or smaller nonmagical object. The copy appears in an unoccupied space within 10 feet of you, and it is made of tangible but translucent force that mimics the size, weight, and other properties of the object it's copying. The copy must appear on a surface or liquid that can support it. Creatures can touch and interact with the copy as if it were a nonmagical object.", "The copy is immune to all damage and can't be dispelled, but a {@spell disintegrate} spell destroys it immediately. Otherwise, the copy disappears after 8 hours or when you dismiss it as an action.", 'The bracelet can create up to three copies and regains all expended uses at dawn.']}, {'type': 'entries', 'name': 'Helpful Hand', 'entries': ["As an action, you can use the bracelet to cast {@spell Bigby's hand} as a 9th-level spell (spell attack bonus +13). When you cast the spell this way, the spell doesn't require {@status concentration}. Once this property is used, it can't be used again until the next dawn."]}]</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['mage hand', "Bigby's hand"]</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

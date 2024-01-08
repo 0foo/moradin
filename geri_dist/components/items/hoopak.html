@@ -1,143 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Hoopak</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DSotDQ</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>188</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>M</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>none</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>martial</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['A', 'F', 'S', '2H']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td>40/160</td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>P</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td>sling bullet|phb</td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>A hoopak is a sturdy stick with a sling at one end and a pointed tip at the other.</li>
-            <li>Special</li>
-            <ul>
-                        <li>When you make a melee attack with this weapon, you ignore its ammunition property. You can use the hoopak as a martial ranged weapon. If you do, it uses the ammunition property, uses sling bullets, and deals {@damage 1d4} bludgeoning damage on a hit.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "A hoopak is a sturdy stick with a sling at one end and a pointed tip at the other.",
-  {
-    "entries": [
-      "When you make a melee attack with this weapon, you ignore its ammunition property. You can use the hoopak as a martial ranged weapon. If you do, it uses the ammunition property, uses sling bullets, and deals {@damage 1d4} bludgeoning damage on a hit."
-    ],
-    "name": "Special",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Hoopak</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Hoopak</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DSotDQ</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>188</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>martial</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['A', 'F', 'S', '2H']</td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td>40/160</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td>weapon</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['A hoopak is a sturdy stick with a sling at one end and a pointed tip at the other.', {'type': 'entries', 'name': 'Special', 'entries': ['When you make a melee attack with this weapon, you ignore its ammunition property. You can use the hoopak as a martial ranged weapon. If you do, it uses the ammunition property, uses sling bullets, and deals {@damage 1d4} bludgeoning damage on a hit.']}]</td>
+                </tr>
+                <tr>
+                    <td>ammoType</td>
+                    <td>sling bullet|phb</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,212 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Helm of the Gods</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>MOT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>196</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>While wearing this helm, you know whether there is a celestial or fiend within 30 feet of you, as well as where the creature is located, provided the creature isn't behind total cover.</li>
-            <li>Whenever you finish a long rest while wearing the helm, you can pray to one of the gods listed on the Helm of the Gods table and store the listed spell in the helm, replacing any spell that is already stored there. The save DC for the spell is 13.</li>
-            <li>The helm has 3 charges. To cast a spell from the helm, you must expend 1 charge, and the helm regains {@dice 1d3} charges daily at dawn.</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "While wearing this helm, you know whether there is a celestial or fiend within 30 feet of you, as well as where the creature is located, provided the creature isn\u0027t behind total cover.",
-  "Whenever you finish a long rest while wearing the helm, you can pray to one of the gods listed on the Helm of the Gods table and store the listed spell in the helm, replacing any spell that is already stored there. The save DC for the spell is 13.",
-  "The helm has 3 charges. To cast a spell from the helm, you must expend 1 charge, and the helm regains {@dice 1d3} charges daily at dawn.",
-  {
-    "colLabels": [
-      "God",
-      "Spell"
-    ],
-    "colStyles": [
-      "col-2 text-center",
-      "col-10 text-center"
-    ],
-    "rows": [
-      [
-        "Athreos",
-        "{@spell protection from evil and good}"
-      ],
-      [
-        "Ephara",
-        "{@spell sanctuary}"
-      ],
-      [
-        "Erebos",
-        "{@spell inflict wounds}"
-      ],
-      [
-        "Heliod",
-        "{@spell guiding bolt}"
-      ],
-      [
-        "Iroas",
-        "{@spell heroism}"
-      ],
-      [
-        "Karametra",
-        "{@spell goodberry}"
-      ],
-      [
-        "Keranos",
-        "{@spell thunderous smite}"
-      ],
-      [
-        "Klothys",
-        "{@spell entangle}"
-      ],
-      [
-        "Kruphix",
-        "{@spell dissonant whispers}"
-      ],
-      [
-        "Mogis",
-        "{@spell hellish rebuke}"
-      ],
-      [
-        "Nylea",
-        "{@spell faerie fire}"
-      ],
-      [
-        "Pharika",
-        "{@spell lesser restoration}"
-      ],
-      [
-        "Phenax",
-        "{@spell charm person}"
-      ],
-      [
-        "Purphoros",
-        "{@spell searing smite}"
-      ],
-      [
-        "Thassa",
-        "{@spell identify}"
-      ]
-    ],
-    "type": "table"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Helm of the Gods</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Helm of the Gods</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>MOT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>196</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d3}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>["While wearing this helm, you know whether there is a celestial or fiend within 30 feet of you, as well as where the creature is located, provided the creature isn't behind total cover.", 'Whenever you finish a long rest while wearing the helm, you can pray to one of the gods listed on the Helm of the Gods table and store the listed spell in the helm, replacing any spell that is already stored there. The save DC for the spell is 13.', 'The helm has 3 charges. To cast a spell from the helm, you must expend 1 charge, and the helm regains {@dice 1d3} charges daily at dawn.', {'type': 'table', 'colStyles': ['col-2 text-center', 'col-10 text-center'], 'colLabels': ['God', 'Spell'], 'rows': [['Athreos', '{@spell protection from evil and good}'], ['Ephara', '{@spell sanctuary}'], ['Erebos', '{@spell inflict wounds}'], ['Heliod', '{@spell guiding bolt}'], ['Iroas', '{@spell heroism}'], ['Karametra', '{@spell goodberry}'], ['Keranos', '{@spell thunderous smite}'], ['Klothys', '{@spell entangle}'], ['Kruphix', '{@spell dissonant whispers}'], ['Mogis', '{@spell hellish rebuke}'], ['Nylea', '{@spell faerie fire}'], ['Pharika', '{@spell lesser restoration}'], ['Phenax', '{@spell charm person}'], ['Purphoros', '{@spell searing smite}'], ['Thassa', '{@spell identify}']]}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

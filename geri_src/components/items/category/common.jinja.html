@@ -1,0 +1,40 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+json_project_path: /data/items/items.json
+start_key: item
+---
+
+<!DOCTYPE html>
+<html>
+        <head>
+        {% include '/includes/simple-head.html' %}
+        {% include '/includes/add-datatables.html' %}
+        <title>{{ name }}</title>
+        <link href="/css/simple-table.css" rel="stylesheet"/>
+        </head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Weapon</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                {% if item.rarity == 'none' %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.type }}</td>
+                        <td>{{ item.weapon }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

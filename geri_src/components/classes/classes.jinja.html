@@ -1,11 +1,15 @@
 ---
-processor: [jinja_file_parser, remove_blank_lines, 5e_tools_item_tag]
-json_path: ../../data/classes/all_classes.json
+processor: [
+    jinja_file_parser, 
+    remove_blank_lines, 
+    5e_tools_tag_replace
+]
+json_project_path: /data/classes/all_classes.json
 filename_key: "{{class.0.name | urlencode}}"
 extension: html
 ---
-{% set class_info = class.0 %}
 
+{% set class_info = class.0 %}
 
 
 <h1>{{ class_info.name }}</h1>

@@ -1,136 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Tyrant Ship</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>AAG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>54</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>SPC</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>none</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Beholders carve tyrant ships out of stone using their disintegration rays and use these ships to wander the Astral Plane, looking for worlds to conquer and rival beholders to destroy. No two tyrant ships look alike, but they all have one or more features reminiscent of their creators, such as a bulbous shape and eyestalks.</li>
-            <li>A spherical chamber on the ship's command deck functions as a spelljamming helm that only beholders can attune to. Any beholder that occupies this chamber can attune to it. Reducing a tyrant ship to 0 hit points not only destroys it but also destroys the ship's spelljamming helm and eyestalk cannons.</li>
-            <li>A tyrant ship can't float on water, but it can safely land on the ground.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Beholders carve tyrant ships out of stone using their disintegration rays and use these ships to wander the Astral Plane, looking for worlds to conquer and rival beholders to destroy. No two tyrant ships look alike, but they all have one or more features reminiscent of their creators, such as a bulbous shape and eyestalks.",
-  "A spherical chamber on the ship\u0027s command deck functions as a spelljamming helm that only beholders can attune to. Any beholder that occupies this chamber can attune to it. Reducing a tyrant ship to 0 hit points not only destroys it but also destroys the ship\u0027s spelljamming helm and eyestalk cannons.",
-  "A tyrant ship can\u0027t float on water, but it can safely land on the ground."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Tyrant Ship</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Tyrant Ship</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>AAG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>SPC</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td>crew</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>vehAc</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>vehHp</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>vehDmgThresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>vehSpeed</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>capCargo</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Beholders carve tyrant ships out of stone using their disintegration rays and use these ships to wander the Astral Plane, looking for worlds to conquer and rival beholders to destroy. No two tyrant ships look alike, but they all have one or more features reminiscent of their creators, such as a bulbous shape and eyestalks.', "A spherical chamber on the ship's command deck functions as a spelljamming helm that only beholders can attune to. Any beholder that occupies this chamber can attune to it. Reducing a tyrant ship to 0 hit points not only destroys it but also destroys the ship's spelljamming helm and eyestalk cannons.", "A tyrant ship can't float on water, but it can safely land on the ground."]</td>
+                </tr>
+                <tr>
+                    <td>seeAlsoVehicle</td>
+                    <td>['Tyrant Ship|AAG']</td>
+                </tr>
+        </table>
+    </body>
 </html>

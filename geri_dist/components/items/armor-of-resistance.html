@@ -1,188 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Armor of Resistance</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>162</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>GV</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below.</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below.",
-  {
-    "colLabels": [
-      "d10",
-      "Damage Type"
-    ],
-    "colStyles": [
-      "col-2 text-center",
-      "col-10"
-    ],
-    "rows": [
-      [
-        "1",
-        "<a href="/components/items/armor-of-acid-resistance.html">armor of acid resistance</a>"
-      ],
-      [
-        "2",
-        "<a href="/components/items/armor-of-cold-resistance.html">armor of cold resistance</a>"
-      ],
-      [
-        "3",
-        "<a href="/components/items/armor-of-fire-resistance.html">armor of fire resistance</a>"
-      ],
-      [
-        "4",
-        "<a href="/components/items/armor-of-force-resistance.html">armor of force resistance</a>"
-      ],
-      [
-        "5",
-        "<a href="/components/items/armor-of-lightning-resistance.html">armor of lightning resistance</a>"
-      ],
-      [
-        "6",
-        "<a href="/components/items/armor-of-necrotic-resistance.html">armor of necrotic resistance</a>"
-      ],
-      [
-        "7",
-        "<a href="/components/items/armor-of-poison-resistance.html">armor of poison resistance</a>"
-      ],
-      [
-        "8",
-        "<a href="/components/items/armor-of-psychic-resistance.html">armor of psychic resistance</a>"
-      ],
-      [
-        "9",
-        "<a href="/components/items/armor-of-radiant-resistance.html">armor of radiant resistance</a>"
-      ],
-      [
-        "10",
-        "<a href="/components/items/armor-of-thunder-resistance.html">armor of thunder resistance</a>"
-      ]
-    ],
-    "type": "table"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Armor of Resistance</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Armor of Resistance</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>162</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>GV</td>
+                </tr>
+                <tr>
+                    <td>tier</td>
+                    <td>major</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below.', {'type': 'table', 'colStyles': ['col-2 text-center', 'col-10'], 'colLabels': ['d10', 'Damage Type'], 'rows': [['1', '{@item armor of acid resistance||Acid}'], ['2', '{@item armor of cold resistance||Cold}'], ['3', '{@item armor of fire resistance||Fire}'], ['4', '{@item armor of force resistance||Force}'], ['5', '{@item armor of lightning resistance||Lightning}'], ['6', '{@item armor of necrotic resistance||Necrotic}'], ['7', '{@item armor of poison resistance||Poison}'], ['8', '{@item armor of psychic resistance||Psychic}'], ['9', '{@item armor of radiant resistance||Radiant}'], ['10', '{@item armor of thunder resistance||Thunder}']]}]</td>
+                </tr>
+                <tr>
+                    <td>items</td>
+                    <td>['Armor of Acid Resistance', 'Armor of Cold Resistance', 'Armor of Fire Resistance', 'Armor of Force Resistance', 'Armor of Lightning Resistance', 'Armor of Necrotic Resistance', 'Armor of Poison Resistance', 'Armor of Psychic Resistance', 'Armor of Radiant Resistance', 'Armor of Thunder Resistance']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,0 +1,42 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+json_project_path: /data/items/items.json
+start_key: item
+custom_filter_file: ".geraldine/custom_jinja_filters.py"
+
+---
+
+<!DOCTYPE html>
+<html>
+        <head>
+        {% include '/includes/simple-head.html' %}
+        {% include '/includes/add-datatables.html' %}
+        <title>{{ name }}</title>
+        <link href="/css/simple-table.css" rel="stylesheet"/>
+        </head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                {% if item.rarity == 'none' %}
+                    {% if item.type == "INS" %}
+                    <tr>
+                        <td>{{ item.name  | format_as_item_href }}</td>
+                        <td>{{ item.type }}</td>                        
+                    </tr>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

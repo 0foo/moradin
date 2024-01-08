@@ -1,0 +1,13 @@
+# custom_plugin_directories: Add your custom plugins in these directories, they will be used if they have a .plugin.py extension and geraldine function inside. 
+# geri_dest_dir_name: The directory that processing results will be written to. It's ephemeral, make no changes to this directory, except through, the source directory. 
+# geri_src_dir_name: The directory that will be processed 
+# max_directory_depth: How many directories deep the system will process. 
+# priority_directories: These directories get processed first, in order to do things like add includes 
+
+custom_plugin_directories:
+- .geraldine/plugins
+geri_dest_dir_name: geri_dist
+geri_src_dir_name: geri_src
+max_directory_depth: 10
+priority_directories:
+- includes

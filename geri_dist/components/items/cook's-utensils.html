@@ -1,124 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Cook's Utensils</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>PHB</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>154</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>AT</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>none</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>8</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td>100</td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-</ul>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Cook's Utensils</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Cook's Utensils</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>PHB</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>154</td>
+                </tr>
+                <tr>
+                    <td>srd</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>basicRules</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>additionalSources</td>
+                    <td>[{'source': 'XGE', 'page': 80}]</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>AT</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>none</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>additionalEntries</td>
+                    <td>['Adventuring is a hard life. With a cook along on the journey, your meals will be much better than the typical mix of hardtack and dried fruit.', {'type': 'entries', 'name': 'Components', 'entries': ["Cook's utensils include a metal pot, knives, forks, a stirring spoon, and a ladle."]}, {'type': 'entries', 'name': 'History', 'entries': ["Your knowledge of cooking techniques allows you to assess the social patterns involved in a culture's eating habits."]}, {'type': 'entries', 'name': 'Medicine', 'entries': ['When administering treatment, you can transform medicine that is bitter or sour into a pleasing concoction.']}, {'type': 'entries', 'name': 'Survival', 'entries': ['When foraging for food, you can make do with ingredients you scavenge that others would be unable to transform into nourishing meals.']}, {'type': 'entries', 'name': 'Prepare Meals', 'entries': ["As part of a short rest, you can prepare a tasty meal that helps your companions regain their strength. You and up to five creatures of your choice regain 1 extra hit point per Hit Die spent during a short rest, provided you have access to your cook's utensils and sufficient food."]}, {'type': 'table', 'caption': "Cook's Utensils", 'colLabels': ['Activity', 'DC'], 'colStyles': ['col-10', 'col-2 text-center'], 'rows': [['Create a typical meal', '10'], ['Duplicate a meal', '10'], ['Spot poison or impurities in food', '15'], ['Create a gourmet meal', '15']]}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

@@ -1,156 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Canian Fork</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>CoA</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>267</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>M</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>martial</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['T', 'V']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td>20/60</td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>P</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td>+3</td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>You have a +3 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one additional attack with it as a bonus action on each of your turns.</li>
-            <li>Curse</li>
-            <ul>
-                        <li>You're unwilling to part with this weapon while attuned to it. You're also vulnerable to radiant damage and each time you receive magical healing, you must make a DC 15 Constitution saving throw.</li>
-                        <li>On a failed save, the healing has no effect. Only the {@spell Remove Curse} spell allows you to end attunement to this item.</li>
-            </ul>
-            <li>Corrupting</li>
-            <ul>
-                        <li>This item corrupts. See the "{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}" section.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "You have a +3 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one additional attack with it as a bonus action on each of your turns.",
-  {
-    "entries": [
-      "You\u0027re unwilling to part with this weapon while attuned to it. You\u0027re also vulnerable to radiant damage and each time you receive magical healing, you must make a DC 15 Constitution saving throw.",
-      "On a failed save, the healing has no effect. Only the {@spell Remove Curse} spell allows you to end attunement to this item."
-    ],
-    "name": "Curse",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "This item corrupts. See the \"{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}\" section."
-    ],
-    "name": "Corrupting",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Canian Fork</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Canian Fork</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>CoA</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>267</td>
+                </tr>
+                <tr>
+                    <td>baseItem</td>
+                    <td>trident|PHB</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>curse</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>martial</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['T', 'V']</td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td>20/60</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td>dmg2</td>
+                    <td>1d8</td>
+                </tr>
+                <tr>
+                    <td>bonusWeapon</td>
+                    <td>+3</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['You have a +3 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one additional attack with it as a bonus action on each of your turns.', {'type': 'entries', 'name': 'Curse', 'entries': ["You're unwilling to part with this weapon while attuned to it. You're also vulnerable to radiant damage and each time you receive magical healing, you must make a DC 15 Constitution saving throw.", 'On a failed save, the healing has no effect. Only the {@spell Remove Curse} spell allows you to end attunement to this item.']}, {'type': 'entries', 'name': 'Corrupting', 'entries': ['This item corrupts. See the "{@adventure Infernal Item Corruption|CoA|16|Infernal Item Corruption}" section.']}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

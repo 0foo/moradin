@@ -1,200 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Ring of Resistance</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>DMG</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>192</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td>RG</td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>rare</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the DM chooses or determines randomly.</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the DM chooses or determines randomly.",
-  {
-    "colLabels": [
-      "d10",
-      "Damage Type",
-      "Gem"
-    ],
-    "colStyles": [
-      "col-2 text-center",
-      "col-5",
-      "col-5"
-    ],
-    "rows": [
-      [
-        "1",
-        "<a href="/components/items/ring-of-acid-resistance.html">ring of acid resistance</a>",
-        "Pearl"
-      ],
-      [
-        "2",
-        "<a href="/components/items/ring-of-cold-resistance.html">ring of cold resistance</a>",
-        "Tourmaline"
-      ],
-      [
-        "3",
-        "<a href="/components/items/ring-of-fire-resistance.html">ring of fire resistance</a>",
-        "Garnet"
-      ],
-      [
-        "4",
-        "<a href="/components/items/ring-of-force-resistance.html">ring of force resistance</a>",
-        "Sapphire"
-      ],
-      [
-        "5",
-        "<a href="/components/items/ring-of-lightning-resistance.html">ring of lightning resistance</a>",
-        "Citrine"
-      ],
-      [
-        "6",
-        "<a href="/components/items/ring-of-necrotic-resistance.html">ring of necrotic resistance</a>",
-        "Jet"
-      ],
-      [
-        "7",
-        "<a href="/components/items/ring-of-poison-resistance.html">ring of poison resistance</a>",
-        "Amethyst"
-      ],
-      [
-        "8",
-        "<a href="/components/items/ring-of-psychic-resistance.html">ring of psychic resistance</a>",
-        "Jade"
-      ],
-      [
-        "9",
-        "<a href="/components/items/ring-of-radiant-resistance.html">ring of radiant resistance</a>",
-        "Topaz"
-      ],
-      [
-        "10",
-        "<a href="/components/items/ring-of-thunder-resistance.html">ring of thunder resistance</a>",
-        "Spinel"
-      ]
-    ],
-    "type": "table"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Ring of Resistance</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Ring of Resistance</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>DMG</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>192</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>RG</td>
+                </tr>
+                <tr>
+                    <td>tier</td>
+                    <td>major</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>rare</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the DM chooses or determines randomly.', {'type': 'table', 'colStyles': ['col-2 text-center', 'col-5', 'col-5'], 'colLabels': ['d10', 'Damage Type', 'Gem'], 'rows': [['1', '{@item ring of acid resistance||Acid}', 'Pearl'], ['2', '{@item ring of cold resistance||Cold}', 'Tourmaline'], ['3', '{@item ring of fire resistance||Fire}', 'Garnet'], ['4', '{@item ring of force resistance||Force}', 'Sapphire'], ['5', '{@item ring of lightning resistance||Lightning}', 'Citrine'], ['6', '{@item ring of necrotic resistance||Necrotic}', 'Jet'], ['7', '{@item ring of poison resistance||Poison}', 'Amethyst'], ['8', '{@item ring of psychic resistance||Psychic}', 'Jade'], ['9', '{@item ring of radiant resistance||Radiant}', 'Topaz'], ['10', '{@item ring of thunder resistance||Thunder}', 'Spinel']]}]</td>
+                </tr>
+                <tr>
+                    <td>items</td>
+                    <td>['Ring of Acid Resistance', 'Ring of Cold Resistance', 'Ring of Fire Resistance', 'Ring of Force Resistance', 'Ring of Lightning Resistance', 'Ring of Necrotic Resistance', 'Ring of Poison Resistance', 'Ring of Psychic Resistance', 'Ring of Radiant Resistance', 'Ring of Thunder Resistance']</td>
+                </tr>
+                <tr>
+                    <td>lootTables</td>
+                    <td>['Magic Item Table G']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

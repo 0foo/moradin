@@ -1,175 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Telescopic Transporter</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>BMT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>105</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This enormous telescope allows you to view distant celestial objects, including stars, Wildspace systems, and Astral Sea phenomena like the cities of deities or the petrified husks of dead gods.</li>
-            <li>After spending 1 hour calibrating the telescope, you can attempt to travel to the planet or celestial body at which the telescope is currently pointed. At the end of the hour, make a DC 17 Intelligence ({@skill Arcana}) check. On a successful check, you and eight other willing creatures touching the telescope, along with everything all travelers are wearing and carrying, safely teleport to unoccupied spaces at the intended destination. On a failed check, a mishap occurs instead. The DM rolls on the Telescope Travel Mishaps table to determine the mishap or chooses a mishap that's good for the campaign.</li>
-            <li></li>
-            <ul>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This enormous telescope allows you to view distant celestial objects, including stars, Wildspace systems, and Astral Sea phenomena like the cities of deities or the petrified husks of dead gods.",
-  "After spending 1 hour calibrating the telescope, you can attempt to travel to the planet or celestial body at which the telescope is currently pointed. At the end of the hour, make a DC 17 Intelligence ({@skill Arcana}) check. On a successful check, you and eight other willing creatures touching the telescope, along with everything all travelers are wearing and carrying, safely teleport to unoccupied spaces at the intended destination. On a failed check, a mishap occurs instead. The DM rolls on the Telescope Travel Mishaps table to determine the mishap or chooses a mishap that\u0027s good for the campaign.",
-  {
-    "caption": "Telescope Travel Mishaps",
-    "colLabels": [
-      "d6",
-      "Mishap"
-    ],
-    "colStyles": [
-      "col-2 text-center",
-      "col-10"
-    ],
-    "rows": [
-      [
-        "1",
-        "The travelers appear adrift in the Astral Sea."
-      ],
-      [
-        "2",
-        "The travelers appear on a different plane of existence, determined randomly or chosen by the DM."
-      ],
-      [
-        "3",
-        "Excess cosmic energy overloads the telescope, causing it to explode. Each creature within 60 feet of the telescope takes {@damage 8d6} necrotic damage. Any Humanoid who survives this damage is transformed into a different kind of creature, as if it had been subject to the {@spell Reincarnate} spell."
-      ],
-      [
-        "4",
-        "A creature from the Astral Sea (such as a {@creature githyanki knight}) appears within 60 feet of the telescope. The DM decides its attitude."
-      ],
-      [
-        "5",
-        "The travelers appear on a different planet or celestial body in the Wildspace system nearest to their target destination."
-      ],
-      [
-        "6",
-        "The travelers arrive at their intended destination, but they each appear coated in harmless slime."
-      ]
-    ],
-    "type": "table"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Telescopic Transporter</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Telescopic Transporter</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>BMT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This enormous telescope allows you to view distant celestial objects, including stars, Wildspace systems, and Astral Sea phenomena like the cities of deities or the petrified husks of dead gods.', "After spending 1 hour calibrating the telescope, you can attempt to travel to the planet or celestial body at which the telescope is currently pointed. At the end of the hour, make a DC 17 Intelligence ({@skill Arcana}) check. On a successful check, you and eight other willing creatures touching the telescope, along with everything all travelers are wearing and carrying, safely teleport to unoccupied spaces at the intended destination. On a failed check, a mishap occurs instead. The DM rolls on the Telescope Travel Mishaps table to determine the mishap or chooses a mishap that's good for the campaign.", {'type': 'table', 'caption': 'Telescope Travel Mishaps', 'colStyles': ['col-2 text-center', 'col-10'], 'colLabels': ['d6', 'Mishap'], 'rows': [['1', 'The travelers appear adrift in the Astral Sea.'], ['2', 'The travelers appear on a different plane of existence, determined randomly or chosen by the DM.'], ['3', 'Excess cosmic energy overloads the telescope, causing it to explode. Each creature within 60 feet of the telescope takes {@damage 8d6} necrotic damage. Any Humanoid who survives this damage is transformed into a different kind of creature, as if it had been subject to the {@spell Reincarnate} spell.'], ['4', 'A creature from the Astral Sea (such as a {@creature githyanki knight}) appears within 60 feet of the telescope. The DM decides its attitude.'], ['5', 'The travelers appear on a different planet or celestial body in the Wildspace system nearest to their target destination.'], ['6', 'The travelers arrive at their intended destination, but they each appear coated in harmless slime.']]}]</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>

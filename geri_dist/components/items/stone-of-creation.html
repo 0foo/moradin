@@ -1,208 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Stone of Creation</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>AitFR-AVT</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>artifact</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>Rare legends and lore that speak of the Stone of Creation claim it fell to the Material Plane like a meteor from some distant edge of the Outer Planes or the Far Realm. Similar legends across various worlds, all describing stones that grow buildings and islands from magic, like a house from a seed, suggest the Stone of Creation is not a unique artifact—or that all the various pieces of it are derived from a single source of stone even larger than sages imagine.</li>
-            <li>The raw, black stone appears flaky like slate but is as hard as granite and marbled with veins of gold and platinum. The original, complete Stone of Creation took the form of a blocky slab like a standing stone, but it may be impossible to know the Stone's true size, or if the concept of a "whole" Stone of Creation even applies to the artifact. Perhaps other slabs and boulders made from the Stone have been scattered across the multiverse, being cut down and recombed through interplanar movements and the magic of the artifacts themselves.</li>
-            <li>Random Properties</li>
-            <ul>
-                        <li>The Stone of Creation has the following random properties:</li>
-                        <ul>
-                                <li>2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties</li>
-                                <li>1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property</li>
-                        </ul>
-            </ul>
-            <li>Stone Smithing</li>
-            <ul>
-                        <li>While attuned to the Stone of Creation, you are proficient with <a href="/components/items/mason's-tools.html">mason's tools</a> and can use them to cut pieces from the Stone's slab, thereby creating lesser artifacts.</li>
-            </ul>
-            <li>Cut into Pieces</li>
-            <ul>
-                        <li>The Stone of Creation is a source for smaller artifacts that derive their power from it. These pieces allow you to shape and bestow a portion of the slab's power for yourself or others.</li>
-                        <li>You can cut pieces in two general sizes: a <a href="/components/items/chip-of-creation.html">chip of creation</a> or a <a href="/components/items/keystone-of-creation.html">keystone of creation</a>. These lesser artifacts require their own attunement.</li>
-                        <li>Up to eleven chips of creation can be created from the existing slab, plus up to nine keystones. A chip resembles a flake of rock about the size of an adult human's hand. A keystone is at least five times that thickness.</li>
-                        <li>When all chips and keystones have been cut away, a portion of the Stone remains but proves impervious to additional attempts to cut or chisel pieces from it. This smallest version of the Stone is the same size as a Tiny creature.</li>
-            </ul>
-            <li>Raze or Reshape Creations</li>
-            <ul>
-                        <li>Although the Stone of Creation cannot create structures or demiplanes of its own, while you are attuned to it you can revise or renovate any structure or demiplane created by a keystone or chip, provided you are within 1 mile of the Stone and you can see or otherwise perceive the structure or demiplane. For example, you may add doors, seal windows, change the arrangement of rooms, or even dispel a structure created by a keystone. To do so, you must concentrate for 1 minute, as if on a spell, while picturing the changes you wish to make in your mind; over the course of that minute, the changes slowly occur. These changes cannot deal damage or directly harm a creature. A dispelled structure gradually recedes and diminishes to nothing, leaving creatures unharmed.</li>
-            </ul>
-            <li>Destroying the Stone</li>
-            <ul>
-                        <li>The Stone of Creation is a strange artifact that can be divided into smaller artifacts, yet the Stone is impervious to most damage. Only the smith attuned to the Stone can carve it. Destroying the Stone's lesser, derived artifacts (and their creations) does no damage to the Stone itself.</li>
-                        <li>The Stone of Creation is destroyed if it reaches the Elemental Chaos or is struck with a forked metal rod attuned to the Elemental Chaos (as per the {@spell plane shift} spell). The Stone then shatters into harmless, inert shards of rock. Places created by the slab's chips and keystones crumble, decay, or fade away to nothing after the Stone of Creation is destroyed. Whether the Stone of Creation is itself a piece of a larger artifact remains unknown.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "Rare legends and lore that speak of the Stone of Creation claim it fell to the Material Plane like a meteor from some distant edge of the Outer Planes or the Far Realm. Similar legends across various worlds, all describing stones that grow buildings and islands from magic, like a house from a seed, suggest the Stone of Creation is not a unique artifact\u2014or that all the various pieces of it are derived from a single source of stone even larger than sages imagine.",
-  "The raw, black stone appears flaky like slate but is as hard as granite and marbled with veins of gold and platinum. The original, complete Stone of Creation took the form of a blocky slab like a standing stone, but it may be impossible to know the Stone\u0027s true size, or if the concept of a \"whole\" Stone of Creation even applies to the artifact. Perhaps other slabs and boulders made from the Stone have been scattered across the multiverse, being cut down and recombed through interplanar movements and the magic of the artifacts themselves.",
-  {
-    "entries": [
-      "The Stone of Creation has the following random properties:",
-      {
-        "items": [
-          "2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties",
-          "1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property"
-        ],
-        "type": "list"
-      }
-    ],
-    "name": "Random Properties",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While attuned to the Stone of Creation, you are proficient with <a href="/components/items/mason\u0027s-tools.html">mason\u0027s tools</a> and can use them to cut pieces from the Stone\u0027s slab, thereby creating lesser artifacts."
-    ],
-    "name": "Stone Smithing",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Stone of Creation is a source for smaller artifacts that derive their power from it. These pieces allow you to shape and bestow a portion of the slab\u0027s power for yourself or others.",
-      "You can cut pieces in two general sizes: a <a href="/components/items/chip-of-creation.html">chip of creation</a> or a <a href="/components/items/keystone-of-creation.html">keystone of creation</a>. These lesser artifacts require their own attunement.",
-      "Up to eleven chips of creation can be created from the existing slab, plus up to nine keystones. A chip resembles a flake of rock about the size of an adult human\u0027s hand. A keystone is at least five times that thickness.",
-      "When all chips and keystones have been cut away, a portion of the Stone remains but proves impervious to additional attempts to cut or chisel pieces from it. This smallest version of the Stone is the same size as a Tiny creature."
-    ],
-    "name": "Cut into Pieces",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "Although the Stone of Creation cannot create structures or demiplanes of its own, while you are attuned to it you can revise or renovate any structure or demiplane created by a keystone or chip, provided you are within 1 mile of the Stone and you can see or otherwise perceive the structure or demiplane. For example, you may add doors, seal windows, change the arrangement of rooms, or even dispel a structure created by a keystone. To do so, you must concentrate for 1 minute, as if on a spell, while picturing the changes you wish to make in your mind; over the course of that minute, the changes slowly occur. These changes cannot deal damage or directly harm a creature. A dispelled structure gradually recedes and diminishes to nothing, leaving creatures unharmed."
-    ],
-    "name": "Raze or Reshape Creations",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "The Stone of Creation is a strange artifact that can be divided into smaller artifacts, yet the Stone is impervious to most damage. Only the smith attuned to the Stone can carve it. Destroying the Stone\u0027s lesser, derived artifacts (and their creations) does no damage to the Stone itself.",
-      "The Stone of Creation is destroyed if it reaches the Elemental Chaos or is struck with a forked metal rod attuned to the Elemental Chaos (as per the {@spell plane shift} spell). The Stone then shatters into harmless, inert shards of rock. Places created by the slab\u0027s chips and keystones crumble, decay, or fade away to nothing after the Stone of Creation is destroyed. Whether the Stone of Creation is itself a piece of a larger artifact remains unknown."
-    ],
-    "name": "Destroying the Stone",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Stone of Creation</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Stone of Creation</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>AitFR-AVT</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>otherSources</td>
+                    <td>[{'source': 'AitFR-DN', 'page': 14}, {'source': 'AitFR-FCD', 'page': 12}]</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>artifact</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['Rare legends and lore that speak of the Stone of Creation claim it fell to the Material Plane like a meteor from some distant edge of the Outer Planes or the Far Realm. Similar legends across various worlds, all describing stones that grow buildings and islands from magic, like a house from a seed, suggest the Stone of Creation is not a unique artifact—or that all the various pieces of it are derived from a single source of stone even larger than sages imagine.', 'The raw, black stone appears flaky like slate but is as hard as granite and marbled with veins of gold and platinum. The original, complete Stone of Creation took the form of a blocky slab like a standing stone, but it may be impossible to know the Stone\'s true size, or if the concept of a "whole" Stone of Creation even applies to the artifact. Perhaps other slabs and boulders made from the Stone have been scattered across the multiverse, being cut down and recombed through interplanar movements and the magic of the artifacts themselves.', {'type': 'entries', 'name': 'Random Properties', 'entries': ['The Stone of Creation has the following random properties:', {'type': 'list', 'items': ['2 {@table Artifact Properties; Minor Beneficial Properties|dmg|minor beneficial} properties', '1 {@table Artifact Properties; Major Beneficial Properties|dmg|major beneficial} property']}]}, {'type': 'entries', 'name': 'Stone Smithing', 'entries': ["While attuned to the Stone of Creation, you are proficient with {@item mason's tools|PHB} and can use them to cut pieces from the Stone's slab, thereby creating lesser artifacts."]}, {'type': 'entries', 'name': 'Cut into Pieces', 'entries': ["The Stone of Creation is a source for smaller artifacts that derive their power from it. These pieces allow you to shape and bestow a portion of the slab's power for yourself or others.", 'You can cut pieces in two general sizes: a {@item chip of creation|AitFR-AVT} or a {@item keystone of creation|AitFR-AVT}. These lesser artifacts require their own attunement.', "Up to eleven chips of creation can be created from the existing slab, plus up to nine keystones. A chip resembles a flake of rock about the size of an adult human's hand. A keystone is at least five times that thickness.", 'When all chips and keystones have been cut away, a portion of the Stone remains but proves impervious to additional attempts to cut or chisel pieces from it. This smallest version of the Stone is the same size as a Tiny creature.']}, {'type': 'entries', 'name': 'Raze or Reshape Creations', 'entries': ['Although the Stone of Creation cannot create structures or demiplanes of its own, while you are attuned to it you can revise or renovate any structure or demiplane created by a keystone or chip, provided you are within 1 mile of the Stone and you can see or otherwise perceive the structure or demiplane. For example, you may add doors, seal windows, change the arrangement of rooms, or even dispel a structure created by a keystone. To do so, you must concentrate for 1 minute, as if on a spell, while picturing the changes you wish to make in your mind; over the course of that minute, the changes slowly occur. These changes cannot deal damage or directly harm a creature. A dispelled structure gradually recedes and diminishes to nothing, leaving creatures unharmed.']}, {'type': 'entries', 'name': 'Destroying the Stone', 'entries': ["The Stone of Creation is a strange artifact that can be divided into smaller artifacts, yet the Stone is impervious to most damage. Only the smith attuned to the Stone can carve it. Destroying the Stone's lesser, derived artifacts (and their creations) does no damage to the Stone itself.", "The Stone of Creation is destroyed if it reaches the Elemental Chaos or is struck with a forked metal rod attuned to the Elemental Chaos (as per the {@spell plane shift} spell). The Stone then shatters into harmless, inert shards of rock. Places created by the slab's chips and keystones crumble, decay, or fade away to nothing after the Stone of Creation is destroyed. Whether the Stone of Creation is itself a piece of a larger artifact remains unknown."]}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

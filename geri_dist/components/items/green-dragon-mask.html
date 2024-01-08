@@ -1,209 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Green Dragon Mask</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>RoTOS</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>This mottled green mask is surmounted by a frilled crest and has leathery spiked plates along its jaw. The mask reshapes to fit a wearer attuned to it. While you are wearing the mask and attuned to it, you can access the following properties</li>
-            <li>Damage Absorption</li>
-            <ul>
-                        <li>You have resistance against poison damage. If you already have resistance to poison damage from another source, you instead have immunity to poison damage. If you already have immunity to poison damage from another source, whenever you are subjected to poison damage, you take none of that damage and regain a number of hit points equal to half the damage dealt of that type.</li>
-            </ul>
-            <li>Draconic Majesty</li>
-            <ul>
-                        <li>While you are wearing no armor, you can add your Charisma bonus to your Armor Class.</li>
-            </ul>
-            <li>Dragon Breath</li>
-            <ul>
-                        <li>If you have a breath weapon that requires rest to recharge, it gains a recharge of 6.</li>
-            </ul>
-            <li>Dragon Sight</li>
-            <ul>
-                        <li>You gain {@sense darkvision} out to 60 feet, or to an additional 60 feet if you already have that sense. Once per day, you can gain {@sense blindsight} out to 30 feet for 5 minutes.</li>
-            </ul>
-            <li>Dragon Tongue</li>
-            <ul>
-                        <li>You can speak and understand Draconic. You also have advantage on any Charisma check you make against Green Dragons.</li>
-            </ul>
-            <li>Legendary Resistance</li>
-            <ul>
-                        <li>(1/Day) If you fail a saving throw, you can choose to succeed instead.</li>
-            </ul>
-            <li>Water Breathing</li>
-            <ul>
-                        <li>You can breathe underwater.</li>
-            </ul>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "This mottled green mask is surmounted by a frilled crest and has leathery spiked plates along its jaw. The mask reshapes to fit a wearer attuned to it. While you are wearing the mask and attuned to it, you can access the following properties",
-  {
-    "entries": [
-      "You have resistance against poison damage. If you already have resistance to poison damage from another source, you instead have immunity to poison damage. If you already have immunity to poison damage from another source, whenever you are subjected to poison damage, you take none of that damage and regain a number of hit points equal to half the damage dealt of that type."
-    ],
-    "name": "Damage Absorption",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "While you are wearing no armor, you can add your Charisma bonus to your Armor Class."
-    ],
-    "name": "Draconic Majesty",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "If you have a breath weapon that requires rest to recharge, it gains a recharge of 6."
-    ],
-    "name": "Dragon Breath",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "You gain {@sense darkvision} out to 60 feet, or to an additional 60 feet if you already have that sense. Once per day, you can gain {@sense blindsight} out to 30 feet for 5 minutes."
-    ],
-    "name": "Dragon Sight",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "You can speak and understand Draconic. You also have advantage on any Charisma check you make against Green Dragons."
-    ],
-    "name": "Dragon Tongue",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "(1/Day) If you fail a saving throw, you can choose to succeed instead."
-    ],
-    "name": "Legendary Resistance",
-    "type": "entries"
-  },
-  {
-    "entries": [
-      "You can breathe underwater."
-    ],
-    "name": "Water Breathing",
-    "type": "entries"
-  }
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Green Dragon Mask</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Green Dragon Mask</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>RoTOS</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>resist</td>
+                    <td>['poison']</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>wondrous</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>grantsLanguage</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['This mottled green mask is surmounted by a frilled crest and has leathery spiked plates along its jaw. The mask reshapes to fit a wearer attuned to it. While you are wearing the mask and attuned to it, you can access the following properties', {'type': 'entries', 'name': 'Damage Absorption', 'entries': ['You have resistance against poison damage. If you already have resistance to poison damage from another source, you instead have immunity to poison damage. If you already have immunity to poison damage from another source, whenever you are subjected to poison damage, you take none of that damage and regain a number of hit points equal to half the damage dealt of that type.']}, {'type': 'entries', 'name': 'Draconic Majesty', 'entries': ['While you are wearing no armor, you can add your Charisma bonus to your Armor Class.']}, {'type': 'entries', 'name': 'Dragon Breath', 'entries': ['If you have a breath weapon that requires rest to recharge, it gains a recharge of 6.']}, {'type': 'entries', 'name': 'Dragon Sight', 'entries': ['You gain {@sense darkvision} out to 60 feet, or to an additional 60 feet if you already have that sense. Once per day, you can gain {@sense blindsight} out to 30 feet for 5 minutes.']}, {'type': 'entries', 'name': 'Dragon Tongue', 'entries': ['You can speak and understand Draconic. You also have advantage on any Charisma check you make against Green Dragons.']}, {'type': 'entries', 'name': 'Legendary Resistance', 'entries': ['(1/Day) If you fail a saving throw, you can choose to succeed instead.']}, {'type': 'entries', 'name': 'Water Breathing', 'entries': ['You can breathe underwater.']}]</td>
+                </tr>
+        </table>
+    </body>
 </html>

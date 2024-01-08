@@ -1,136 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/htmx.org"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
-    <script  type="module" src="/js/util/util.js"></script>
-    <script  type="module" src="/js/util/global.js"></script>
-    <title></title>
-</head>
-<body>
-<table >
-    <tr>
-        <td>Name:</td>
-        <td>Dragonstaff of Ahghairon</td>
-    </tr>
-    <tr>
-        <td>Source:</td>
-        <td>WDH</td>
-    </tr>
-    <tr>
-        <td>Page:</td>
-        <td>191</td>
-    </tr>
-    <tr>
-        <td>Type:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Rarity:</td>
-        <td>legendary</td>
-    </tr>
-    <tr>
-        <td>Weight:</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>Weapon Category:</td>
-        <td>simple</td>
-    </tr>
-    <tr>
-        <td>Property:</td>
-        <td>['V']</td>
-    </tr>
-    <tr>
-        <td>Range:</td>
-        <td><class 'range'></td>
-    </tr>
-    <tr>
-        <td>Reload</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Dmg1</td>
-        <td>1d6</td>
-    </tr>
-    <tr>
-        <td>Dmg Type</td>
-        <td>B</td>
-    </tr>
-    <tr>
-        <td>Firearm</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Ammo Type</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>SRD</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Basic Rules</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Value
-            (in copper, divide by 100 for gold)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>AC</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Strength</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Stealth</td>
-        <td></td>
-    </tr>    
-    <tr>
-        <td>Bonus Weapon</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Requires Attunement:</td>
-        <td>True</td>
-    </tr>
-    <tr>
-        <td>Wondrous:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Attack:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bonus Spell Save DC:</td>
-        <td></td>
-    </tr>
-</table>
-<hr/>
-<ul>
-            <li>While holding the dragonstaff of Ahghairon, you have advantage on saving throws against the spells and breath weapons of dragons, as well as the breath weapons of other creatures of the dragon type (such as dragon turtles).</li>
-            <li>A creature of the dragon type that you touch with the staff can move through the city of Waterdeep, ignoring Ahghairon's dragonward (see "Ahghairon's Dragonward," in the Introduction). This effect lasts until the creature is touched again by the staff or until a time you proclaim when you confer the benefit.</li>
-            <li>The staff has 10 charges. While holding it, you can expend 1 charge as an action to cast the {@spell command} spell. If you target a dragon with this casting, the dragon has disadvantage on its saving throw. The staff regains {@dice 1d10} charges daily at dawn.</li>
-</ul>
-<hr/>
-Note: this display part is still in progress, here's the complete data:
-<pre>[
-  "While holding the dragonstaff of Ahghairon, you have advantage on saving throws against the spells and breath weapons of dragons, as well as the breath weapons of other creatures of the dragon type (such as dragon turtles).",
-  "A creature of the dragon type that you touch with the staff can move through the city of Waterdeep, ignoring Ahghairon\u0027s dragonward (see \"Ahghairon\u0027s Dragonward,\" in the Introduction). This effect lasts until the creature is touched again by the staff or until a time you proclaim when you confer the benefit.",
-  "The staff has 10 charges. While holding it, you can expend 1 charge as an action to cast the {@spell command} spell. If you target a dragon with this casting, the dragon has disadvantage on its saving throw. The staff regains {@dice 1d10} charges daily at dawn."
-]</pre>
-</body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <link href="/css/simple-table.css" rel="stylesheet"/>
+            <title>Dragonstaff of Ahghairon</title>
+        </head>
+    <body>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Dragonstaff of Ahghairon</td>
+                </tr>
+                <tr>
+                    <td>source</td>
+                    <td>WDH</td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>191</td>
+                </tr>
+                <tr>
+                    <td>rarity</td>
+                    <td>legendary</td>
+                </tr>
+                <tr>
+                    <td>reqAttune</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>weaponCategory</td>
+                    <td>simple</td>
+                </tr>
+                <tr>
+                    <td>property</td>
+                    <td>['V']</td>
+                </tr>
+                <tr>
+                    <td>dmg1</td>
+                    <td>1d6</td>
+                </tr>
+                <tr>
+                    <td>dmgType</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>dmg2</td>
+                    <td>1d8</td>
+                </tr>
+                <tr>
+                    <td>recharge</td>
+                    <td>dawn</td>
+                </tr>
+                <tr>
+                    <td>rechargeAmount</td>
+                    <td>{@dice 1d10}</td>
+                </tr>
+                <tr>
+                    <td>charges</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>staff</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>entries</td>
+                    <td>['While holding the dragonstaff of Ahghairon, you have advantage on saving throws against the spells and breath weapons of dragons, as well as the breath weapons of other creatures of the dragon type (such as dragon turtles).', 'A creature of the dragon type that you touch with the staff can move through the city of Waterdeep, ignoring Ahghairon\'s dragonward (see "Ahghairon\'s Dragonward," in the Introduction). This effect lasts until the creature is touched again by the staff or until a time you proclaim when you confer the benefit.', 'The staff has 10 charges. While holding it, you can expend 1 charge as an action to cast the {@spell command} spell. If you target a dragon with this casting, the dragon has disadvantage on its saving throw. The staff regains {@dice 1d10} charges daily at dawn.']</td>
+                </tr>
+                <tr>
+                    <td>attachedSpells</td>
+                    <td>['command']</td>
+                </tr>
+                <tr>
+                    <td>hasFluffImages</td>
+                    <td>True</td>
+                </tr>
+        </table>
+    </body>
 </html>
