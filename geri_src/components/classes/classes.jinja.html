@@ -4,87 +4,122 @@ processor: [
     remove_blank_lines, 
     5e_tools_tag_replace
 ]
-json_project_path: /data/classes/all_classes.json
+json_project_path: /geri_dist/data/classes/all_classes.json
 filename_key: "{{class.0.name | urlencode}}"
 extension: html
 custom_filter_files: 
 - ".geraldine/custom_filters/custom_jinja_filters.py"
-add_full_data_variable: true
+add_full_data_variable: false
 ---
 
 {% set class_info = class.0 %}
 
+
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+
+    .inlineTable {
+        display: inline;
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+</style>
 
 <h1>{{ class_info.name }}</h1>
 
 <hr/>
 
 <div id="class-info-container">
-
-<div class="class-info-box">
-<h4>Starting Info</h4>
-<p><strong>Source:</strong> {{ class_info.source | upper }}, Page: {{ class_info.page }}</p>
-<p><strong>Hit Dice:</strong> {{ class_info.hd.number }}d{{ class_info.hd.faces }}</p>
-<p><strong>Proficiency:</strong> {{ class_info.proficiency | join(", ")}}</p>
-{% if class_info.spellcastingAbility %}
-<p><strong>Spellcasting Ability:</strong> {{ class_info.spellcastingAbility }}</p>
-<p><strong>Caster Progression:</strong> {{ class_info.casterProgression }}</p>
-{% if class_info.preparedSpells %}
-<p><strong>Prepared Spells:</strong> {{ class_info.preparedSpells }}</p>
-{% endif %}
-{% endif %}
-</div>
-
-<div class="class-info-box">
-    <h4>Starting Proficiencies</h4>
-    <p><strong>Armor:</strong> {{ class_info.startingProficiencies.armor|join(", ") }}</p>
-    <p><strong>Weapons:</strong> {{ class_info.startingProficiencies.weapons|join(", ") }}</p>
-    {% if class_info.startingProficiencies.tools %}
-    <p><strong>Tools:</strong> {{ class_info.startingProficiencies.tools| join(", ") }}</p>
-    {% endif %}
-</div>
-
-
-<div class="class-info-box">
-    <h4>Starting Equipment</h4>
-    <ul>
-        {%- for item in class_info.startingEquipment.default -%}
-        <li>{{ item }}</li>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> {{ class_info.source | upper }}, Page: {{ class_info.page }}</p>
+        <p><strong>Hit Dice:</strong> {{ class_info.hd.number }}d{{ class_info.hd.faces }}</p>
+        <p><strong><u>Multiclass Requirements</u></strong></p>
+        <ul>
+        {%- for key,value in class_info.multiclassing.requirements.items() -%}
+            <li>{{ key | capitalize }}:{{ value }}</li>
         {% endfor %}
-    </ul>
+        </ul>
+    </div>
+
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> {{ class_info.proficiency | join(", ")}}</p>
+        <p><strong>Armor:</strong> {{ class_info.startingProficiencies.armor|join(", ") }}</p>
+        <p><strong>Weapons:</strong> {{ class_info.startingProficiencies.weapons|join(", ") }}</p>
+        {% if class_info.startingProficiencies.tools %}
+            <p><strong>Tools:</strong> {{ class_info.startingProficiencies.tools| join(", ") }}</p>
+        {% endif %}
+        <p><strong><u>Skills</u></strong> </p>
+        <p>{{ class_info.startingProficiencies.skills | convert_to_html_lists }}</p>
+    </div>
+
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul>
+            {%- for item in class_info.startingEquipment.default -%}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Gold Alternative:</strong> {{ class_info.startingEquipment.goldAlternative }}</p>
+    </div>
 </div>
 
 
+{% if class_info.spellcastingAbility %}
+    <section id="class-magic-section" class="class-section">
+        <hr/>
+        <h4><u>Magic</u></h4>
+            <p><strong>Spellcasting Ability:</strong> {{ class_info.spellcastingAbility }}</p>
+            <p><strong>Caster Progression:</strong> {{ class_info.casterProgression }}</p>
+            {% if class_info.preparedSpells %}
+                <p><strong>Prepared Spells:</strong> {{ class_info.preparedSpells }}</p>
+            {% endif %}
+            {% if class_info.cantripProgression %}
+                <p><strong>Cantrips:</strong> {{ class_info.cantripProgression | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% endif %}
+            {% if class_info.spellsKnownProgressionFixed %}
+                <p><strong>New spells added per level:</strong> {{ class_info.spellsKnownProgressionFixed | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% elif class_info.spellsKnownProgression %}
+                <p><strong>Spells known total per level:</strong> {{ class_info.spellsKnownProgression | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% else %}
+                <p><strong>Spells known:</strong> All class spells are known.</p>
+            {% endif %}
 
-</div>
-
-
-<hr/>
-
-{% if class_info.cantripProgression %}
-<div class="class-info-box"></div>
-<h2>Cantrip Progression</h2>
-<ul>
-    <li>{{ class_info.cantripProgression | join(",") }}</li>
-</ul>
-</div>
+    </section>
 {% endif %}
 
-{% if class_info.optionalfeatureProgression %}
-<div class="class-info-box"></div>
-<h2>Optional Feature Progression</h2>
-<ul>
-    {% for feature in class_info.optionalfeatureProgression %}
-    <li>{{ feature.name }}: {{ feature.progression|join(", ") }}</li>
-    {% endfor %}
-</ul>
-</div>
+
+{% if classFeature %}
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+        {% for feature in classFeature %}
+            {% if not feature.name == "Ability Score Improvement" %}
+                <p>Name: {{ feature.name }}</p>
+                <ul>
+                <li>level: {{ feature.level }}</li>
+                {% for entry in feature.entries %}
+                    <li>{{ entry }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+   
+    </section>
 {% endif %}
+
 
 <hr/>
 {% if geraldine_full_data %}
-<pre> {{- geraldine_full_data.class.0| without_keys(["classFeatures", "classTableGroups", "fluff"]) | type_tree | tojson(indent=2) -}}</pre>
-
-<hr/>
-<pre>{{- geraldine_full_data.class.0 | without_keys(["classFeatures", "classTableGroups", "fluff"]) | tojson(indent=2) -}}</pre>
+<pre>{{- geraldine_full_data.classFeature | tojson(indent=2) -}}</pre>
 {% endif %}
+
+
+

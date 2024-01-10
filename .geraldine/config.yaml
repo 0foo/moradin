@@ -11,4 +11,6 @@ geri_src_dir_name: geri_src
 max_directory_depth: 10
 priority_directories:
 - includes
+- data
+- compiled_data
 log_level: debug

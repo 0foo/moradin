@@ -1,171 +1,161 @@
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+    .inlineTable {
+        display: inline;
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+</style>
 <h1>Mystic</h1>
 <hr/>
 <div id="class-info-container">
-<div class="class-info-box">
-<h4>Starting Info</h4>
-<p><strong>Source:</strong> UATHEMYSTICCLASS, Page: 1</p>
-<p><strong>Hit Dice:</strong> 1d8</p>
-<p><strong>Proficiency:</strong> int, wis</p>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> UATHEMYSTICCLASS, Page: 1</p>
+        <p><strong>Hit Dice:</strong> 1d8</p>
+        <p><strong><u>Multiclass Requirements</u></strong></p>
+        <ul><li>Wis:13</li>
+        </ul>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> int, wis</p>
+        <p><strong>Armor:</strong> light</p>
+        <p><strong>Weapons:</strong> simple</p>
+        <p><strong><u>Skills</u></strong> </p>
+        <p><ul><li>choose: 2</li><ul><li>arcana</li><li>history</li><li>insight</li><li>medicine</li><li>nature</li><li>perception</li><li>religion</li></ul></ul><br></p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul><li>(a) a <a href="/components/items/spear.html">spear</a> or (b) a <a href="/components/items/mace.html">mace</a></li>
+            <li>(a) <a href="/components/items/leather-armor.html">leather armor</a> or (b) <a href="/components/items/studded-leather-armor.html">studded leather armor</a></li>
+            <li>(a) a <a href="/components/items/light-crossbow.html">light crossbow</a> and <a href="/components/items/crossbow-bolts-(20).html">crossbow bolts (20)</a> or (b) any <a href="/components/items/category/common-weapons.html">simple weapon</a></li>
+            <li>(a) a <a href="/components/items/scholar's-pack.html">scholar's pack</a> or (b) an <a href="/components/items/explorer's-pack.html">explorer's pack</a></li>
+        </ul>
+        <p><strong>Gold Alternative:</strong> 5d4 × 10</p>
+    </div>
 </div>
-<div class="class-info-box">
-    <h4>Starting Proficiencies</h4>
-    <p><strong>Armor:</strong> light</p>
-    <p><strong>Weapons:</strong> simple</p>
-</div>
-<div class="class-info-box">
-    <h4>Starting Equipment</h4>
-    <ul><li>(a) a <a href="/components/items/spear.html">spear</a> or (b) a <a href="/components/items/mace.html">mace</a></li>
-        <li>(a) <a href="/components/items/leather-armor.html">leather armor</a> or (b) <a href="/components/items/studded-leather-armor.html">studded leather armor</a></li>
-        <li>(a) a <a href="/components/items/light-crossbow.html">light crossbow</a> and <a href="/components/items/crossbow-bolts-(20).html">crossbow bolts (20)</a> or (b) any <a href="/components/items/category/common-weapons.html">simple weapon</a></li>
-        <li>(a) a <a href="/components/items/scholar's-pack.html">scholar's pack</a> or (b) an <a href="/components/items/explorer's-pack.html">explorer's pack</a></li>
-    </ul>
-</div>
-</div>
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+                <p>Name: Mystic Order</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>At 1st level, you choose a Mystic Order from the list of available orders. Each order specializes in a specific approach to psionics.</li>
+                    <li>Your order gives you features when you choose it at 1st level and additional features at 3rd, 6th, and 14th level.</li>
+                </ul>
+                <p>Name: Psionic Disciplines and Talents</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>{@filter Psionic talents|psionics|type=T} and {@filter disciplines|psionics|type=D} are the heart of a mystic's craft. They are the mental exercises and psionic formulae used to forge will into tangible, magical effects.</li>
+                    <li>Psionic disciplines were each discovered by different orders and tend to reflect their creators' specialties. However, a mystic can learn any discipline regardless of its associated order.</li>
+                </ul>
+                <p>Name: Psionics</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>As a student of psionics, you can master and use psionic talents and disciplines, the rules for which appear at the end of this document. Psionics is a special form of magic use, distinct from spellcasting.</li>
+                    <li>{'type': 'entries', 'name': 'Psionic Talents', 'entries': ['A {@filter psionic talent|psionics|type=T} is a minor psionic effect you have mastered. At 1st level, you know one psionic talent of your choice. You learn additional talents of your choice at higher levels. The Talents Known column of the Mystic table shows the total number of talents you know at each level; when that number goes up for you, choose a new talent.']}</li>
+                    <li>{'type': 'entries', 'name': 'Psionic Disciplines', 'entries': ['A {@filter psionic discipline|psionics|type=D} is a rigid set of mental exercises that allows a mystic to manifest psionic power. A mystic masters only a few disciplines at a time.', 'At 1st level, you know one psionic discipline of your choice. The Disciplines Known column of the Mystic table shows the total number of disciplines you know at each level; when that number goes up for you, choose a new discipline.', 'In addition, whenever you gain a level in this class, you can replace one discipline you know with a different one of your choice.']}</li>
+                    <li>{'type': 'entries', 'name': 'Psi Points', 'entries': ['You have an internal reservoir of energy that can be devoted to psionic disciplines you know. This energy is represented by psi points. Each psionic discipline describes effects you can create with it by spending a certain number of psi points. A psionic talent requires no psi points.', "The number of psi points you have is based on your mystic level, as shown in the Psi Points column of the Mystic table. The number shown for your level is your psi point maximum. Your psi point total returns to its maximum when you finish a long rest. The number of psi points you have can't go below 0 or over your maximum."]}</li>
+                    <li>{'type': 'entries', 'name': 'Psi Limit', 'entries': ['Though you have access to a potent amount of psionic energy, it takes training and practice to channel that energy. There is a limit on the number of psi points you can spend to activate a psionic discipline. The limit is based on your mystic level, as shown in the Psi Limit column of the Mystic table. For example, as a 3rd-level mystic, you can spend no more than 3 psi points on a discipline each time you use it, no matter how many psi points you have.']}</li>
+                    <li>{'type': 'entries', 'name': 'Psychic Focus', 'entries': ["You can focus psionic energy on one of your psionic disciplines to draw ongoing benefits from it. As a bonus action, you can choose one of your psionic disciplines and gain its psychic focus benefit, which is detailed in that discipline's description. The benefit lasts until you are {@condition incapacitated} or until you use another bonus action to choose a different focus benefit.", "You can have only one psychic focus benefit at a time, and using the psychic focus of one discipline doesn't limit your ability to use other disciplines."]}</li>
+                    <li>{'type': 'entries', 'name': 'Psionic Ability', 'entries': ['Intelligence is your psionic ability for your psionic disciplines. You use your Intelligence modifier when setting the saving throw DC for a psionic discipline or when making an attack roll with one.', {'type': 'abilityDc', 'name': 'Discipline', 'attributes': ['int']}, {'type': 'abilityAttackMod', 'name': 'Discipline', 'attributes': ['int']}]}</li>
+                </ul>
+                <p>Name: Using a Discipline</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>Each psionic discipline has several ways you can use it, all contained in its description. The discipline specifies the type of action and number of psi points it requires. It also details whether you must concentrate on its effects, how many targets it affects, what saving throws it requires, and so on.</li>
+                    <li>The following sections go into more detail on using a discipline. Psionic disciplines are magical and function similarly to spells.</li>
+                    <li>{'type': 'entries', 'name': 'Psychic Focus', 'entries': ['The Psychic Focus section of a discipline describes the benefit you gain when you choose that discipline for your psychic focus.']}</li>
+                    <li>{'type': 'entries', 'name': 'Effect Options and Psi Points', 'entries': ["A discipline provides different options for how to use it with your psi points. Each effect option has a name, and the psi point cost of that option appears in parentheses after its name. You must spend that number of psi points to use that option, while abiding by your psi limit. If you don't have enough psi points left, or the cost is above your psi limit, you can't use the option.", "Some options show a range of psi points, rather than a specific cost. To use that option, you must spend a number of points within that point range, still abiding by your psi limit. Some options let you spend additional psi points to increase a discipline's potency. Again, you must abide by your psi limit, and you must spend all the points when you first use the discipline; you can't decide to spend additional points once you see the discipline in action.", 'Each option notes specific information about its effect, including any action required to use it and its range.']}</li>
+                    <li>{'type': 'entries', 'name': 'Components', 'entries': ["Disciplines don't require the components that many spells require. Using a discipline requires no spoken words, gestures, or materials. The power of psionics comes from the mind."]}</li>
+                    <li>{'type': 'entries', 'name': 'Duration', 'entries': ['An effect option in a discipline specifies how long its effect lasts.', {'type': 'entries', 'name': 'Instantaneous', 'entries': ['If no duration is specified, the effect of the option is instantaneous.']}, {'type': 'entries', 'name': 'Concentration', 'entries': ['Some options require {@status concentration} to maintain their effects. This requirement is noted with "conc." after the option\'s psi point cost. The "conc." notation is followed by the maximum duration of the {@status concentration}. For example, if an option says "conc., 1 min.," you can concentrate on its effect for up to 1 minute.', 'Concentrating on a discipline follows the same rules as {@status concentration||concentrating} on a spell. This rule means you can\'t concentrate on a spell and a discipline at the same time, nor can you concentrate on two disciplines at the same time. See {@book chapter 10|PHB|10}, "Spellcasting," in the Player\'s Handbook for how {@status concentration} works.']}]}</li>
+                    <li>{'type': 'entries', 'name': 'Targets and Areas of Effect', 'entries': ['Psionic disciplines use the same rules as spells for determining targets and areas of effect, as presented in {@book chapter 10|PHB|10}, "Spellcasting," of the Player\'s Handbook.']}</li>
+                    <li>{'type': 'entries', 'name': 'Saving Throws and Attack Rolls', 'entries': ['If a discipline requires a saving throw, it specifies the type of save and the results of a successful or failed saving throw. The DC is determined by your psionic ability.', "Some disciplines require you to make an attack roll to determine whether the discipline's effect hits its target. The attack roll uses your psionic ability."]}</li>
+                    <li>{'type': 'entries', 'name': 'Combining Psionic Effects', 'entries': ["The effects of different psionic disciplines add together while the durations of the disciplines overlap. Likewise, different options from a psionic discipline combine if they are active at the same time. However, a specific option from a psionic discipline doesn't combine with itself if the option is used multiple times. Instead, the most potent effect—usually dependent on how many psi points were used to create the effect—applies while the durations of the effects overlap.", 'Psionics and spells are separate effects, and therefore their benefits and drawbacks overlap. A psionic effect that reproduces a spell is an exception to this rule.']}</li>
+                </ul>
+                <p>Name: Mystical Recovery</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>Starting at 2nd level, you can draw vigor from the psi energy you use to power your psionic disciplines.</li>
+                    <li>Immediately after you spend psi points on a psionic discipline, you can take a bonus action to regain hit points equal to the number of psi points you spent.</li>
+                </ul>
+                <p>Name: Telepathy</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>At 2nd level, your mind awakens to the ability to communicate via telepathy. You can telepathically speak to any creature you can see within 120 feet of you in this manner. You don't need to share a language with the creature for it to understand your telepathic messages, but the creature must be able to understand at least one language or be telepathic itself.</li>
+                </ul>
+                <p>Name: Mystic Order feature</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>At 3rd level, you gain another feature from your Mystic Order.</li>
+                </ul>
+                <p>Name: Strength of Mind</p>
+                <ul>
+                <li>level: 4</li>
+                    <li>Even the simplest psionic technique requires a deep understanding of how psionic energy can augment mind and body. This understanding allows you to alter your defenses to better deal with threats.</li>
+                    <li>Starting at 4th level, you can replace your proficiency in Wisdom saving throws whenever you finish a short or long rest. To do so, choose Strength, Dexterity, Constitution, or Charisma. You gain proficiency in saves using that ability, instead of Wisdom. This change lasts until you finish your next short or long rest.</li>
+                </ul>
+                <p>Name: Mystic Order feature</p>
+                <ul>
+                <li>level: 6</li>
+                    <li>At 6th level, you gain another feature from your Mystic Order.</li>
+                </ul>
+                <p>Name: Potent Psionics (1d8)</p>
+                <ul>
+                <li>level: 8</li>
+                    <li>At 8th level, you gain the ability to infuse your weapon attacks with psychic energy. Once on each of your turns when you hit a creature with a weapon, you can deal an extra {@damage 1d8} psychic damage to that target. When you reach 14th level, this extra damage increases to 2d8.</li>
+                    <li>In addition, you add your Intelligence modifier to any damage roll you make for a {@filter psionic talent|psionics|type=T}.</li>
+                </ul>
+                <p>Name: Consumptive Power</p>
+                <ul>
+                <li>level: 10</li>
+                    <li>At 10th level, you gain the ability to sacrifice your physical durability in exchange for psionic power. When activating a psionic discipline, you can pay its psi point cost with your hit points, instead of using any psi points. Your current hit points and hit point maximum are both reduced by the number of hit points you spend. This reduction can't be lessened in any way, and the reduction to your hit point maximum lasts until you finish a long rest.</li>
+                    <li>Once you use this feature, you can't use it again until you finish a long rest.</li>
+                </ul>
+                <p>Name: Psionic Mastery (1/Day)</p>
+                <ul>
+                <li>level: 11</li>
+                    <li>Beginning at 11th level, your mastery of psionic energy allows you to push your mind beyond its normal limits. As an action, you gain 9 special psi points that you can spend only on disciplines that require an action or a bonus action to use. You can use all 9 points on one discipline, or you can spread them across multiple disciplines. You can't also spend your normal psi points on these disciplines; you can spend only the special points gained from this feature. When you finish a long rest, you lose any of these special points that you haven't spent.</li>
+                    <li>If more than one of the disciplines you activate with these points require {@status concentration}, you can concentrate on all of them. Activating one of them ends any effect you were already {@status concentration||concentrating} on, and if you begin {@status concentration||concentrating} on an effect that doesn't use these special points, the disciplines end that you're {@status concentration||concentrating} on.</li>
+                    <li>At 15th level, the pool of psi points you gain from this feature increases to 11.</li>
+                    <li>You have one use of this feature, and you regain any expended use of it with a long rest. You gain one additional use of this feature at 13th, 15th, and 17th level.</li>
+                </ul>
+                <p>Name: Psionic Mastery (2/Day)</p>
+                <ul>
+                <li>level: 13</li>
+                    <li>At 13th level, you can use your Psionic Mastery twice per day.</li>
+                </ul>
+                <p>Name: Mystic Order feature</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>At 14th level, you gain another feature from your Mystic Order.</li>
+                </ul>
+                <p>Name: Potent Psionics (2d8)</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>At 14th level, your Potent Psionics damage increased to 2d8.</li>
+                </ul>
+                <p>Name: Psionic Mastery (3/Day)</p>
+                <ul>
+                <li>level: 15</li>
+                    <li>At 15th level, you can use your Psionic Mastery three times per day.</li>
+                </ul>
+                <p>Name: Psionic Mastery (4/Day)</p>
+                <ul>
+                <li>level: 17</li>
+                    <li>At 17th level, you can use your Psionic Mastery four times per day.</li>
+                </ul>
+                <p>Name: Psionic Body</p>
+                <ul>
+                <li>level: 20</li>
+                    <li>At 20th level, your mastery of psionic power causes your mind to transcend the body. Your physical form is infused with psionic energy. You gain the following benefits:</li>
+                    <li>{'type': 'list', 'items': ['You gain resistance to bludgeoning, piercing, and slashing damage.', 'You no longer age.', 'You are immune to disease, poison damage, and the {@condition poisoned} condition.', 'If you die, roll a d20. On a 10 or higher, you discorporate with 0 hit points, instead of dying, and you fall {@condition unconscious}. You and your gear disappear. You appear at a spot of your choice 1d3 days later on the plane of existence where you died, having gained the benefits of one long rest.']}</li>
+                </ul>
+    </section>
 <hr/>
-<hr/>
-<pre>{
-  "hd": {
-    "faces": "int",
-    "number": "int"
-  },
-  "multiclassing": {
-    "requirements": {
-      "wis": "int"
-    }
-  },
-  "name": "str",
-  "page": "int",
-  "proficiency": [],
-  "source": "str",
-  "startingEquipment": {
-    "additionalFromBackground": "bool",
-    "default": [],
-    "defaultData": [
-      {
-        "a": [],
-        "b": []
-      },
-      {
-        "a": [],
-        "b": []
-      },
-      {
-        "a": [],
-        "b": [
-          {
-            "equipmentType": "str"
-          }
-        ]
-      },
-      {
-        "a": [],
-        "b": []
-      }
-    ],
-    "goldAlternative": "str"
-  },
-  "startingProficiencies": {
-    "armor": [],
-    "skills": [
-      {
-        "choose": {
-          "count": "int",
-          "from": []
-        }
-      }
-    ],
-    "weapons": []
-  },
-  "subclassTitle": "str"
-}</pre>
-<hr/>
-<pre>{
-  "hd": {
-    "faces": 8,
-    "number": 1
-  },
-  "multiclassing": {
-    "requirements": {
-      "wis": 13
-    }
-  },
-  "name": "Mystic",
-  "page": 1,
-  "proficiency": [
-    "int",
-    "wis"
-  ],
-  "source": "UATheMysticClass",
-  "startingEquipment": {
-    "additionalFromBackground": true,
-    "default": [
-      "(a) a <a href="/components/items/spear.html">spear</a> or (b) a <a href="/components/items/mace.html">mace</a>",
-      "(a) <a href="/components/items/leather-armor.html">leather armor</a> or (b) <a href="/components/items/studded-leather-armor.html">studded leather armor</a>",
-      "(a) a <a href="/components/items/light-crossbow.html">light crossbow</a> and <a href="/components/items/crossbow-bolts-(20).html">crossbow bolts (20)</a> or (b) any <a href="/components/items/category/common-weapons.html">simple weapon</a>",
-      "(a) a <a href="/components/items/scholar\u0027s-pack.html">scholar\u0027s pack</a> or (b) an <a href="/components/items/explorer\u0027s-pack.html">explorer\u0027s pack</a>"
-    ],
-    "defaultData": [
-      {
-        "a": [
-          "spear|phb"
-        ],
-        "b": [
-          "mace|phb"
-        ]
-      },
-      {
-        "a": [
-          "leather armor|phb"
-        ],
-        "b": [
-          "studded leather armor|phb"
-        ]
-      },
-      {
-        "a": [
-          "light crossbow|phb",
-          "crossbow bolts (20)|phb"
-        ],
-        "b": [
-          {
-            "equipmentType": "weaponSimple"
-          }
-        ]
-      },
-      {
-        "a": [
-          "scholar\u0027s pack|phb"
-        ],
-        "b": [
-          "explorer\u0027s pack|phb"
-        ]
-      }
-    ],
-    "goldAlternative": "{@dice 5d4 \u00d7 10|5d4 \u00d7 10|Starting Gold}"
-  },
-  "startingProficiencies": {
-    "armor": [
-      "light"
-    ],
-    "skills": [
-      {
-        "choose": {
-          "count": 2,
-          "from": [
-            "arcana",
-            "history",
-            "insight",
-            "medicine",
-            "nature",
-            "perception",
-            "religion"
-          ]
-        }
-      }
-    ],
-    "weapons": [
-      "simple"
-    ]
-  },
-  "subclassTitle": "Mystic Order"
-}</pre>

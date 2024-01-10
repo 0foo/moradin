@@ -14,3 +14,9 @@
     // });
 
 </script>
+
+
+<pre>{{- geraldine_full_data | top_level_keys | tojson(indent=2) -}}</pre>
+<hr/>
+<pre> {{- geraldine_full_data | type_tree | tojson(indent=2) -}}</pre>
+<hr/>

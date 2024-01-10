@@ -61,6 +61,7 @@ def entry_to_html(data):
     return html_output
 
 
+
 """
 def entry_processor(value):
     out = []

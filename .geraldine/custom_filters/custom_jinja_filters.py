@@ -65,3 +65,69 @@ def type_tree(obj):
         return str(type(obj).__name__)
 
 
+def list_to_horizontal_html_table(lst, the_class=None):
+    # Starting the table
+    if the_class:
+        html_table = f'<table class="{the_class}">\n'
+    else:
+        html_table = '<table>\n'
+
+    # Adding table header row
+    html_table += '<tr>\n'
+    for item in lst:
+        html_table += f'  <th>{item}</th>\n'
+    html_table += '</tr>\n'
+
+    # Ending the table
+    html_table += '</table>'
+
+    return html_table
+
+def convert_to_html_lists(data_list):
+    html_output = ""
+
+    for data in data_list:
+        choice_count = data.get("choose", {}).get("count", 0)
+        choices = data.get("choose", {}).get("from", [])
+
+        html_output += f'<ul><li>choose: {choice_count}</li><ul>'
+
+        for choice in choices:
+            html_output += f'<li>{choice}</li>'
+
+        html_output += '</ul></ul><br>'
+
+    return html_output
+
+# looks up in a dictionary based on a list, ie ["0", "class", "1] will return dict[0]["class"][1]
+def dict_lookup_function(input_dict, lookup_list):
+    def is_int(key):
+        try:
+            int(key)
+            return True
+        except:
+            return False
+        
+    current_dict = input_dict
+    for key in lookup_list:
+        if is_int(key):
+            key = int(key)
+            current_dict = current_dict[key]
+            continue
+        if key in current_dict:
+            current_dict = current_dict[key]
+        else:
+            print(f"{key} not in dictionary")
+            return None  # Key not found in the dictionary
+    return current_dict
+
+
+# pass a list of dicts in and a dot separated string(class.2.item.0.), will iterate the list and return a list of all values 
+def extract_list_of_same_values(in_list, list_identifiers):
+    the_lookup_list = list_identifiers.split(".")
+    out = []
+    for item in in_list:
+        the_value = dict_lookup_function(item, the_lookup_list)
+        if the_value:
+            out.append(the_value)
+    return out

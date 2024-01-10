@@ -5,11 +5,7 @@ body {
   display: flex;
 }
 
-section {
-  min-height: 100vh;
-  overflow-y: auto;
-  padding: 20px;
-}
+
 
 .main-section{
   border-bottom: solid 1px grey;
@@ -30,8 +26,12 @@ section {
   display: flex;
   flex-direction: column;
 }
+
 #content > section{
   border-bottom: 1px solid grey;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 h2 {
@@ -57,7 +57,7 @@ img {
   display: none;
 }
 #Race-Screen, #Race-Nav{
-  display: none;
+  display: block;
 }
 #Ability-Screen, #Ability-Nav{
   display: none;
@@ -79,4 +79,21 @@ img {
 }
 #Reference-Screen, #Reference-Nav{
   display: none;
+}
+
+.simpleTable {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  td, th {
+      border: 1px solid black;
+      padding: 5px;
+  }
+}
+
+.preModified {
+      max-width: 100%;       /* Limit the width to 100% of the parent container */
+      overflow-x: auto;      /* Enable horizontal scrolling if content overflows */
+      white-space: pre-wrap; /* Wrap text to next line if it's too long */
+      word-wrap: break-word; /* Break words if necessary to prevent overflow */
 }

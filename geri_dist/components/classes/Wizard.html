@@ -1,226 +1,160 @@
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+    .inlineTable {
+        display: inline;
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+</style>
 <h1>Wizard</h1>
 <hr/>
 <div id="class-info-container">
-<div class="class-info-box">
-<h4>Starting Info</h4>
-<p><strong>Source:</strong> PHB, Page: 112</p>
-<p><strong>Hit Dice:</strong> 1d6</p>
-<p><strong>Proficiency:</strong> int, wis</p>
-<p><strong>Spellcasting Ability:</strong> int</p>
-<p><strong>Caster Progression:</strong> full</p>
-<p><strong>Prepared Spells:</strong> <$level$> + <$int_mod$></p>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> PHB, Page: 112</p>
+        <p><strong>Hit Dice:</strong> 1d6</p>
+        <p><strong><u>Multiclass Requirements</u></strong></p>
+        <ul><li>Int:13</li>
+        </ul>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> int, wis</p>
+        <p><strong>Armor:</strong> </p>
+        <p><strong>Weapons:</strong> <a href="/components/items/dagger.html">dagger</a>, <a href="/components/items/dart.html">dart</a>, <a href="/components/items/sling.html">sling</a>, <a href="/components/items/quarterstaff.html">quarterstaff</a>, <a href="/components/items/light-crossbow.html">light crossbow</a></p>
+        <p><strong><u>Skills</u></strong> </p>
+        <p><ul><li>choose: 2</li><ul><li>arcana</li><li>history</li><li>insight</li><li>investigation</li><li>medicine</li><li>religion</li></ul></ul><br></p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul><li>(a) a <a href="/components/items/quarterstaff.html">quarterstaff</a> or (b) a <a href="/components/items/dagger.html">dagger</a></li>
+            <li>(a) a <a href="/components/items/component-pouch.html">component pouch</a> or (b) an <a href="/components/items/arcane-focus.html">arcane focus</a></li>
+            <li>(a) a <a href="/components/items/scholar's-pack.html">scholar's pack</a> or (b) an <a href="/components/items/explorer's-pack.html">explorer's pack</a></li>
+            <li>A <a href="/components/items/spellbook.html">spellbook</a></li>
+        </ul>
+        <p><strong>Gold Alternative:</strong> 4d4 × 10</p>
+    </div>
 </div>
-<div class="class-info-box">
-    <h4>Starting Proficiencies</h4>
-    <p><strong>Armor:</strong> </p>
-    <p><strong>Weapons:</strong> <a href="/components/items/dagger.html">dagger</a>, <a href="/components/items/dart.html">dart</a>, <a href="/components/items/sling.html">sling</a>, <a href="/components/items/quarterstaff.html">quarterstaff</a>, <a href="/components/items/light-crossbow.html">light crossbow</a></p>
-</div>
-<div class="class-info-box">
-    <h4>Starting Equipment</h4>
-    <ul><li>(a) a <a href="/components/items/quarterstaff.html">quarterstaff</a> or (b) a <a href="/components/items/dagger.html">dagger</a></li>
-        <li>(a) a <a href="/components/items/component-pouch.html">component pouch</a> or (b) an <a href="/components/items/arcane-focus.html">arcane focus</a></li>
-        <li>(a) a <a href="/components/items/scholar's-pack.html">scholar's pack</a> or (b) an <a href="/components/items/explorer's-pack.html">explorer's pack</a></li>
-        <li>A <a href="/components/items/spellbook.html">spellbook</a></li>
-    </ul>
-</div>
-</div>
+    <section id="class-magic-section" class="class-section">
+        <hr/>
+        <h4><u>Magic</u></h4>
+            <p><strong>Spellcasting Ability:</strong> int</p>
+            <p><strong>Caster Progression:</strong> full</p>
+                <p><strong>Prepared Spells:</strong> <$level$> + <$int_mod$></p>
+                <p><strong>Cantrips:</strong> <table class="inlineTable">
+<tr>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+  <th>5</th>
+</tr>
+</table></p>
+                <p><strong>New spells added per level:</strong> <table class="inlineTable">
+<tr>
+  <th>6</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+</tr>
+</table></p>
+    </section>
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+                <p>Name: Arcane Recovery</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</li>
+                    <li>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots.</li>
+                    <li>You can recover either a 2nd-level spell slot or two 1st-level spell slots.</li>
+                </ul>
+                <p>Name: Spellcasting</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter wizard spell list|spells|class=wizard}.</li>
+                    <li>{'type': 'entries', 'name': 'Cantrips', 'entries': ['At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spellbook', 'entries': ['At 1st level, you have a spellbook containing six 1st-level {@filter wizard spells|spells|class=wizard} of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind.']}</li>
+                    <li>{'type': 'entries', 'name': 'Preparing and Casting Spells', 'entries': ["The Wizard table shows how many spell slots you have to cast your wizard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.", 'You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.', "For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell {@spell magic missile}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.", 'You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spellcasting Ability', 'entries': ['Intelligence is your spellcasting ability for your wizard spells, since you learn your wizard spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.', {'type': 'abilityDc', 'name': 'Spell', 'attributes': ['int']}, {'type': 'abilityAttackMod', 'name': 'Spell', 'attributes': ['int']}]}</li>
+                    <li>{'type': 'entries', 'name': 'Ritual Casting', 'entries': ["You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared."]}</li>
+                    <li>{'type': 'entries', 'name': 'Spellcasting Focus', 'entries': ['You can use an <a href="/components/items/arcane-focus.html">arcane focus</a> as a spellcasting focus for your wizard spells.']}</li>
+                    <li>{'type': 'entries', 'name': 'Learning Spells of 1st Level and Higher', 'entries': ['Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook (see "Your Spellbook").']}</li>
+                    <li>{'type': 'inset', 'name': 'Your Spellbook', 'entries': ["The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard's chest, for example, or in a dusty tome in an ancient library.", "A spellbook doesn't contain cantrips.", {'type': 'entries', 'entries': [{'type': 'entries', 'name': 'Copying a Spell into the Book', 'entries': ['When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.', 'Copying a spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.', 'For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.', {'type': 'entries', 'name': 'Copying from a Spell Scroll', 'source': 'DMG', 'page': 139, 'entries': ["A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When you copy a spell from a spell scroll, you must succeed on an Intelligence ({@skill Arcana}) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed."]}]}]}, {'type': 'entries', 'entries': [{'type': 'entries', 'name': 'Replacing the Book', 'entries': ['You can copy a spell from your own spellbook into another book—for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.', 'If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place.']}]}, {'type': 'entries', 'entries': [{'type': 'entries', 'name': "The Book's Appearance", 'entries': ['Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a plain, functional leather volume that you received as a gift from your master, a finely bound gilt-edged tome you found in an ancient library, or even a loose collection of notes scrounged together after you lost your previous spellbook in a mishap.']}]}]}</li>
+                </ul>
+                <p>Name: Arcane Tradition</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>When you reach 2nd level, you choose an arcane tradition from the list of available traditions, shaping your practice of magic. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.</li>
+                </ul>
+                <p>Name: Cantrip Formulas</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>{@i 3rd-level wizard {@variantrule optional class features|tce|optional feature}}</li>
+                    <li>You have scribed a set of arcane formulas in your spellbook that you can use to formulate a cantrip in your mind. Whenever you finish a long rest and consult those formulas in your spellbook, you can replace one wizard cantrip you know with another cantrip from the wizard spell list.</li>
+                </ul>
+                <p>Name: Arcane Tradition feature</p>
+                <ul>
+                <li>level: 6</li>
+                    <li>At 6th level, you gain a feature granted by your Arcane Tradition.</li>
+                </ul>
+                <p>Name: Arcane Tradition feature</p>
+                <ul>
+                <li>level: 10</li>
+                    <li>At 10th level, you gain a feature granted by your Arcane Tradition.</li>
+                </ul>
+                <p>Name: Arcane Tradition feature</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>At 14th level, you gain a feature granted by your Arcane Tradition.</li>
+                </ul>
+                <p>Name: Spell Mastery</p>
+                <ul>
+                <li>level: 18</li>
+                    <li>At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.</li>
+                    <li>By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.</li>
+                </ul>
+                <p>Name: Signature Spells</p>
+                <ul>
+                <li>level: 20</li>
+                    <li>When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.</li>
+                    <li>If you want to cast either spell at a higher level, you must expend a spell slot as normal.</li>
+                </ul>
+    </section>
 <hr/>
-<div class="class-info-box"></div>
-<h2>Cantrip Progression</h2>
-<ul>
-    <li>3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5</li>
-</ul>
-</div>
-<hr/>
-<pre>{
-  "basicRules": "bool",
-  "cantripProgression": [],
-  "casterProgression": "str",
-  "hd": {
-    "faces": "int",
-    "number": "int"
-  },
-  "multiclassing": {
-    "requirements": {
-      "int": "int"
-    }
-  },
-  "name": "str",
-  "page": "int",
-  "preparedSpells": "str",
-  "proficiency": [],
-  "source": "str",
-  "spellcastingAbility": "str",
-  "spellsKnownProgressionFixed": [],
-  "spellsKnownProgressionFixedAllowLowerLevel": "bool",
-  "srd": "bool",
-  "startingEquipment": {
-    "additionalFromBackground": "bool",
-    "default": [],
-    "defaultData": [
-      {
-        "a": [],
-        "b": []
-      },
-      {
-        "a": [],
-        "b": []
-      },
-      {
-        "a": [],
-        "b": []
-      },
-      {
-        "_": []
-      }
-    ],
-    "goldAlternative": "str"
-  },
-  "startingProficiencies": {
-    "skills": [
-      {
-        "choose": {
-          "count": "int",
-          "from": []
-        }
-      }
-    ],
-    "weapons": []
-  },
-  "subclassTitle": "str"
-}</pre>
-<hr/>
-<pre>{
-  "basicRules": true,
-  "cantripProgression": [
-    3,
-    3,
-    3,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5
-  ],
-  "casterProgression": "full",
-  "hd": {
-    "faces": 6,
-    "number": 1
-  },
-  "multiclassing": {
-    "requirements": {
-      "int": 13
-    }
-  },
-  "name": "Wizard",
-  "page": 112,
-  "preparedSpells": "\u003c$level$\u003e + \u003c$int_mod$\u003e",
-  "proficiency": [
-    "int",
-    "wis"
-  ],
-  "source": "PHB",
-  "spellcastingAbility": "int",
-  "spellsKnownProgressionFixed": [
-    6,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-  ],
-  "spellsKnownProgressionFixedAllowLowerLevel": true,
-  "srd": true,
-  "startingEquipment": {
-    "additionalFromBackground": true,
-    "default": [
-      "(a) a <a href="/components/items/quarterstaff.html">quarterstaff</a> or (b) a <a href="/components/items/dagger.html">dagger</a>",
-      "(a) a <a href="/components/items/component-pouch.html">component pouch</a> or (b) an <a href="/components/items/arcane-focus.html">arcane focus</a>",
-      "(a) a <a href="/components/items/scholar\u0027s-pack.html">scholar\u0027s pack</a> or (b) an <a href="/components/items/explorer\u0027s-pack.html">explorer\u0027s pack</a>",
-      "A <a href="/components/items/spellbook.html">spellbook</a>"
-    ],
-    "defaultData": [
-      {
-        "a": [
-          "quarterstaff|phb"
-        ],
-        "b": [
-          "dagger|phb"
-        ]
-      },
-      {
-        "a": [
-          "component pouch|phb"
-        ],
-        "b": [
-          "arcane focus|phb"
-        ]
-      },
-      {
-        "a": [
-          "scholar\u0027s pack|phb"
-        ],
-        "b": [
-          "explorer\u0027s pack|phb"
-        ]
-      },
-      {
-        "_": [
-          "spellbook|phb"
-        ]
-      }
-    ],
-    "goldAlternative": "{@dice 4d4 \u00d7 10|4d4 \u00d7 10|Starting Gold}"
-  },
-  "startingProficiencies": {
-    "skills": [
-      {
-        "choose": {
-          "count": 2,
-          "from": [
-            "arcana",
-            "history",
-            "insight",
-            "investigation",
-            "medicine",
-            "religion"
-          ]
-        }
-      }
-    ],
-    "weapons": [
-      "<a href="/components/items/dagger.html">dagger</a>",
-      "<a href="/components/items/dart.html">dart</a>",
-      "<a href="/components/items/sling.html">sling</a>",
-      "<a href="/components/items/quarterstaff.html">quarterstaff</a>",
-      "<a href="/components/items/light-crossbow.html">light crossbow</a>"
-    ]
-  },
-  "subclassTitle": "Arcane Tradition"
-}</pre>

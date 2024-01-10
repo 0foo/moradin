@@ -46,9 +46,27 @@ def convert_item_tags_to_links(text):
     # Use the sub method to replace each match with the result of replace_with_link
     return re.sub(pattern, replace_with_link, text)
 
+def convert_dice_tags(input_string):
+    # Regular expression pattern to find {@dice ...} tags
+    dice_tag_pattern = r"{@dice ([^|}]+).*?}"
+
+    # Function to replace each match with its first element
+    def replace_with_first_element(match):
+        # Extract the first element
+        first_element = match.group(1)
+        return first_element
+
+    # Replace all occurrences of the dice tag
+    return re.sub(dice_tag_pattern, replace_with_first_element, input_string)
+
+
 def geraldine(in_data):
     content = in_data["template_content_string"]
     content = convert_item_tags_to_links(content)
     content = convert_simple_weapon_tags_to_links(content)
     content = convert_instrument_tags_to_links(content)
+    content = convert_dice_tags(content)
+
     return content
+
+
