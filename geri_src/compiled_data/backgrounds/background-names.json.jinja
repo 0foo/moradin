@@ -1,0 +1,15 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+custom_filter_files: ".geraldine/custom_filters/custom_jinja_filters.py"
+json_project_path: /geri_dist/data/backgrounds/backgrounds.json
+---
+
+
+[
+    {% for item in background %}
+     "{{ item.name  | replace(" ", "_")}}-{{ item.source}}"{{ "," if not loop.last }}
+    {% endfor %}
+]

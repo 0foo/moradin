@@ -1,0 +1,206 @@
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+    .inlineTable {
+        display: inline;
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+    .class-display-container{
+        border:solid 0px black;
+        border-radius: 20px;
+        padding: 0 20px 0 20px;
+    }
+    #class-select-container {
+        display: flex; /* Use Flexbox */
+    }
+    #class-select-control-container{
+        flex:1;
+        height:auto;
+    }
+    #class-description-container {
+        flex:4;
+        padding-left: 20px;
+    }
+    #class-info-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; /* Aligns children horizontally, this is default */
+        justify-content: flex-start; 
+        align-items: left; 
+    }
+    .class-info-box {
+        /* flex:1; */
+        border: solid 1px black;
+        border-radius: 10px;
+        padding:0 10px 0 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+        flex: 1 1 30%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .class-info-box > h4 {
+        text-decoration: underline;
+    }
+    #class-magic-section{
+        flex:2;
+        border:solid 1px black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    #image-info-box{
+        flex: 1 1 30%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+    }
+</style>
+<div class="class-display-container">
+<h1 style="margin-top:0;">Rogue</h1>
+<div id="class-info-container">
+    <div id="image-info-box">
+        <img src="/images/classes/rogue.png"/>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> PHB, Page: 94</p>
+        <p><strong>Hit Dice:</strong> 1d8</p>
+        <p><strong>ASI or Feat at levels:</strong>
+                4,  
+                8,  
+                10,  
+                12,  
+                16,  
+                19 
+        </p>
+        <p><strong><u>Multiclass Requirements</u></strong>
+            <ul><li>Dex:13</li>
+            </ul>
+        </p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> dex, int</p>
+        <p><strong>Armor:</strong> light</p>
+        <p><strong>Weapons:</strong> simple, <a href="/components/items/hand-crossbow.html">hand crossbow</a>, <a href="/components/items/longsword.html">longsword</a>, <a href="/components/items/rapier.html">rapier</a>, <a href="/components/items/shortsword.html">shortsword</a></p>
+            <p><strong>Tools:</strong> <a href="/components/items/thieves'-tools.html">thieves' tools</a></p>
+        <p><strong><u>Skills</u></strong> </p>
+        <p><ul><li>choose: 4</li><ul><li>acrobatics</li><li>athletics</li><li>deception</li><li>insight</li><li>intimidation</li><li>investigation</li><li>perception</li><li>performance</li><li>persuasion</li><li>sleight of hand</li><li>stealth</li></ul></ul><br></p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul><li>(a) a <a href="/components/items/rapier.html">rapier</a> or (b) a <a href="/components/items/shortsword.html">shortsword</a></li>
+            <li>(a) a <a href="/components/items/shortbow.html">shortbow</a> and <a href="/components/items/quiver.html">quiver</a> of <a href="/components/items/arrows-(20).html">arrows (20)</a> or (b) a <a href="/components/items/shortsword.html">shortsword</a></li>
+            <li>(a) a <a href="/components/items/burglar's-pack.html">burglar's pack</a>, (b) a <a href="/components/items/dungeoneer's-pack.html">dungeoneer's pack</a>, or (c) an <a href="/components/items/explorer's-pack.html">explorer's pack</a></li>
+            <li><a href="/components/items/leather-armor.html">Leather armor</a>, two <a href="/components/items/dagger.html">dagger</a>, and <a href="/components/items/thieves'-tools.html">thieves' tools</a></li>
+        </ul>
+        <p><strong>Gold Alternative:</strong> 4d4 × 10</p>
+    </div>
+</div>
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+                <p>Name: Expertise</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with <a href="/components/items/thieves'-tools.html">thieves' tools</a>. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.</li>
+                    <li>At 6th level, you can choose two more of your proficiencies (in skills or with <a href="/components/items/thieves'-tools.html">thieves' tools</a>) to gain this benefit.</li>
+                </ul>
+                <p>Name: Sneak Attack</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra {@damage 1d6} damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.</li>
+                    <li>You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't {@condition incapacitated}, and you don't have disadvantage on the attack roll.</li>
+                    <li>The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.</li>
+                </ul>
+                <p>Name: Thieves' Cant</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.</li>
+                    <li>In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.</li>
+                </ul>
+                <p>Name: Cunning Action</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the {@action Dash}, {@action Disengage}, or {@action Hide} action.</li>
+                </ul>
+                <p>Name: Roguish Archetype</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities from the list of available archetypes. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.</li>
+                </ul>
+                <p>Name: Steady Aim</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>{@i 3rd-level rogue {@variantrule optional class features|tce|optional feature}}</li>
+                    <li>As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn.</li>
+                </ul>
+                <p>Name: Uncanny Dodge</p>
+                <ul>
+                <li>level: 5</li>
+                    <li>Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.</li>
+                </ul>
+                <p>Name: Expertise</p>
+                <ul>
+                <li>level: 6</li>
+                    <li>At 6th level, you can choose two more of your proficiencies (in skills or with <a href="/components/items/thieves'-tools.html">thieves' tools</a>) to gain the benefit of Expertise.</li>
+                </ul>
+                <p>Name: Evasion</p>
+                <ul>
+                <li>level: 7</li>
+                    <li>Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon's fiery breath or an {@spell ice storm} spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</li>
+                </ul>
+                <p>Name: Roguish Archetype feature</p>
+                <ul>
+                <li>level: 9</li>
+                    <li>At 9th level, you gain a feature granted by your Roguish Archetype.</li>
+                </ul>
+                <p>Name: Reliable Talent</p>
+                <ul>
+                <li>level: 11</li>
+                    <li>By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.</li>
+                </ul>
+                <p>Name: Roguish Archetype feature</p>
+                <ul>
+                <li>level: 13</li>
+                    <li>At 13th level, you gain a feature granted by your Roguish Archetype.</li>
+                </ul>
+                <p>Name: Blindsense</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or {@condition invisible} creature within 10 feet of you.</li>
+                </ul>
+                <p>Name: Slippery Mind</p>
+                <ul>
+                <li>level: 15</li>
+                    <li>By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.</li>
+                </ul>
+                <p>Name: Roguish Archetype feature</p>
+                <ul>
+                <li>level: 17</li>
+                    <li>At 17th level, you gain a feature granted by your Roguish Archetype.</li>
+                </ul>
+                <p>Name: Elusive</p>
+                <ul>
+                <li>level: 18</li>
+                    <li>Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't {@condition incapacitated}.</li>
+                </ul>
+                <p>Name: Stroke of Luck</p>
+                <ul>
+                <li>level: 20</li>
+                    <li>At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.</li>
+                    <li>Once you use this feature, you can't use it again until you finish a short or long rest.</li>
+                </ul>
+    </section>
+</div>

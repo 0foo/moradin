@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+  display: flex;
+}
+
+
+
+.main-section{
+  border-bottom: solid 1px grey;
+}
+
+#tableOfContents {
+  width: 200px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#content > section{
+  border-bottom: 1px solid grey;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#Class-Screen, #Class-Nav{
+  display:block;
+}
+#Subclass-Screen, #Subclass-Nav{
+  display: none;
+}
+#Race-Screen, #Race-Nav{
+  display: block;
+}
+#Ability-Screen, #Ability-Nav{
+  display: block;
+}
+#Background-Screen, #Background-Nav{
+  display: block;
+}
+#Spell-Nav, #Spell-Screen{
+  display: block;
+}
+#Skill-Screen, #Skill-Nav{
+  display: block;
+}
+#Feat-Screen, #Feat-Nav{
+  display: block;
+}
+#Item-Screen, #Item-Nav{
+  display: block;
+}
+#Reference-Screen, #Reference-Nav{
+  display: block;
+}
+
+.simpleTable {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  td, th {
+      border: 1px solid black;
+      padding: 5px;
+  }
+}
+
+.preModified {
+      max-width: 100%;       /* Limit the width to 100% of the parent container */
+      overflow-x: auto;      /* Enable horizontal scrolling if content overflows */
+      white-space: pre-wrap; /* Wrap text to next line if it's too long */
+      word-wrap: break-word; /* Break words if necessary to prevent overflow */
+}
