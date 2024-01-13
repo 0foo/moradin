@@ -60,25 +60,25 @@ img {
   display: block;
 }
 #Ability-Screen, #Ability-Nav{
-  display: none;
+  display: block;
 }
 #Background-Screen, #Background-Nav{
-  display: none;
+  display: block;
 }
 #Spell-Nav, #Spell-Screen{
-  display: none;
+  display: block;
 }
 #Skill-Screen, #Skill-Nav{
-  display: none;
+  display: block;
 }
 #Feat-Screen, #Feat-Nav{
-  display: none;
+  display: block;
 }
 #Item-Screen, #Item-Nav{
-  display: none;
+  display: block;
 }
 #Reference-Screen, #Reference-Nav{
-  display: none;
+  display: block;
 }
 
 .simpleTable {

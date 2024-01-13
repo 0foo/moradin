@@ -20,3 +20,48 @@
 <hr/>
 <pre> {{- geraldine_full_data | type_tree | tojson(indent=2) -}}</pre>
 <hr/>
+
+
+    <section id="Subclass-Screen">
+          {% include './includes/subsection/subclass.html' %}
+    </section>
+
+    <section id="Race-Screen"> 
+      {% include './includes/subsection/race.html' %}
+    </section>
+
+
+
+    <section id="Ability-Screen">
+      <h2>Abilities</h2>
+      <p>Your content for section 3 goes here.</p>
+    </section>
+
+    <section id="Background-Screen"> 
+        <h2>Background</h2>
+    </section>
+
+    <section id="Skill-Screen">
+        <h2>Feats</h2>
+        <p>Your content for section 4 goes here.</p>
+      </section>
+    
+    <section id="Feat-Screen">
+        <h2>Items</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Item-Screen">
+        <h2>Items</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Spell-Screen">
+        <h2>Spells</h2>
+        <p>Your content for section 4 goes here.</p>
+    </section>
+
+    <section id="Reference-Screen">
+        <h2>Reference</h2>
+        <p>Reference content.</p>
+    </section>

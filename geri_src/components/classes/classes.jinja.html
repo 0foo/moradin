@@ -29,23 +29,93 @@ add_full_data_variable: false
             padding: 5px;
         }
     }
+    .class-display-container{
+        border:solid 0px black;
+        border-radius: 20px;
+        padding: 0 20px 0 20px;
+    }
+    #class-select-container {
+        display: flex; /* Use Flexbox */
+    }
+    #class-select-control-container{
+        flex:1;
+        height:auto;
+    }
+
+    #class-description-container {
+        flex:4;
+        padding-left: 20px;
+    }
+
+    #class-info-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; /* Aligns children horizontally, this is default */
+        justify-content: flex-start; 
+        align-items: left; 
+    }
+
+    .class-info-box {
+        /* flex:1; */
+        border: solid 1px black;
+        border-radius: 10px;
+        padding:0 10px 0 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+        flex: 1 1 30%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .class-info-box > h4 {
+        text-decoration: underline;
+    }
+
+    #class-magic-section{
+        flex:2;
+        border:solid 1px black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    #image-info-box{
+        flex: 1 1 30%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+
+    }
+
 </style>
+<div class="class-display-container">
+<h1 style="margin-top:0;">{{ class_info.name }}</h1>
 
-<h1>{{ class_info.name }}</h1>
-
-<hr/>
 
 <div id="class-info-container">
+    <div id="image-info-box">
+        <img src="/images/classes/{{ class_info.name | lower }}.png"/>
+    </div>
+
     <div class="class-info-box">
         <h4>Starting Info</h4>
         <p><strong>Source:</strong> {{ class_info.source | upper }}, Page: {{ class_info.page }}</p>
         <p><strong>Hit Dice:</strong> {{ class_info.hd.number }}d{{ class_info.hd.faces }}</p>
-        <p><strong><u>Multiclass Requirements</u></strong></p>
-        <ul>
-        {%- for key,value in class_info.multiclassing.requirements.items() -%}
-            <li>{{ key | capitalize }}:{{ value }}</li>
-        {% endfor %}
-        </ul>
+        <p><strong>ASI or Feat at levels:</strong>
+            {% for feature in classFeature %}
+                {% if feature.name == "Ability Score Improvement" %}{{ feature.level }}{% if feature.level < 19 %}, {% endif %} {% endif %}
+            {% endfor %}
+        </p>
+        <p><strong><u>Multiclass Requirements</u></strong>
+            <ul>
+            {%- for key,value in class_info.multiclassing.requirements.items() -%}
+                <li>{{ key | capitalize }}:{{ value }}</li>
+            {% endfor %}
+            </ul>
+        </p>
     </div>
 
     <div class="class-info-box">
@@ -69,12 +139,11 @@ add_full_data_variable: false
         </ul>
         <p><strong>Gold Alternative:</strong> {{ class_info.startingEquipment.goldAlternative }}</p>
     </div>
-</div>
+
 
 
 {% if class_info.spellcastingAbility %}
-    <section id="class-magic-section" class="class-section">
-        <hr/>
+    <div id="class-magic-section" class="class-section">
         <h4><u>Magic</u></h4>
             <p><strong>Spellcasting Ability:</strong> {{ class_info.spellcastingAbility }}</p>
             <p><strong>Caster Progression:</strong> {{ class_info.casterProgression }}</p>
@@ -91,10 +160,9 @@ add_full_data_variable: false
             {% else %}
                 <p><strong>Spells known:</strong> All class spells are known.</p>
             {% endif %}
-
-    </section>
+    </div>
 {% endif %}
-
+</div>
 
 {% if classFeature %}
     <section id="class-features-section" class="class-section">
@@ -116,10 +184,9 @@ add_full_data_variable: false
 {% endif %}
 
 
-<hr/>
+
 {% if geraldine_full_data %}
+<hr/>
 <pre>{{- geraldine_full_data.classFeature | tojson(indent=2) -}}</pre>
 {% endif %}
-
-
-
+</div>
