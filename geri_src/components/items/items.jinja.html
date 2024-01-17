@@ -4,14 +4,17 @@ processor: [
     remove_blank_lines, 
     5e_tools_tag_replace
 ]
-json_project_path: /geri_dist/data/items/items.json
-start_key: item
-filename_key: "{{ name | lower | replace(' ', '-') }}"
-extension: html
-custom_filter_files: 
-- ".geraldine/custom_filters/custom_jinja_filters.py"
-- ".geraldine/custom_filters/items/item_jinja_filters.py"
-add_full_data_variable: true
+
+jinja_file_parser: 
+    json_project_path: /geri_dist/data/items/items.json
+    start_key: item
+    filename_key: "{{ name | lower | replace(' ', '-') }}"
+    extension: html
+    custom_filter_files: [
+        ".geraldine/custom_filters/custom_jinja_filters.py",
+        ".geraldine/custom_filters/items/item_jinja_filters.py"
+    ]
+    add_full_data_variable: true
 ---
 
 <!DOCTYPE html>

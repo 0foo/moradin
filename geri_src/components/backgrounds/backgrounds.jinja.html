@@ -1,59 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ data.name }}</title>
-</head>
-<body>
-    <h1>{{ data.name }}</h1>
-    <p>Source: {{ data.source }}</p>
-    <p>Page: {{ data.page }}</p>
+---
+processor: [
+    jinja_file_parser, 
+    remove_blank_lines, 
+    5e_tools_tag_replace
+]
+jinja_file_parser:
+    json_project_path: /geri_dist/data/backgrounds/backgrounds.json
+    filename_key: '{{ name  | replace(" ", "_") }}-{{ source }}'
+    extension: html
+    start_key: background
+    custom_filter_files: [
+        ".geraldine/custom_filters/custom_jinja_filters.py"
+    ]
+    add_full_data_variable: true
+---
 
-    <h2>Skill Proficiencies:</h2>
-    {% for proficiency in data.skillProficiencies %}
-        {% for skill, value in proficiency.items() %}
-            <p>{{ skill | capitalize }}: {{ value }}</p>
-        {% endfor %}
-    {% endfor %}
+<div>
+    <h1>{{ name }}</h1>
+    <p>Source: {{ source }}</p>
+    <p>Page: {{ page }}</p>
 
-    <h2>Language Proficiencies:</h2>
-    {% for language in data.languageProficiencies %}
-        {% for type, count in language.items() %}
-            <p>{{ type | replace("_", " ") | capitalize }}: {{ count }}</p>
-        {% endfor %}
+    {% for key, value in geraldine_full_data.items() %}
+    {{ key }}: {{ value }}<br/>
     {% endfor %}
+</div>
 
-    <h2>Starting Equipment:</h2>
-    {% for equipment_category in data.startingEquipment %}
-        {% for key, items in equipment_category.items() %}
-            <h3>{{ key | capitalize }}:</h3>
-            <ul>
-                {% for item in items %}
-                    {% if item.special %}
-                        <li>{{ item.special }} ({{ item.quantity | default(1) }})</li>
-                    {% elif item.item %}
-                        <li>{{ item.displayName | default(item.item) }}</li>
-                    {% else %}
-                        <li>{{ item }}</li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        {% endfor %}
-    {% endfor %}
 
-    <h2>Features and Characteristics:</h2>
-    {% for entry in data.entries %}
-        <h3>{{ entry.name }}</h3>
-        {% if entry.type == "list" %}
-            <ul>
-                {% for item in entry.items %}
-                    <li><strong>{{ item.name }}</strong>: {{ item.entry }}</li>
-                {% endfor %}
-            </ul>
-        {% elif entry.type == "entries" %}
-            {% for text in entry.entries %}
-                <p>{{ text }}</p>
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-</body>
-</html>

@@ -1,0 +1,253 @@
+---
+processor: [
+    remove_blank_lines
+]
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="preload" href="/data/classes/all_classes.min.json" as="fetch" crossorigin="anonymous">
+    <title></title>
+</head>
+<body>
+
+  <div id="tableOfContents">
+    <button type="button" class="btn btn-warning">Reset All</button>
+    <hr/>
+    <h2 id="Class-Nav"><a href="#Class-Screen">Class</a></h2>
+    <h2 id="Subclass-Nav"><a href="#Subclass-Screen">Subclass</a></h2>
+    <h2 id="Race-Nav"><a href="#Race-Screen">Race</a></h2>
+    <h2 id="Ability-Nav"><a href="#Ability-Screen">Abilities</a></h2>
+    <h2 id="Background-Nav"><a href="#Background-Screen">Background</a></h2>
+    <h2 id="Skill-Nav"><a href="#Skill-Screen">Skills</a></h2>
+    <h2 id="Feat-Nav"><a href="#Feat-Screen">Feats</a></h2>
+    <h2 id="Item-Nav"><a href="#Item-Screen">Items</a></h2>
+    <h2 id="Spell-Nav"><a href="#Spell-Screen">Spells</a></h2>
+    <h2 id="Reference-Nav"><a href="#Reference-Screen">Reference</a></h2>
+  </div>
+  <style>
+    .horizontal-flex-container {
+      display: flex; /* This turns the container into a flexbox container */
+      flex-direction: row; /* Aligns children horizontally, this is default */
+      justify-content: flex-start; 
+      align-items: left; 
+    }
+
+    .select-flex-item {
+      flex:1;
+    }
+    .display-flex-item{
+      flex:4;
+    }
+
+  </style>
+
+  <div id="content">
+    <section id="Class-Screen">
+      <div class="horizontal-flex-container">
+        <div class="select-flex-item">
+
+            <mutant-select 
+              max-width="350px"
+              caption="Select a class:"
+              data-path="/compiled_data/classes/class-names.json"
+              event_emit_name="class-select-event"></mutant-select>
+
+            <mutant-selection-store
+                store_name="class_select_store"
+                url_id_key="char_id"
+                max-width="350px"
+                event_consume_name="button-class-select-event"
+                do_index="true"
+                selection_limit="20"
+                remove_type="last"
+            ></mutant-selection-store>
+
+        </div>
+
+      <div class="display-flex-item">
+          <mutant-display
+            event_consume_name="class-select-event"
+            base_path="/components/classes">
+          </mutant-display>
+      </div>
+    </div>
+    </section>
+
+    <section id="Race-Screen">
+      <div class="horizontal-flex-container">
+        <div class="select-flex-item">
+          <mutant-select 
+            max-width="350px"
+            caption="Select a race:"
+            multiple-size="15"
+            data-path="/compiled_data/races/race-names.json"
+            event_emit_name="race-select-event"></mutant-select>
+
+            <mutant-selection-store
+              max-width="350px"
+              multiple-size=" 1"
+              event_consume_name="button-race-select-event"
+              selection_limit=1
+              remove_type="last"
+            ></mutant-selection-store>
+          </div>
+
+          <div class="display-flex-item">
+            <mutant-display
+              event_consume_name="race-select-event"
+              base_path="/components/races">
+            </mutant-display>
+          </div>
+      </div>
+    </section>
+
+
+    <section id="Ability-Screen">
+    </section>
+
+    <section id="Background-Screen">
+      <div class="horizontal-flex-container">
+
+        <div class="select-flex-item">
+          <mutant-select 
+              max-width="350px"
+              caption="Select a background:"
+              multiple-size="15"
+              data-path="/compiled_data/backgrounds/background-names.json"
+              event_emit_name="background-select-event"></mutant-select>
+          
+          <mutant-selection-store
+              max-width="350px"
+              multiple-size=" 1"
+              event_consume_name="button-background-select-event"
+              selection_limit=1
+              remove_type="last"
+            ></mutant-selection-store>
+          </div>
+
+      <div class="display-flex-item">
+        <mutant-display
+          event_consume_name="background-select-event"
+          base_path="/components/backgrounds">
+        </mutant-display>
+      </div>
+    </section>
+
+
+    <section id="Skill-Screen">
+      <div class="horizontal-flex-container">
+
+        <div class="select-flex-item">
+          <mutant-select 
+              max-width="350px"
+              caption="Select a skill:"
+              multiple-size="15"
+              data-path="/compiled_data/skills/skill-names.json"
+              event_emit_name="skill-select-event"></mutant-select>
+
+          <mutant-selection-store
+              max-width="350px"
+              multiple-size="15"
+              event_consume_name="button-skill-select-event"
+              unique_options="true"
+            ></mutant-selection-store>
+
+          </div>
+
+      <div class="display-flex-item">
+        <mutant-display
+          event_consume_name="skill-select-event"
+          base_path="/components/skills">
+        </mutant-display>
+      </div>
+    </section>
+
+
+    <section id="Feat-Screen">
+      <div class="horizontal-flex-container">
+
+        <div class="select-flex-item">
+          <mutant-select 
+              max-width="350px"
+              caption="Select a feat:"
+              multiple-size="15"
+              data-path="/compiled_data/feats/feat-names.json"
+              event_emit_name="feat-select-event"></mutant-select>
+          <mutant-selection-store
+              max-width="350px"
+              multiple-size="15"
+              event_consume_name="button-feat-select-event"
+              unique_options="true"></mutant-selection-store>
+          </div>
+
+      <div class="display-flex-item">
+        <mutant-display
+          event_consume_name="feat-select-event"
+          base_path="/components/feats">
+        </mutant-display>
+      </div>
+    </section>
+
+
+  </div>
+  
+
+  <script src="/js/components/selection.js"></script>
+  <script src="/js/components/display.js"></script>
+  <script src="/js/components/selection-store.js"></script>
+
+  <script>
+
+    function displayIncompatibilityMessage() {
+        const message = "Your browser is not supported. Please upgrade to a newer browser for the best experience.";
+        document.body.innerHTML = `<div style="color: red; text-align: center;">${message}</div>`; // Overwrites the entire body
+        // Alternatively, you can append the message or display it in a specific div
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('#tableOfContents a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+
+
+
+    function listen_to_all_events(){
+      // List of common event types
+      // const eventTypes = ['click', 'change', 'mouseover', 'mouseout', 'keydown', 'keyup', 'submit', 'load', 'resize'];
+      const eventTypes = ['click'];
+
+      // Function to handle events
+      function handleEvent(e) {
+          console.log(`Event: ${e.detail.value}`, e);
+      }
+
+      // Attach event listeners for all event types
+      eventTypes.forEach(type => {
+          window.addEventListener(type, handleEvent, true); // 'true' for capturing phase
+      });
+    }
+
+
+    function onSelectButtonEvent(e) {
+      console.log('select_button_event occurred!', e.detail.value);
+    }
+
+      // Add the event listener to the window
+    // window.addEventListener('button-class-select-event', onSelectButtonEvent);
+
+
+  </script>
+</body>
+</html>

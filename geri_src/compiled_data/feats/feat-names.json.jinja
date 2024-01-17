@@ -1,0 +1,16 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+jinja_parser:
+    custom_filter_files: ".geraldine/custom_filters/custom_jinja_filters.py"
+    json_project_path: /geri_dist/data/feats/feats.json
+---
+
+
+[
+    {% for item in feat %}
+     "{{ item.name | replace(" ", "_") }}-{{ item.source }}"{{ "," if not loop.last }}
+    {% endfor %}
+]
