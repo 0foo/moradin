@@ -1,4 +1,4 @@
-function generateRandomHash(length) {
+export function generateRandomHash(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     const charactersLength = characters.length;

@@ -13,4 +13,24 @@ priority_directories:
 - includes
 - data
 - compiled_data
+
 log_level: debug
+post_processors:
+  -   name: file_appender
+      # set delete_originals to false while developing in these directories as theres a conflict with the watcher
+      dirs_to_append: 
+      - path: /geri_dist/js/util
+        extension: js
+        delete_originals: false
+        destination_path: /geri_dist/js/util/util-compiled.js
+      - path: /geri_dist/js/components
+        extension: js
+        delete_originals: false
+        destination_path: /geri_dist/js/components/components-compiled.js
+      - path: /geri_dist/js/app
+        extension: js
+        delete_originals: false
+        destination_path: /geri_dist/js/app/app-compiled.js
+    
+
+    
