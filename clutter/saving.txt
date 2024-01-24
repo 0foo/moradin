@@ -23,7 +23,7 @@
     }
 
 
-        setupButton() {
+    setupButton() {
         let button = this.shadowRoot.getElementById('chooser-button');
         button.onclick = this.buttonClickEvent.bind(this)
     }

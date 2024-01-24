@@ -97,11 +97,6 @@ class SelectionStore extends HTMLElement {
         }
 
        this.render();
-
-    //    for (option in this.character_id_storage[this.store_name]){
-    //        this.putOption(option)
-    //    }
-
     }
 
     render() {
@@ -128,13 +123,28 @@ class SelectionStore extends HTMLElement {
             <button id="chooser-button" class="btn btn-danger btn-lg">Remove option(s)</button>
         </div>
     `;
-    // this.setupButton()
+        this.setupButton()
         this.makeSelect()
     }
 
+    setupButton() {
+        let button = this.shadowRoot.getElementById('chooser-button');
+        button.onclick = this.buttonClickEvent.bind(this)
+    }
+    buttonClickEvent(){
+        if (this.remove_type === 'last'){
+            this.removeLastOption()
+            return
+        } 
+        this.removeSelectedOptions()
+    }
     removeLastOption() {
-        let index = 
-        this.character_storage.removeItemFromList(this.store_name, index)
+        let list = this.character_storage.getItem(this.store_name)
+        if (list){
+            let list_len = parseInt(list.length)
+            this.character_storage.removeItemFromList(this.store_name, list_len - 1)
+        }
+        this.makeSelect()
     }
 
     removeSelectedOptions() {
@@ -144,9 +154,10 @@ class SelectionStore extends HTMLElement {
         for (var i = selectElement.options.length - 1; i >= 0; i--) {
             let option = selectElement.options[i]
             if (option.selected) {
-                this.removeOption(option.value)
+                this.character_storage.removeItemFromList(this.store_name, i)
             }
         }
+        this.makeSelect()
     }
 
 
