@@ -43,4 +43,4 @@ class DisplayComponent extends HTMLElement {
     }
 }
 
-customElements.define('mutant-display', DisplayComponent);
+customElements.define('moradin-display', DisplayComponent);

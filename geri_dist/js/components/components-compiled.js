@@ -45,7 +45,12 @@ class DisplayComponent extends HTMLElement {
     }
 }
 
-customElements.define('mutant-display', DisplayComponent);
+customElements.define('moradin-display', DisplayComponent);
+
+import { MoradinStorageManager } from '/js/app/MoradinStorageManager.js';
+import { CharacterStorageManager } from '/js/app/CharacterStorageManager.js';
+import * as Util from '/js/util/util-compiled.js'; 
+
 
 class SelectionStore extends HTMLElement {
     constructor() {
@@ -57,22 +62,22 @@ class SelectionStore extends HTMLElement {
         this.caption =''
         this.multiple_size='15'
         this.max_width=''
+        this.store_name=false
         this.selection_limit=-1
         this.selection_count=0
         this.remove_type=''
         this.unique_options=false
-        this.local_storage_parent_key=''
-        this.local_storage_sub_key=''
+        this.characterID=''
+        this.storage_manager = new MoradinStorageManager()
+        this.characterID = Util.URLutil.getParameter('charIdentifier')
+        this.character_storage = new CharacterStorageManager(this.characterID)
     }
 
     connectedCallback() {
-        this.render();
-                // Set up attributes
         if (this.hasAttribute('event_consume_name')) {
             this.event_consume_name = this.getAttribute('event_consume_name');
             document.addEventListener(this.event_consume_name, (e) => {this.addOption(e.detail);});
         }
-
         if (this.hasAttribute('do_index')) {
             this.do_index = this.getAttribute('do_index');
         }
@@ -85,52 +90,19 @@ class SelectionStore extends HTMLElement {
         if (this.hasAttribute('unique_options')) {
             this.unique_options = this.getAttribute('unique_options');
         }
-        if (this.hasAttribute('local_storage_parent_key')) {
-            this.local_storage_parent_key = this.getAttribute('local_storage_parent_key');
+        if (this.hasAttribute('store_name')) {
+            this.store_name = this.getAttribute('store_name');
         }
-        if (this.hasAttribute('local_storage_sub_key')) {
-            this.local_storage_sub_key = this.getAttribute('local_storage_sub_key');
+        if (this.hasAttribute('multiple_size')) {
+            this.multiple_size = this.getAttribute('multiple_size');
         }
-        if (!this.fetchFromLocalStorage(this.local_storage_parent_key)){
-            this.saveToLocalStorage(this.local_storage_parent_key, {})
-        }
-        if (!this.fetchFromLocalStorage(this.local_storage_parent_key).hasOwnProperty(this.local_storage_sub_key)) {
-            let data  = this.fetchFromLocalStorage(this.local_storage_parent_key)
-            data[this.local_storage_sub_key] = {}
-            this.saveToLocalStorage(this.local_storage_parent_key, data)
-        }
-    }
-    fetchFromLocalStorage(id) {
-        try {
-            const jsonData = localStorage.getItem(id);
-            if (jsonData === null) {
-                console.log('No data found for the given ID');
-                return found;
-            }
-            return JSON.parse(jsonData);
-        } catch (error) {
-            console.error('Error fetching data from local storage:', error);
-            return found;
-        }
-    }
-    saveToLocalStorage(id, data) {
-        try {
-            const jsonData = JSON.stringify(data);
-            localStorage.setItem(id, jsonData);
-            console.log('Data saved successfully');
-        } catch (error) {
-            console.error('Error saving data to local storage:', error);
-        }
-    }
 
-    updateLocalStorage(){
+       this.render();
 
-    }
+    //    for (option in this.character_id_storage[this.store_name]){
+    //        this.putOption(option)
+    //    }
 
-    setCharId(){
-        const url = window.location.href;
-        const urlParams = new URLSearchParams(new URL(url).search);
-        this.char_id = urlParams.get(this.char_id_key);
     }
 
     render() {
@@ -170,14 +142,12 @@ class SelectionStore extends HTMLElement {
         } 
         this.removeSelectedOptions()
     }
+
     removeLastOption() {
         var selectElement = this.shadowRoot.getElementById('shadow-select');
         if (selectElement && selectElement.options.length > 0) {
-            console.log("remove")
             selectElement.remove(selectElement.options.length - 1);
-            console.log(this.selection_count)
             this.selection_count =  this.selection_count - 1
-            console.log("remove after")
         }
     }
 
@@ -186,24 +156,30 @@ class SelectionStore extends HTMLElement {
         if (!selectElement) return;
     
         for (var i = selectElement.options.length - 1; i >= 0; i--) {
-            if (selectElement.options[i].selected) {
-                selectElement.remove(i);
-                console.log("remove")
-                this.selection_count -= 1
+            let option = selectElement.options[i]
+            if (option.selected) {
+                this.removeOption(option.value)
             }
         }
     }
 
-    optionExists(optionValue) {
+    optionExists(optionText) {
         var selectElement = this.shadowRoot.getElementById('shadow-select');
         if (!selectElement) return false;
     
         for (var i = 0; i < selectElement.options.length; i++) {
-            if (selectElement.options[i].value === optionValue) {
+            if (selectElement.options[i].text=== optionText) {
                 return true;
             }
         }
         return false;
+    }
+
+    buildSelect(){
+        let store_data = this.character_storage.getItem(this.store_name)
+        for (option in store_data){
+            this.putOption(option.value, option.text)
+        }
     }
 
     addOption(data) {
@@ -214,21 +190,40 @@ class SelectionStore extends HTMLElement {
         if(this.unique_options && this.optionExists(data.value)){
             return
         }
-        const option = document.createElement('option');
-        let value = data.value
+        let text = data.value
         if(this.do_index){
             let cur_count = this.selection_count + 1
-            value = cur_count + " - " + value
+            text = cur_count + " - " + text
         }
+        let value_hash = Util.Hash.generateRandomHash(6)
+        this.putOption(value_hash, text)
+        this.selection_count += 1
+    }
+
+    putOption(value, text){
+        let option = document.createElement('option');
         option.value=value
-        option.textContent = value;
+        option.textContent = text;
         let select = this.shadowRoot.getElementById('shadow-select')
         select.appendChild(option);
-        this.selection_count += 1
+    }
+
+    removeOption(value) {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (!selectElement) return;
+    
+        for (var i = selectElement.options.length - 1; i >= 0; i--) {
+            var option = selectElement.options[i];
+            if (option.value === value) {
+                selectElement.remove(i);
+            }
+        }
+        this.selection_count -= 1
+        delete this.component_store[value]
     }
 }
 
-customElements.define('mutant-selection-store',  SelectionStore);
+customElements.define('moradin-selection-store',  SelectionStore);
 
 /*
 Example usage:
@@ -367,5 +362,5 @@ class SelectComponent extends HTMLElement {
     }
 }
 
-customElements.define('mutant-select', SelectComponent);
+customElements.define('moradin-select', SelectComponent);
 

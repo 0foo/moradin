@@ -135,4 +135,4 @@ class SelectComponent extends HTMLElement {
     }
 }
 
-customElements.define('mutant-select', SelectComponent);
+customElements.define('moradin-select', SelectComponent);

@@ -27,10 +27,5 @@ post_processors:
         extension: js
         delete_originals: false
         destination_path: /geri_dist/js/components/components-compiled.js
-      - path: /geri_dist/js/app
-        extension: js
-        delete_originals: false
-        destination_path: /geri_dist/js/app/app-compiled.js
-    
 
     

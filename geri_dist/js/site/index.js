@@ -1,68 +1,69 @@
+import { MoradinStorageManager } from '/js/app/MoradinStorageManager.js';
+import * as Util from  '/js/util/util-compiled.js'
+
+
+// Util.Storage.clear()
+
+let char_store = new MoradinStorageManager()
+
 document.getElementById('viewCharacterBtn').addEventListener('click', function() {
     console.log('view character')
+    Util.URL.changeLocation('edit.html', ["charIdentifier", ])
 });
 
 document.getElementById('editCharacterBtn').addEventListener('click', function() {
-    console.log('edit character')
+    let the_identifier = getFirstSelectOption().value
+
+    Util.URLutil.openLocation('edit.html', {"charIdentifier": the_identifier})
 });
 
 document.getElementById('addCharacterBtn').addEventListener('click', function() {
-    const characterName = prompt("Enter the character's name:");
-    if (characterName) {
-        addToSelectBox(characterName)
-        addToStorage(characterName)
-    }
+    const characterName = prompt('Enter the character\'s name (can be changed later):');
+    char_store.newBlankCharacter(characterName)
+    updateSelectBox()
 });
 
 document.getElementById('deleteCharacterBtn').addEventListener('click', function() {
-    const selectBox = document.getElementById('characterSelect');
-    for (let i = selectBox.options.length - 1; i >= 0; i--) {
-        if (selectBox.options[i].selected) {
-            console.log(selectBox.options[i])
-        }
-    }
-    
+    let char_id = getFirstSelectOption().value
+    char_store.deleteCharacterById(char_id)
+    updateSelectBox()
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const characterData = localStorage.getItem('character-generator');
-    if (characterData) {
-        const characterObj = JSON.parse(characterData);
-        for (let key in characterObj) {
-            addToSelectBox(key)
-        }
-    }
+    updateSelectBox()
 });
 
+function updateSelectBox(){
+    document.getElementById('characterSelect').innerHTML = '';
+    const characterData = char_store.getIdentifierAndNames()
 
+    for (let identifier in characterData) {
+        if (characterData.hasOwnProperty(identifier)) {
+          const name = characterData[identifier];
+          addToSelectBox(identifier, name)
+        }
+      }
+}
 
-
-
-function addToSelectBox(characterName){
+function addToSelectBox(characterId, characterName){
     const selectBox = document.getElementById('characterSelect');
     const newOption = document.createElement('option');
     newOption.text = characterName;
-    newOption.value = characterName.toLowerCase().replace(/\s/g, '');
+    newOption.value = characterId;
     selectBox.add(newOption);
 }
 
-function addToStorage(characterName){
-    const storage_char_data = localStorage.getItem('character-generator');
-    let characterData = data ? JSON.parse(data) : {};
-    const namesList = arrayOfObjects.map((obj) => obj.name);
-    if ( !characterData.hasOwnProperty(characterName)){
-        characterData[characterName] = {};
-    }
-    localStorage.setItem('character-generator', JSON.stringify(characterData));
+function getFirstSelectOption(){
+    const selectElement = document.getElementById('characterSelect');
+    const selectedIndex = selectElement.selectedIndex;
+    return selectElement.options[selectedIndex];
 }
 
-function deleteFromStorage(characterName){
-    const data = localStorage.getItem('character-generator');
-    let characterData = data ? JSON.parse(data) : {};
-    if (characterData.hasOwnProperty(characterName)){
-        delete characterData[characterName]; 
-    }
-    localStorage.setItem('character-generator', JSON.stringify(characterData));
+function changeLocation(newPath, ){
+    const currentURL = new URL(window.location.href);
+    const characterId = 1231245;
+    currentURL.pathname = newPath;
+    currentURL.searchParams.set('character_id', characterId);
+    window.location.href = currentURL.toString();
 }
-
 

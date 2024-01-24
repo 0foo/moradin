@@ -52,13 +52,13 @@ processor: [
       <div class="horizontal-flex-container">
         <div class="select-flex-item">
 
-            <mutant-select 
+            <moradin-select 
               max-width="350px"
               caption="Select a class:"
               data-path="/compiled_data/classes/class-names.json"
-              event_emit_name="class-select-event"></mutant-select>
+              event_emit_name="class-select-event"></moradin-select>
 
-            <mutant-selection-store
+            <moradin-selection-store
                 store_name="class_select_store"
                 url_id_key="char_id"
                 max-width="350px"
@@ -66,15 +66,15 @@ processor: [
                 do_index="true"
                 selection_limit="20"
                 remove_type="last"
-            ></mutant-selection-store>
+            ></moradin-selection-store>
 
         </div>
 
       <div class="display-flex-item">
-          <mutant-display
+          <moradin-display
             event_consume_name="class-select-event"
             base_path="/components/classes">
-          </mutant-display>
+          </moradin-display>
       </div>
     </div>
     </section>
@@ -82,27 +82,27 @@ processor: [
     <section id="Race-Screen">
       <div class="horizontal-flex-container">
         <div class="select-flex-item">
-          <mutant-select 
+          <moradin-select 
             max-width="350px"
             caption="Select a race:"
             multiple-size="15"
             data-path="/compiled_data/races/race-names.json"
-            event_emit_name="race-select-event"></mutant-select>
+            event_emit_name="race-select-event"></moradin-select>
 
-            <mutant-selection-store
+            <moradin-selection-store
               max-width="350px"
-              multiple-size="1"
+              multiple_size="1"
               event_consume_name="button-race-select-event"
               selection_limit=1
               remove_type="last"
-            ></mutant-selection-store>
+            ></moradin-selection-store>
           </div>
 
           <div class="display-flex-item">
-            <mutant-display
+            <moradin-display
               event_consume_name="race-select-event"
               base_path="/components/races">
-            </mutant-display>
+            </moradin-display>
           </div>
       </div>
     </section>
@@ -115,27 +115,27 @@ processor: [
       <div class="horizontal-flex-container">
 
         <div class="select-flex-item">
-          <mutant-select 
+          <moradin-select 
               max-width="350px"
               caption="Select a background:"
               multiple-size="15"
               data-path="/compiled_data/backgrounds/background-names.json"
-              event_emit_name="background-select-event"></mutant-select>
+              event_emit_name="background-select-event"></moradin-select>
           
-          <mutant-selection-store
+          <moradin-selection-store
               max-width="350px"
-              multiple-size="1"
+              multiple_size="1"
               event_consume_name="button-background-select-event"
               selection_limit=1
               remove_type="last"
-            ></mutant-selection-store>
+            ></moradin-selection-store>
           </div>
 
       <div class="display-flex-item">
-        <mutant-display
+        <moradin-display
           event_consume_name="background-select-event"
           base_path="/components/backgrounds">
-        </mutant-display>
+        </moradin-display>
       </div>
     </section>
 
@@ -144,27 +144,27 @@ processor: [
       <div class="horizontal-flex-container">
 
         <div class="select-flex-item">
-          <mutant-select 
+          <moradin-select 
               max-width="350px"
               caption="Select a skill:"
               multiple-size="15"
               data-path="/compiled_data/skills/skill-names.json"
-              event_emit_name="skill-select-event"></mutant-select>
+              event_emit_name="skill-select-event"></moradin-select>
 
-          <mutant-selection-store
+          <moradin-selection-store
               max-width="350px"
               multiple-size="15"
               event_consume_name="button-skill-select-event"
               unique_options="true"
-            ></mutant-selection-store>
+            ></moradin-selection-store>
 
           </div>
 
       <div class="display-flex-item">
-        <mutant-display
+        <moradin-display
           event_consume_name="skill-select-event"
           base_path="/components/skills">
-        </mutant-display>
+        </moradin-display>
       </div>
     </section>
 
@@ -173,24 +173,24 @@ processor: [
       <div class="horizontal-flex-container">
 
         <div class="select-flex-item">
-          <mutant-select 
+          <moradin-select 
               max-width="350px"
               caption="Select a feat:"
               multiple-size="15"
               data-path="/compiled_data/feats/feat-names.json"
-              event_emit_name="feat-select-event"></mutant-select>
-          <mutant-selection-store
+              event_emit_name="feat-select-event"></moradin-select>
+          <moradin-selection-store
               max-width="350px"
               multiple-size="15"
               event_consume_name="button-feat-select-event"
-              unique_options="true"></mutant-selection-store>
+              unique_options="true"></moradin-selection-store>
           </div>
 
       <div class="display-flex-item">
-        <mutant-display
+        <moradin-display
           event_consume_name="feat-select-event"
           base_path="/components/feats">
-        </mutant-display>
+        </moradin-display>
       </div>
     </section>
 
@@ -198,54 +198,8 @@ processor: [
   </div>
   
 
-  <script src="/js/components/components-compiled.js"></script>
+  <script type="module" src="/js/components/components-compiled.js"></script>
+  <script type="module" src="/js/site/edit.js"></script>
 
-  <script>
-
-    function displayIncompatibilityMessage() {
-        const message = "Your browser is not supported. Please upgrade to a newer browser for the best experience.";
-        document.body.innerHTML = `<div style="color: red; text-align: center;">${message}</div>`; // Overwrites the entire body
-        // Alternatively, you can append the message or display it in a specific div
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('#tableOfContents a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-    });
-
-
-
-    function listen_to_all_events(){
-      // List of common event types
-      // const eventTypes = ['click', 'change', 'mouseover', 'mouseout', 'keydown', 'keyup', 'submit', 'load', 'resize'];
-      const eventTypes = ['click'];
-
-      // Function to handle events
-      function handleEvent(e) {
-          console.log(`Event: ${e.detail.value}`, e);
-      }
-
-      // Attach event listeners for all event types
-      eventTypes.forEach(type => {
-          window.addEventListener(type, handleEvent, true); // 'true' for capturing phase
-      });
-    }
-
-
-    function onSelectButtonEvent(e) {
-      console.log('select_button_event occurred!', e.detail.value);
-    }
-
-      // Add the event listener to the window
-    // window.addEventListener('button-class-select-event', onSelectButtonEvent);
-
-
-  </script>
 </body>
 </html>
