@@ -1,3 +1,124 @@
+    syncViewAndStorage(){
+        console.log(this.character_storage.getAll())
+        let char_data = this.character_storage.getItem(this.store_name)
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+
+        for (let i = 0; i < char_data.length; i++) {
+            storage_item = char_data[i]
+            select_item = selectElement.options[i]
+        }
+    }
+
+
+    optionExists(optionValue) {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (!selectElement) return false;
+    
+        for (var i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].value === optionValue) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+        setupButton() {
+        let button = this.shadowRoot.getElementById('chooser-button');
+        button.onclick = this.buttonClickEvent.bind(this)
+    }
+    buttonClickEvent(){
+        if (this.remove_type === 'last'){
+            this.removeLastOption()
+            return
+        } 
+        this.removeSelectedOptions()
+    }
+
+    
+    removeLastOption() {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (selectElement && selectElement.options.length > 0) {
+            let len = selectElement.options.length
+            selectElement.remove(len - 1);
+            this.character_storage.removeItemFromList(this.store_name, len-1)
+            this.selection_count =  this.selection_count - 1
+        }
+    }
+
+    removeSelectedOptions() {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (!selectElement) return;
+    
+        for (var i = selectElement.options.length - 1; i >= 0; i--) {
+            let option = selectElement.options[i]
+            if (option.selected) {
+                this.removeOption(option.value)
+            }
+        }
+    }
+
+    optionExists(optionText) {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (!selectElement) return false;
+    
+        for (var i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].text=== optionText) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    buildSelect(){
+        let store_data = this.character_storage.getItem(this.store_name)
+        for (option in store_data){
+            this.putOption(option.value, option.text)
+        }
+
+    }
+
+    addOption(data) {
+        if(this.selection_limit > 0 && this.selection_count >= this.selection_limit){
+            return
+        }
+
+        if(this.unique_options && this.optionExists(data.value)){
+            return
+        }
+        let text = data.value
+        if(this.do_index){
+            let cur_count = this.selection_count + 1
+            text = cur_count + " - " + text
+        }
+        let value_hash = Util.Hash.generateRandomHash(6)
+        this.putOption(value_hash, text)
+        this.selection_count += 1
+    }
+
+    putOption(value, text){
+        let option = document.createElement('option');
+        option.value=value
+        option.textContent = text;
+        let select = this.shadowRoot.getElementById('shadow-select')
+        select.appendChild(option);
+    }
+
+    removeOption(value) {
+        var selectElement = this.shadowRoot.getElementById('shadow-select');
+        if (!selectElement) return;
+    
+        for (var i = selectElement.options.length - 1; i >= 0; i--) {
+            var option = selectElement.options[i];
+            if (option.value === value) {
+                selectElement.remove(i);
+            }
+        }
+        this.selection_count -= 1
+        delete this.component_store[value]
+    }
+
+
 <script type="module">
     // import * as util from '/js/util/util.js';
 

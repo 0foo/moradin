@@ -68,7 +68,6 @@ class SelectionStore extends HTMLElement {
         this.remove_type=''
         this.unique_options=false
         this.characterID=''
-        this.storage_manager = new MoradinStorageManager()
         this.characterID = Util.URLutil.getParameter('charIdentifier')
         this.character_storage = new CharacterStorageManager(this.characterID)
     }
@@ -129,26 +128,13 @@ class SelectionStore extends HTMLElement {
             <button id="chooser-button" class="btn btn-danger btn-lg">Remove option(s)</button>
         </div>
     `;
-    this.setupButton()
-    }
-    setupButton() {
-        let button = this.shadowRoot.getElementById('chooser-button');
-        button.onclick = this.buttonClickEvent.bind(this)
-    }
-    buttonClickEvent(){
-        if (this.remove_type === 'last'){
-            this.removeLastOption()
-            return
-        } 
-        this.removeSelectedOptions()
+    // this.setupButton()
+        this.makeSelect()
     }
 
     removeLastOption() {
-        var selectElement = this.shadowRoot.getElementById('shadow-select');
-        if (selectElement && selectElement.options.length > 0) {
-            selectElement.remove(selectElement.options.length - 1);
-            this.selection_count =  this.selection_count - 1
-        }
+        let index = 
+        this.character_storage.removeItemFromList(this.store_name, index)
     }
 
     removeSelectedOptions() {
@@ -163,64 +149,68 @@ class SelectionStore extends HTMLElement {
         }
     }
 
-    optionExists(optionText) {
-        var selectElement = this.shadowRoot.getElementById('shadow-select');
-        if (!selectElement) return false;
-    
-        for (var i = 0; i < selectElement.options.length; i++) {
-            if (selectElement.options[i].text=== optionText) {
-                return true;
+
+    makeSelect(){
+        let char_data = this.character_storage.getItem(this.store_name)
+        console.log(char_data)
+        let selectElement = this.shadowRoot.getElementById('shadow-select');
+        selectElement.innerHTML = '';
+
+        // check if the store is empty
+        if (!char_data){
+            return
+        }
+
+        for (let index in char_data){
+            let storage_item = char_data[index]
+            let value = storage_item.value
+            let text = storage_item.text
+
+            if(this.do_index){
+                let display_index = parseInt(index) + 1
+                text = display_index + " - " + text
             }
-        }
-        return false;
-    }
 
-    buildSelect(){
-        let store_data = this.character_storage.getItem(this.store_name)
-        for (option in store_data){
-            this.putOption(option.value, option.text)
+            let option = this.makeOption(value, text)
+            selectElement.appendChild(option);
         }
     }
 
-    addOption(data) {
-        if(this.selection_limit > 0 && this.selection_count >= this.selection_limit){
-            return
-        }
-
-        if(this.unique_options && this.optionExists(data.value)){
-            return
-        }
-        let text = data.value
-        if(this.do_index){
-            let cur_count = this.selection_count + 1
-            text = cur_count + " - " + text
-        }
-        let value_hash = Util.Hash.generateRandomHash(6)
-        this.putOption(value_hash, text)
-        this.selection_count += 1
-    }
-
-    putOption(value, text){
+    makeOption(value, text){
         let option = document.createElement('option');
         option.value=value
         option.textContent = text;
-        let select = this.shadowRoot.getElementById('shadow-select')
-        select.appendChild(option);
+        return option
     }
 
-    removeOption(value) {
-        var selectElement = this.shadowRoot.getElementById('shadow-select');
-        if (!selectElement) return;
-    
-        for (var i = selectElement.options.length - 1; i >= 0; i--) {
-            var option = selectElement.options[i];
-            if (option.value === value) {
-                selectElement.remove(i);
+    addOption(data){
+        let char_store = this.character_storage.getItem(this.store_name)
+        if(this.selection_limit > 0 && char_store.length >= this.selection_limit){
+            return
+        }
+
+        if(this.unique_options){
+            for( let index in char_store){
+                let item = char_store[index]
+                if (item.text == data.value){
+                    return
+                }
             }
         }
-        this.selection_count -= 1
-        delete this.component_store[value]
+
+        let text = data.value
+        let value = Util.Hash.generateRandomHash(6)
+        if(!this.store_name){
+            console.log("No store name defined!")
+            return
+        }
+        this.character_storage.addItemToList(this.store_name, {
+            "text": text,
+            "value": value
+        })
+        this.makeSelect()
     }
+
 }
 
 customElements.define('moradin-selection-store',  SelectionStore);
