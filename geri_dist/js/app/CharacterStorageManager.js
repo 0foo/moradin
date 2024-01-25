@@ -11,6 +11,13 @@ export class CharacterStorageManager{
         return this.storage_manager.loadFullCharacterData()[this.characterId]
     }
 
+    addItem(key, value){
+        let full_data = this.storage_manager.loadFullCharacterData()
+        let character_data = full_data[this.characterId]
+        character_data[key] = value
+        this.storage_manager.saveFullCharacterData(full_data)
+    }
+
     getItem(key){
         let character_data = this.storage_manager.loadFullCharacterData()[this.characterId]
         if(key in character_data){
@@ -57,13 +64,6 @@ export class CharacterStorageManager{
         if (index !== -1) {
             character_data[list_name].splice(index, 1);
         }
-        this.storage_manager.saveFullCharacterData(full_data)
-    }
-
-    addItem(key, value){
-        let full_data = this.storage_manager.loadFullCharacterData()
-        let character_data = full_data[this.characterId]
-        character_data[key] = value
         this.storage_manager.saveFullCharacterData(full_data)
     }
 

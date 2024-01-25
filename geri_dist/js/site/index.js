@@ -13,7 +13,6 @@ document.getElementById('viewCharacterBtn').addEventListener('click', function()
 
 document.getElementById('editCharacterBtn').addEventListener('click', function() {
     let the_identifier = getFirstSelectOption().value
-
     Util.URLutil.openLocation('edit.html', {"charIdentifier": the_identifier})
 });
 
@@ -59,11 +58,4 @@ function getFirstSelectOption(){
     return selectElement.options[selectedIndex];
 }
 
-function changeLocation(newPath, ){
-    const currentURL = new URL(window.location.href);
-    const characterId = 1231245;
-    currentURL.pathname = newPath;
-    currentURL.searchParams.set('character_id', characterId);
-    window.location.href = currentURL.toString();
-}
 

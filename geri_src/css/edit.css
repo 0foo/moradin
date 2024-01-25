@@ -1,0 +1,51 @@
+
+#tableOfContents {
+    width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#content > section{
+    border-bottom: 1px solid grey;
+    overflow-y: auto;
+    padding: 20px;
+}
+#Class-Screen, #Class-Nav{
+    display:block;
+}
+#Subclass-Screen, #Subclass-Nav{
+display: none;
+}
+#Race-Screen, #Race-Nav{
+display: block;
+}
+#Ability-Screen, #Ability-Nav{
+display: block;
+}
+#Background-Screen, #Background-Nav{
+display: block;
+}
+#Spell-Nav, #Spell-Screen{
+display: block;
+}
+#Skill-Screen, #Skill-Nav{
+display: block;
+}
+#Feat-Screen, #Feat-Nav{
+display: block;
+}
+#Item-Screen, #Item-Nav{
+display: block;
+}
+#Reference-Screen, #Reference-Nav{
+display: block;
+}
+  
