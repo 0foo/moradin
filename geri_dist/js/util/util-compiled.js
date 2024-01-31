@@ -98,7 +98,7 @@ export const Random = {
             total: total
         };
 
-        console.log(out)
+        // console.log(out)
         return out
     }
 };
