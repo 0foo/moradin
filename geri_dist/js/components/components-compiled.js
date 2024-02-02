@@ -296,6 +296,7 @@ customElements.define('moradin-selection-store',  SelectionStore);
 
 // import * as Util from '/js/util/util-compiled.js'; 
 
+
 class AbilityComponent extends HTMLElement {
 
     constructor(){
@@ -406,11 +407,15 @@ class AbilityComponent extends HTMLElement {
                 this.updateInput(event);
             });
         });
+        elementsWithClass.forEach((element) => {
+            element.value = this.character_storage.getItem(element.id)
+        });
     }
 
     updateInput(event){
         const elementId = event.target.id;
         const elementValue = event.target.value;
+        this.character_storage.addItem(elementId, elementValue)
         console.log(`Element ID: ${elementId}, Value: ${elementValue}`);
     }
     
@@ -435,6 +440,13 @@ class AbilityComponent extends HTMLElement {
         elementsWithClass.forEach((element) => {
             let roll_result = Util.Random.dice_roll(num_dice, 6, roll_bonus, drop_lowest)
             element.value = roll_result.total
+            // trigger 'input' event
+            const inputEvent = new Event('input', {
+                bubbles: true,
+                cancelable: true
+            });
+            element.dispatchEvent(inputEvent);
+            // end 'input' event 
             const spanId = element.getAttribute("result-id");
             const spanElement = this.shadowRoot.getElementById(spanId);
             const rolls = roll_result.rolls.join(", ");
