@@ -1,0 +1,11 @@
+---
+processor: [
+    jinja_parser, 
+    remove_blank_lines
+]
+jinja_parser:
+    custom_filter_files: ".geraldine/custom_filters/custom_jinja_filters.py"
+    json_file_project_path: /geri_src/5e_tools_data/conditionsdiseases.json
+---
+
+{% geraldine_full_data %}

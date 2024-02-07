@@ -112,7 +112,10 @@ class AbilityComponent extends HTMLElement {
             });
         });
         elementsWithClass.forEach((element) => {
-            element.value = this.character_storage.getItem(element.id)
+            let item = this.character_storage.getItem(element.id)
+            if(item){
+                element.value = item
+            }
         });
     }
 

@@ -14,7 +14,10 @@ priority_directories:
 - data
 - compiled_data
 
-log_level: debug
+ignored_paths:
+- 5e_tools_data
+
+log_level: error
 post_processors:
   -   name: file_appender
       # set delete_originals to false while developing in these directories as theres a conflict with the watcher
