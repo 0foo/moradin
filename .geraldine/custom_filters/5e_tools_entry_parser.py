@@ -144,7 +144,6 @@ def convert_entries(data):
                         the_list = list_to_html_bulleted_list(the_list)
                         out.append(the_list)
                 if item.get("type") == "table":
-                    print("TABLEEEEEEEEEEEEEEEEEEEEE")
                     table = data_structure_to_html_table(item)
                     out.append(table)
 
