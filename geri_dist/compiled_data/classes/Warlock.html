@@ -1,0 +1,248 @@
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+    .inlineTable {
+        display: inline;
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+    .class-display-container{
+        border:solid 0px black;
+        border-radius: 20px;
+        padding: 0 20px 0 20px;
+    }
+    #class-select-container {
+        display: flex; /* Use Flexbox */
+    }
+    #class-select-control-container{
+        flex:1;
+        height:auto;
+    }
+    #class-description-container {
+        flex:4;
+        padding-left: 20px;
+    }
+    #class-info-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; /* Aligns children horizontally, this is default */
+        justify-content: flex-start; 
+        align-items: left; 
+    }
+    .class-info-box {
+        /* flex:1; */
+        border: solid 1px black;
+        border-radius: 10px;
+        padding:0 10px 0 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+        flex: 1 1 30%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .class-info-box > h4 {
+        text-decoration: underline;
+    }
+    #class-magic-section{
+        flex:2;
+        border:solid 1px black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    #image-info-box{
+        flex: 1 1 30%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+    }
+</style>
+<div class="class-display-container">
+<h1 style="margin-top:0;">Warlock</h1>
+<div id="class-info-container">
+    <div id="image-info-box">
+        <img src="/images/classes/warlock.png"/>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> PHB, Page: 105</p>
+        <p><strong>Hit Dice:</strong> 1d8</p>
+        <p><strong>ASI or Feat at levels:</strong>
+                4,  
+                8,  
+                12,  
+                16,  
+                19 
+        </p>
+        <p><strong><u>Multiclass Requirements</u></strong>
+            <ul><li>Cha:13</li>
+            </ul>
+        </p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> wis, cha</p>
+        <p><strong>Armor:</strong> light</p>
+        <p><strong>Weapons:</strong> simple</p>
+        <p><strong><u>Skills</u></strong> </p>
+        <p><ul><li>choose: 2</li><ul><li>arcana</li><li>deception</li><li>history</li><li>intimidation</li><li>investigation</li><li>nature</li><li>religion</li></ul></ul><br></p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul><li>(a) a <a href="/compiled_data/items/light-crossbow.html">light crossbow</a> and <a href="/compiled_data/items/crossbow-bolts-(20).html">crossbow bolts (20)</a> or (b) any <a href="/compiled_data/items/category/common-weapons.html">simple weapon</a></li>
+            <li>(a) a <a href="/compiled_data/items/component-pouch.html">component pouch</a> or (b) an <a href="/compiled_data/items/arcane-focus.html">arcane focus</a></li>
+            <li>(a) a <a href="/compiled_data/items/scholar's-pack.html">scholar's pack</a> or (b) a <a href="/compiled_data/items/dungeoneer's-pack.html">dungeoneer's pack</a></li>
+            <li><a href="/compiled_data/items/leather-armor.html">Leather armor</a>, any <a href="/compiled_data/items/category/common-weapons.html">simple weapon</a>, and two <a href="/compiled_data/items/dagger.html">dagger</a></li>
+        </ul>
+        <p><strong>Gold Alternative:</strong> 4d4 × 10</p>
+    </div>
+    <div id="class-magic-section" class="class-section">
+        <h4><u>Magic</u></h4>
+            <p><strong>Spellcasting Ability:</strong> cha</p>
+            <p><strong>Caster Progression:</strong> pact</p>
+                <p><strong>Cantrips:</strong> <table class="inlineTable">
+<tr>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+</tr>
+</table></p>
+                <p><strong>Spells known total per level:</strong> <table class="inlineTable">
+<tr>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+  <th>6</th>
+  <th>7</th>
+  <th>8</th>
+  <th>9</th>
+  <th>10</th>
+  <th>10</th>
+  <th>11</th>
+  <th>11</th>
+  <th>12</th>
+  <th>12</th>
+  <th>13</th>
+  <th>13</th>
+  <th>14</th>
+  <th>14</th>
+  <th>15</th>
+  <th>15</th>
+</tr>
+</table></p>
+    </div>
+</div>
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+                <p>Name: Otherworldly Patron</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</li>
+                </ul>
+                <p>Name: Pact Magic</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting and {@book chapter 11|PHB|11} for the {@filter warlock spell list|spells|class=warlock}.</li>
+                    <li>{'type': 'entries', 'name': 'Cantrips', 'entries': ['You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spell Slots', 'entries': ['The Warlock table shows how many spell slots you have to cast your {@filter warlock spells|spells|class=warlock} of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.', 'For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell {@spell witch bolt}, you must spend one of those slots, and you cast it as a 3rd-level spell.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spells Known of 1st Level and Higher', 'entries': ['At 1st level, you know two 1st-level spells of your choice from the warlock spell list.', "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.", 'Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spellcasting Ability', 'entries': ['Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.', {'type': 'abilityDc', 'name': 'Spell', 'attributes': ['cha']}, {'type': 'abilityAttackMod', 'name': 'Spell', 'attributes': ['cha']}]}</li>
+                    <li>{'type': 'entries', 'name': 'Spellcasting Focus', 'entries': ['You can use an <a href="/compiled_data/items/arcane-focus.html">arcane focus</a> as a spellcasting focus for your warlock spells.']}</li>
+                </ul>
+                <p>Name: Eldritch Invocations</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.</li>
+                    <li>At 2nd level, you gain two eldritch invocations of your choice. A list of the available options can be found on the {@filter Optional Features|optionalfeatures|Feature Type=EI} page. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.</li>
+                    <li>Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.</li>
+                    <li>If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class.</li>
+                </ul>
+                <p>Name: Pact Boon</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.</li>
+                    <li>{'type': 'options', 'count': 1, 'entries': [{'type': 'refOptionalfeature', 'optionalfeature': 'Pact of the Chain'}, {'type': 'refOptionalfeature', 'optionalfeature': 'Pact of the Blade'}, {'type': 'refOptionalfeature', 'optionalfeature': 'Pact of the Tome'}, {'type': 'refOptionalfeature', 'optionalfeature': 'Pact of the Talisman|TCE'}]}</li>
+                </ul>
+                <p>Name: Eldritch Versatility</p>
+                <ul>
+                <li>level: 4</li>
+                    <li>{@i 4th-level warlock {@variantrule optional class features|tce|optional feature}}</li>
+                    <li>Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change of focus in your occult studies:</li>
+                    <li>{'type': 'list', 'items': ["Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the {@filter warlock spell list|spells|level=0|class=Warlock}.", "Replace the option you chose for the Pact Boon feature with one of that feature's other options.", "If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level."]}</li>
+                    <li>If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify.</li>
+                </ul>
+                <p>Name: Otherworldly Patron feature</p>
+                <ul>
+                <li>level: 6</li>
+                    <li>At 6th level, you gain a feature granted by your Otherworldly Patron.</li>
+                </ul>
+                <p>Name: Otherworldly Patron feature</p>
+                <ul>
+                <li>level: 10</li>
+                    <li>At 10th level, you gain a feature granted by your Otherworldly Patron.</li>
+                </ul>
+                <p>Name: Mystic Arcanum (6th level)</p>
+                <ul>
+                <li>level: 11</li>
+                    <li>At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 6th-level spell from the warlock spell list|spells|level=6|class=Warlock} as this arcanum.</li>
+                    <li>You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.</li>
+                    <li>At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest.</li>
+                </ul>
+                <p>Name: Mystic Arcanum (7th level)</p>
+                <ul>
+                <li>level: 13</li>
+                    <li>At 13th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 7th-level spell from the warlock spell list|spells|level=7|class=Warlock} as this arcanum.</li>
+                    <li>You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.</li>
+                </ul>
+                <p>Name: Otherworldly Patron feature</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>At 14th level, you gain a feature granted by your Otherworldly Patron.</li>
+                </ul>
+                <p>Name: Mystic Arcanum (8th level)</p>
+                <ul>
+                <li>level: 15</li>
+                    <li>At 15th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 8th-level spell from the warlock spell list|spells|level=8|class=Warlock} as this arcanum.</li>
+                    <li>You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.</li>
+                </ul>
+                <p>Name: Mystic Arcanum (9th level)</p>
+                <ul>
+                <li>level: 17</li>
+                    <li>At 17th level, your patron bestows upon you a magical secret called an arcanum. Choose one {@filter 9th-level spell from the warlock spell list|spells|level=9|class=Warlock} as this arcanum.</li>
+                    <li>You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.</li>
+                </ul>
+                <p>Name: Eldritch Master</p>
+                <ul>
+                <li>level: 20</li>
+                    <li>At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again.</li>
+                </ul>
+    </section>
+</div>

@@ -9,7 +9,7 @@ def convert_simple_weapon_tags_to_links(text):
     def replace_match(match):
         # Extract the first element to use as link text
         link_text = match.group(1).strip()
-        return f'<a href="/components/items/category/common-weapons.html">{link_text}</a>'
+        return f'<a href="/compiled_data/items/category/common-weapons.html">{link_text}</a>'
 
     # Use re.sub() to replace the pattern in the text
     return re.sub(pattern, replace_match, text)
@@ -22,7 +22,7 @@ def convert_instrument_tags_to_links(text):
     def replace_match(match):
         # Extract the first element to use as link text
         link_text = match.group(1).strip()
-        return f'<a href="/components/items/category/instruments.html">{link_text}</a>'
+        return f'<a href="/compiled_data/items/category/instruments.html">{link_text}</a>'
 
     # Use re.sub() to replace the pattern in the text
     return re.sub(pattern, replace_match, text)
@@ -38,7 +38,7 @@ def convert_item_tags_to_links(text):
         # Extract the first part and replace spaces with dashes, add '.html' at the end
         item_name = parts[0].strip().replace(' ', '-').lower() + '.html'
         # Construct the URL
-        url = f'/components/items/{item_name}'
+        url = f'/compiled_data/items/{item_name}'
         # Construct the HTML link
         link_text = parts[0] if len(parts) > 0 else "Item"
         return f'<a href="{url}">{link_text}</a>'
@@ -59,13 +59,37 @@ def convert_dice_tags(input_string):
     # Replace all occurrences of the dice tag
     return re.sub(dice_tag_pattern, replace_with_first_element, input_string)
 
+def convert_condition_tags(input_string):
+    pattern = r'{@condition\s(.*?)}'
+    modified_content = re.sub(pattern, r'<a href="/compiled_data/conditions/condition-list.html">\1</a>', input_string)
+    return modified_content
 
-def geraldine(in_data):
+
+def convert_action_tags(input_string):
+    pattern = r'{@action\s(.*?)}'
+    modified_content = re.sub(pattern, r'<a href="/compiled_data/actions/actions.html">\1</a>', input_string)
+    return modified_content
+
+def convert_skill_tags(input_string):
+    pattern = r'{@skill\s(.*?)}'
+    modified_content = re.sub(pattern, r'<a href="/compiled_data/skills/skills.html">\1</a>', input_string)
+    return modified_content
+
+def convert_status_tags(input_string):
+    pattern = r'{@status\s(.*?)}'
+    modified_content = re.sub(pattern, r'<b>\1</b>', input_string)
+    return modified_content
+
+def geraldine(in_data, the_state, the_logger):
     content = in_data["template_content_string"]
     content = convert_item_tags_to_links(content)
     content = convert_simple_weapon_tags_to_links(content)
     content = convert_instrument_tags_to_links(content)
     content = convert_dice_tags(content)
+    content = convert_condition_tags(content)
+    content = convert_action_tags(content)
+    content = convert_skill_tags(content)
+    content = convert_status_tags(content)
 
     return content
 

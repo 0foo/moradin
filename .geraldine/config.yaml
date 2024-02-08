@@ -11,13 +11,12 @@ geri_src_dir_name: geri_src
 max_directory_depth: 10
 priority_directories:
 - includes
-- data
 - compiled_data
 
 ignored_paths:
 - 5e_tools_data
 
-log_level: error
+log_level: info
 post_processors:
   -   name: file_appender
       # set delete_originals to false while developing in these directories as theres a conflict with the watcher

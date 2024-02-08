@@ -1,0 +1,47 @@
+---
+ignore_processing: false
+processor: [
+    jinja_parser, 
+    remove_blank_lines,
+    5e_tools_tag_replace
+]
+jinja_parser:
+    custom_filter_files: [
+        ".geraldine/custom_filters/custom_jinja_filters.py",
+        ".geraldine/custom_filters/5e_tools_entry_parser.py"
+    ]
+    json_file_project_path: /geri_src/5e_tools_data/skills.json
+    start_key: "skill"
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="/css/simple-table.css" rel="stylesheet"/>
+        <title>Skills</title>
+    </head>
+
+<h2>Skills Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Entries</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for skill in data %}
+            <tr>
+                <td>{{ skill.name }}</td>
+                <td>{{ skill.source }}: p{{ skill.page }}</td>
+                <td>{{ skill.entries | convert_entries}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

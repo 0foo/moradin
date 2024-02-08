@@ -1,0 +1,193 @@
+---
+processor: [
+    jinja_file_parser, 
+    remove_blank_lines, 
+    5e_tools_tag_replace
+]
+jinja_file_parser:
+    json_project_path: /geri_src/5e_tools_data/class/all-classes.json
+    filename_key: "{{class.0.name | urlencode}}"
+    extension: html
+    custom_filter_files: [
+        ".geraldine/custom_filters/custom_jinja_filters.py"
+    ]
+    add_full_data_variable: false
+---
+
+{% set class_info = class.0 %}
+
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+
+    .inlineTable {
+        display: inline;
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+    .class-display-container{
+        border:solid 0px black;
+        border-radius: 20px;
+        padding: 0 20px 0 20px;
+    }
+    #class-select-container {
+        display: flex; /* Use Flexbox */
+    }
+    #class-select-control-container{
+        flex:1;
+        height:auto;
+    }
+
+    #class-description-container {
+        flex:4;
+        padding-left: 20px;
+    }
+
+    #class-info-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; /* Aligns children horizontally, this is default */
+        justify-content: flex-start; 
+        align-items: left; 
+    }
+
+    .class-info-box {
+        /* flex:1; */
+        border: solid 1px black;
+        border-radius: 10px;
+        padding:0 10px 0 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+        flex: 1 1 30%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .class-info-box > h4 {
+        text-decoration: underline;
+    }
+
+    #class-magic-section{
+        flex:2;
+        border:solid 1px black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    #image-info-box{
+        flex: 1 1 30%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+
+    }
+
+</style>
+<div class="class-display-container">
+<h1 style="margin-top:0;">{{ class_info.name }}</h1>
+
+
+<div id="class-info-container">
+    <div id="image-info-box">
+        <img src="/images/classes/{{ class_info.name | lower }}.png"/>
+    </div>
+
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> {{ class_info.source | upper }}, Page: {{ class_info.page }}</p>
+        <p><strong>Hit Dice:</strong> {{ class_info.hd.number }}d{{ class_info.hd.faces }}</p>
+        <p><strong>ASI or Feat at levels:</strong>
+            {% for feature in classFeature %}
+                {% if feature.name == "Ability Score Improvement" %}{{ feature.level }}{% if feature.level < 19 %}, {% endif %} {% endif %}
+            {% endfor %}
+        </p>
+        <p><strong><u>Multiclass Requirements</u></strong>
+            <ul>
+            {%- for key,value in class_info.multiclassing.requirements.items() -%}
+                <li>{{ key | capitalize }}:{{ value }}</li>
+            {% endfor %}
+            </ul>
+        </p>
+    </div>
+
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> {{ class_info.proficiency | join(", ")}}</p>
+        <p><strong>Armor:</strong> {{ class_info.startingProficiencies.armor|join(", ") }}</p>
+        <p><strong>Weapons:</strong> {{ class_info.startingProficiencies.weapons|join(", ") }}</p>
+        {% if class_info.startingProficiencies.tools %}
+            <p><strong>Tools:</strong> {{ class_info.startingProficiencies.tools| join(", ") }}</p>
+        {% endif %}
+        <p><strong><u>Skills</u></strong> </p>
+        <p>{{ class_info.startingProficiencies.skills | convert_to_html_lists }}</p>
+    </div>
+
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul>
+            {%- for item in class_info.startingEquipment.default -%}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <p><strong>Gold Alternative:</strong> {{ class_info.startingEquipment.goldAlternative }}</p>
+    </div>
+
+
+
+{% if class_info.spellcastingAbility %}
+    <div id="class-magic-section" class="class-section">
+        <h4><u>Magic</u></h4>
+            <p><strong>Spellcasting Ability:</strong> {{ class_info.spellcastingAbility }}</p>
+            <p><strong>Caster Progression:</strong> {{ class_info.casterProgression }}</p>
+            {% if class_info.preparedSpells %}
+                <p><strong>Prepared Spells:</strong> {{ class_info.preparedSpells }}</p>
+            {% endif %}
+            {% if class_info.cantripProgression %}
+                <p><strong>Cantrips:</strong> {{ class_info.cantripProgression | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% endif %}
+            {% if class_info.spellsKnownProgressionFixed %}
+                <p><strong>New spells added per level:</strong> {{ class_info.spellsKnownProgressionFixed | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% elif class_info.spellsKnownProgression %}
+                <p><strong>Spells known total per level:</strong> {{ class_info.spellsKnownProgression | list_to_horizontal_html_table("inlineTable") }}</p>
+            {% else %}
+                <p><strong>Spells known:</strong> All class spells are known.</p>
+            {% endif %}
+    </div>
+{% endif %}
+</div>
+
+{% if classFeature %}
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+        {% for feature in classFeature %}
+            {% if not feature.name == "Ability Score Improvement" %}
+                <p>Name: {{ feature.name }}</p>
+                <ul>
+                <li>level: {{ feature.level }}</li>
+                {% for entry in feature.entries %}
+                    <li>{{ entry }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+   
+    </section>
+{% endif %}
+
+
+
+{% if geraldine_full_data %}
+<hr/>
+<pre>{{- geraldine_full_data.classFeature | tojson(indent=2) -}}</pre>
+{% endif %}
+</div>

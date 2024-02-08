@@ -8,9 +8,8 @@ jinja_parser:
     json_file_project_path: /geri_src/5e_tools_data/class/all-classes.json
 ---
 
-
 [
     {% for item in data %}
-     "{{ item.0.name }}"{{ "," if not loop.last }}
+     "{{ item.class.0.name }}"{{ "," if not loop.last }}
     {% endfor %}
 ]

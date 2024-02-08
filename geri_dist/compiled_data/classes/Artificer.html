@@ -1,0 +1,247 @@
+<style>
+    #class-section{
+        margin: 10px 0 10px 0;
+        width: 100%;
+    }
+    .inlineTable {
+        display: inline;
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    }
+    .class-display-container{
+        border:solid 0px black;
+        border-radius: 20px;
+        padding: 0 20px 0 20px;
+    }
+    #class-select-container {
+        display: flex; /* Use Flexbox */
+    }
+    #class-select-control-container{
+        flex:1;
+        height:auto;
+    }
+    #class-description-container {
+        flex:4;
+        padding-left: 20px;
+    }
+    #class-info-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; /* Aligns children horizontally, this is default */
+        justify-content: flex-start; 
+        align-items: left; 
+    }
+    .class-info-box {
+        /* flex:1; */
+        border: solid 1px black;
+        border-radius: 10px;
+        padding:0 10px 0 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+        flex: 1 1 30%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .class-info-box > h4 {
+        text-decoration: underline;
+    }
+    #class-magic-section{
+        flex:2;
+        border:solid 1px black;
+        border-radius: 10px;
+        padding:10px;
+    }
+    #image-info-box{
+        flex: 1 1 30%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+    }
+</style>
+<div class="class-display-container">
+<h1 style="margin-top:0;">Artificer</h1>
+<div id="class-info-container">
+    <div id="image-info-box">
+        <img src="/images/classes/artificer.png"/>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Info</h4>
+        <p><strong>Source:</strong> TCE, Page: 9</p>
+        <p><strong>Hit Dice:</strong> 1d8</p>
+        <p><strong>ASI or Feat at levels:</strong>
+                4,  
+                8,  
+                12,  
+                16,  
+                19 
+        </p>
+        <p><strong><u>Multiclass Requirements</u></strong>
+            <ul><li>Int:13</li>
+            </ul>
+        </p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Proficiencies</h4>
+        <p><strong>Ability:</strong> con, int</p>
+        <p><strong>Armor:</strong> light, medium, <a href="/compiled_data/items/shield.html">shield</a></p>
+        <p><strong>Weapons:</strong> simple, {'proficiency': 'firearms', 'optional': True}</p>
+            <p><strong>Tools:</strong> <a href="/compiled_data/items/thieves'-tools.html">thieves' tools</a>, <a href="/compiled_data/items/tinker's-tools.html">tinker's tools</a>, one type of <a href="/compiled_data/items/artisan's-tools.html">artisan's tools</a> of your choice</p>
+        <p><strong><u>Skills</u></strong> </p>
+        <p><ul><li>choose: 2</li><ul><li>arcana</li><li>history</li><li>investigation</li><li>medicine</li><li>nature</li><li>perception</li><li>sleight of hand</li></ul></ul><br></p>
+    </div>
+    <div class="class-info-box">
+        <h4>Starting Equipment</h4>
+        <ul><li>any two <a href="/compiled_data/items/category/common-weapons.html">simple weapons</a> of your choice</li>
+            <li>a <a href="/compiled_data/items/light-crossbow.html">light crossbow</a> and <a href="/compiled_data/items/crossbow-bolts-(20).html">crossbow bolts (20)</a></li>
+            <li>(a) <a href="/compiled_data/items/studded-leather-armor.html">studded leather armor</a> or (b) <a href="/compiled_data/items/scale-mail.html">scale mail</a></li>
+            <li><a href="/compiled_data/items/thieves'-tools.html">thieves' tools</a> and a <a href="/compiled_data/items/dungeoneer's-pack.html">dungeoneer's pack</a></li>
+        </ul>
+        <p><strong>Gold Alternative:</strong> 5d4 × 10</p>
+    </div>
+    <div id="class-magic-section" class="class-section">
+        <h4><u>Magic</u></h4>
+            <p><strong>Spellcasting Ability:</strong> int</p>
+            <p><strong>Caster Progression:</strong> artificer</p>
+                <p><strong>Prepared Spells:</strong> <$level$> / 2 + <$int_mod$></p>
+                <p><strong>Cantrips:</strong> <table class="inlineTable">
+<tr>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>2</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>3</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+  <th>4</th>
+</tr>
+</table></p>
+                <p><strong>Spells known:</strong> All class spells are known.</p>
+    </div>
+</div>
+    <section id="class-features-section" class="class-section">
+        <hr/>        
+        <h4><u>Class Features</u></h4>
+                <p>Name: Magical Tinkering</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have <a href="/compiled_data/items/thieves'-tools.html">thieves' tools</a> or <a href="/compiled_data/items/artisan's-tools.html">artisan's tools</a> in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:</li>
+                    <li>{'type': 'list', 'items': ['The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.', 'Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.', 'The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.', "A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."]}</li>
+                    <li>The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.</li>
+                    <li>You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies.</li>
+                </ul>
+                <p>Name: Optional Rule: Firearm Proficiency</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in {@book chapter 9|DMG|9|Firearms} of the {@book Dungeon Master's Guide|DMG} and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them.</li>
+                </ul>
+                <p>Name: Spellcasting</p>
+                <ul>
+                <li>level: 1</li>
+                    <li>You have studied the workings of magic and how to channel it through objects. As a result, you have gained the ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as if you're producing wonders using mundane items or outlandish inventions.</li>
+                    <li>{'type': 'entries', 'name': 'Tools Required', 'entries': ['You produce your artificer spell effects through your tools. You must have a spellcasting focus—specifically <a href="/compiled_data/items/thieves\'-tools.html">thieves\' tools</a> or some kind of <a href="/compiled_data/items/artisan\'s-tools.html">artisan\'s tools</a>—in hand when you cast any spell with this Spellcasting feature (meaning the spell has an \'M\' component when you cast it). You must be proficient with the tool to use it in this way. See {@book chapter 5|PHB|4}, "Equipment," in the {@book Player\'s Handbook|PHB} for descriptions of these tools.', 'After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.', {'type': 'inset', 'name': 'The Magic of Artifice', 'entries': ["As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast {@spell cure wounds} using <a href="/compiled_data/items/alchemist's-supplies.html">alchemist's supplies</a>, you could be quickly producing a salve. If you cast it using <a href="/compiled_data/items/tinker's-tools.html">tinker's tools</a>, you might have a miniature mechanical spider that binds wounds. When you cast {@spell poison spray}, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.", "The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace {@spell cure wounds} with {@spell heat metal}, you might be altering the device you use to heal—perhaps modifying a tool so that it channels heat instead of healing energy.", "Such details don't limit you in any way or provide you with any benefit beyond the spell's effects. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself from other spellcasters."]}]}</li>
+                    <li>{'type': 'entries', 'name': 'Cantrips (0-Level Spells)', 'entries': ['At 1st level, you know two cantrips of your choice from the {@filter artificer spell list|spells|level=0|class=Artificer}. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.', 'When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list.']}</li>
+                    <li>{'type': 'entries', 'name': 'Preparing and Casting Spells', 'entries': ["The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.", 'You prepare the list of artificer spells that are available for you to cast, choosing from the {@filter artificer spell list|spells|class=Artificer}. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.', "For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.", 'You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list.']}</li>
+                    <li>{'type': 'entries', 'name': 'Spellcasting Ability', 'entries': ['Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.', {'type': 'abilityDc', 'name': 'Spell', 'attributes': ['int']}, {'type': 'abilityAttackMod', 'name': 'Spell', 'attributes': ['int']}]}</li>
+                    <li>{'type': 'entries', 'name': 'Ritual Casting', 'entries': ['You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared.']}</li>
+                </ul>
+                <p>Name: Infuse Item</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>At 2nd level, you gain the ability to imbue mundane items with certain magical infusions. The magic items you create with this feature are effectively prototypes of permanent items.</li>
+                    <li>{'type': 'refClassFeature', 'classFeature': 'Infusions Known|Artificer|TCE|2'}</li>
+                    <li>{'type': 'inset', 'name': 'Artificer Infusions', 'entries': ['Artificers have invented numerous magical infusions, extraordinary processes that rapidly create magic items. To many, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete.', 'The description of each of the following infusions details the type of item that can receive it, along with whether the resulting magic item requires attunement.', "Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.", "Unless an infusion's description says otherwise, you can't learn an infusion more than once."]}</li>
+                    <li>{'type': 'entries', 'name': 'Infusing an Item', 'entries': ['Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion\'s description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see "Attunement" in chapter 7 of the {@book Dungeon Master\'s Guide|DMG}).', 'Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.', 'You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies.', 'If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space.']}</li>
+                </ul>
+                <p>Name: Infusions Known</p>
+                <ul>
+                <li>level: 2</li>
+                    <li>When you gain this feature, pick four artificer infusions to learn, choosing from the "{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=TCE}" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.</li>
+                    <li>Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one.</li>
+                </ul>
+                <p>Name: Artificer Specialist</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>At 3rd level, you choose the type of specialist you are, each of which is detailed at the end of the class's description. Your choice grants you features at 5th level and again at 9th and 15th level.</li>
+                </ul>
+                <p>Name: The Right Tool for the Job</p>
+                <ul>
+                <li>level: 3</li>
+                    <li>At 3rd level, you learn how to produce exactly the tool you need: with <a href="/compiled_data/items/thieves'-tools.html">thieves' tools</a> or <a href="/compiled_data/items/artisan's-tools.html">artisan's tools</a> in hand, you can magically create one set of <a href="/compiled_data/items/artisan's-tools.html">artisan's tools</a> in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.</li>
+                </ul>
+                <p>Name: Artificer Specialist Feature</p>
+                <ul>
+                <li>level: 5</li>
+                    <li>At 5th level, you gain a feature granted by your Artificer Specialist choice.</li>
+                </ul>
+                <p>Name: Tool Expertise</p>
+                <ul>
+                <li>level: 6</li>
+                    <li>Starting at 6th level, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.</li>
+                </ul>
+                <p>Name: Flash of Genius</p>
+                <ul>
+                <li>level: 7</li>
+                    <li>Starting at 7th level, you gain the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.</li>
+                    <li>You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest.</li>
+                </ul>
+                <p>Name: Artificer Specialist Feature</p>
+                <ul>
+                <li>level: 9</li>
+                    <li>At 9th level, you gain a feature granted by your Artificer Specialist choice.</li>
+                </ul>
+                <p>Name: Magic Item Adept</p>
+                <ul>
+                <li>level: 10</li>
+                    <li>When you reach 10th level, you achieve a profound understanding of how to use and make magic items:</li>
+                    <li>{'type': 'list', 'items': ['You can attune to up to four magic items at once.', 'If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold.']}</li>
+                </ul>
+                <p>Name: Spell-Storing Item</p>
+                <ul>
+                <li>level: 11</li>
+                    <li>At 11th level, you learn how to store a spell in an object. Whenever you finish a long rest, you can touch one <a href="/compiled_data/items/category/common-weapons.html">simple or martial weapon</a> or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} that requires 1 action to cast (you needn't have it prepared).</li>
+                    <li>While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires <b>concentration</b>, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object.</li>
+                </ul>
+                <p>Name: Magic Item Savant</p>
+                <ul>
+                <li>level: 14</li>
+                    <li>At 14th level, your skill with magic items deepens more:</li>
+                    <li>{'type': 'list', 'items': ['You can attune to up to five magic items at once.', 'You ignore all class, race, spell, and level requirements on attuning to or using a magic item.']}</li>
+                </ul>
+                <p>Name: Artificer Specialist Feature</p>
+                <ul>
+                <li>level: 15</li>
+                    <li>At 15th level, you gain a feature granted by your Artificer Specialist choice.</li>
+                </ul>
+                <p>Name: Magic Item Master</p>
+                <ul>
+                <li>level: 18</li>
+                    <li>Starting at 18th level, you can attune to up to six magic items at once.</li>
+                </ul>
+                <p>Name: Soul of Artifice</p>
+                <ul>
+                <li>level: 20</li>
+                    <li>At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:</li>
+                    <li>{'type': 'list', 'items': ['You gain a +1 bonus to all saving throws per magic item you are currently attuned to.', "If you're reduced to 0 hit points but not killed outright, you can use your reaction to end one of your artificer infusions, causing you to drop to 1 hit point instead of 0."]}</li>
+                </ul>
+    </section>
+</div>
